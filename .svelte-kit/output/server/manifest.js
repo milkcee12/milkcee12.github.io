@@ -1,14 +1,18 @@
 export const manifest = {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png"]),
-	mimeTypes: {".png":"image/png"},
+	assets: new Set(["favicon.ico","favicon.png","scss/global.scss"]),
+	mimeTypes: {".ico":"image/vnd.microsoft.icon",".png":"image/png",".scss":"text/x-scss"},
 	_: {
-		entry: {"file":"_app/immutable/start-fc9df59d.js","imports":["_app/immutable/start-fc9df59d.js","_app/immutable/chunks/index-edd250b0.js","_app/immutable/chunks/singletons-6b212565.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-c439da6d.js","imports":["_app/immutable/start-c439da6d.js","_app/immutable/chunks/index-f58f646f.js","_app/immutable/chunks/singletons-40cfda17.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
-			() => import('./nodes/2.js')
+			() => import('./nodes/2.js'),
+			() => import('./nodes/3.js'),
+			() => import('./nodes/4.js'),
+			() => import('./nodes/5.js'),
+			() => import('./nodes/6.js')
 		],
 		routes: [
 			{
@@ -17,7 +21,34 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0], errors: [1], leaf: 2 },
+				page: { layouts: [0], errors: [1], leaf: 3 },
+				endpoint: null
+			},
+			{
+				id: "/(app)/about",
+				pattern: /^\/about\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,2], errors: [1,,], leaf: 4 },
+				endpoint: null
+			},
+			{
+				id: "/(app)/playground",
+				pattern: /^\/playground\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,2], errors: [1,,], leaf: 5 },
+				endpoint: null
+			},
+			{
+				id: "/(app)/work",
+				pattern: /^\/work\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,2], errors: [1,,], leaf: 6 },
 				endpoint: null
 			}
 		],
