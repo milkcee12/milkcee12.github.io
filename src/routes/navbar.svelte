@@ -4,3 +4,9 @@
     <a href="/about">About</a>
     <a href="/playground">Playground</a>
 </nav>
+
+<style lang="scss">
+    a {
+        color: $text-white;
+    }
+</style>
