@@ -1,7 +1,7 @@
 import { c as create_ssr_component } from "../../chunks/index.js";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');body{font-family:'Inter', sans-serif}",
+  code: '@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");body{font-family:"Inter", sans-serif;background-color:#1E1E1E;color:#FFFFFF}a{color:#12E599;text-decoration:none}',
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {

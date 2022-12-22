@@ -1,10 +1,10 @@
 export const manifest = {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set([".nojekyll","favicon.ico","favicon.png"]),
-	mimeTypes: {".ico":"image/vnd.microsoft.icon",".png":"image/png"},
+	assets: new Set([".nojekyll","favicon.ico","favicon.png","scss/_globals.scss"]),
+	mimeTypes: {".ico":"image/vnd.microsoft.icon",".png":"image/png",".scss":"text/x-scss"},
 	_: {
-		entry: {"file":"_app/immutable/start-c4847e35.js","imports":["_app/immutable/start-c4847e35.js","_app/immutable/chunks/index-f58f646f.js","_app/immutable/chunks/singletons-ba1b4387.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-6e293f71.js","imports":["_app/immutable/start-6e293f71.js","_app/immutable/chunks/index-f58f646f.js","_app/immutable/chunks/singletons-114119aa.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
