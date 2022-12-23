@@ -1,5 +1,6 @@
 <script>
     import Navbar from './navbar.svelte';
+    import Footer from './footer.svelte';
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
 </script>
@@ -21,24 +22,28 @@
 
 <Navbar />
 
-<section>
-    <h2>Timeline</h2>
-    <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</section>
+<div class="container">
+    <section>
+        <h2>Timeline</h2>
+        <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+    </section>
+    
+    <section>
+        <h2>Works</h2>
+        <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+    </section>
+    
+    <section>
+        <h2>Hello World</h2>
+        <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+    </section>
+</div>
 
-<section>
-    <h2>Works</h2>
-    <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</section>
-
-<section>
-    <h2>Hello World</h2>
-    <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</section>
+<Footer />
 
 <style lang="scss">
     section.hero {
-        height: 45em;
+        height: 48em;
         display: flex;
         .block {
             flex: 1;
@@ -49,19 +54,20 @@
 
         img {
             position: absolute;
+            pointer-events: none;
 
             &.hero-sig {
-                width: 80em;
+                width: 85em;
                 left: 50%;
-                margin-left: -30em;
-                margin-top: -5em;
+                margin-left: -32em;
+                margin-top: -10em;
             }
             &.hero-figure {
                 width: 36em;
                 height: auto;
                 top: 2em;
                 left: 50%;
-                margin-left: -18em;
+                margin-left: -15em;
             }
         }
 
@@ -79,9 +85,20 @@
             .line {
                 width: 4em;
                 flex-grow: 1;
-                height: 2.5px;
+                height: 3px;
                 background-color: $text-tech;
             }
         }
+    }
+
+    .container {
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        section {
+            padding-bottom: 8em;
+        }
+
     }
 </style>

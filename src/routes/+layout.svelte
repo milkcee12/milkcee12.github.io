@@ -5,14 +5,25 @@
     body {
         overflow-x: hidden;
         font-family: 'Inter', sans-serif;
-        background-color: $bg-dark;
-        color: $text-white;
+        background-color: $dark;
+        color: $light;
         padding: 0;
         margin: 0;
+    }
+
+    body > div {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     a {
         color: $text-art;
         text-decoration: none;
+    }
+
+    .container {
+        flex: 1;
+        margin: 8em 3em 0;
     }
 </style>
