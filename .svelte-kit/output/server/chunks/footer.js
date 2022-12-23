@@ -1,15 +1,15 @@
 import { c as create_ssr_component, o as onDestroy, d as spread, f as escape_object, h as createEventDispatcher, v as validate_component, e as escape } from "./index.js";
 const navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "nav.svelte-13mc7uy.svelte-13mc7uy{display:flex;justify-content:space-between;border-bottom:2px solid #FFFFFF;padding:3.5em 3em}nav.svelte-13mc7uy .nav-links a.svelte-13mc7uy{padding:0 1em}nav.svelte-13mc7uy .nav-brand.svelte-13mc7uy{font-size:1.5rem}a.svelte-13mc7uy.svelte-13mc7uy{color:#FFFFFF}",
+  code: ".svelte-a28day.svelte-a28day::-webkit-scrollbar,.svelte-a28day.svelte-a28day::-webkit-scrollbar-thumb{width:18px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-a28day.svelte-a28day::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-a28day.svelte-a28day{display:flex;justify-content:space-between;border-bottom:2px solid #FFFFFF;padding:3.5em 3em}nav.svelte-a28day .nav-links a.svelte-a28day{padding:0 1em}nav.svelte-a28day .nav-brand.svelte-a28day{font-size:1.5rem}a.svelte-a28day.svelte-a28day{color:#FFFFFF}",
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<nav class="${"svelte-13mc7uy"}"><a href="${"/"}" class="${"nav-brand svelte-13mc7uy"}"><b>MC</b></a>
-    <div class="${"nav-links"}"><a href="${"/work"}" class="${"svelte-13mc7uy"}">Work</a>
-        <a href="${"/about"}" class="${"svelte-13mc7uy"}">About</a>
-        <a href="${"/playground"}" class="${"svelte-13mc7uy"}">Playground</a></div>
+  return `<nav class="${"svelte-a28day"}"><a href="${"/"}" class="${"nav-brand svelte-a28day"}"><b class="${"svelte-a28day"}">MC</b></a>
+    <div class="${"nav-links svelte-a28day"}"><a href="${"/work"}" class="${"svelte-a28day"}">Work</a>
+        <a href="${"/about"}" class="${"svelte-a28day"}">About</a>
+        <a href="${"/playground"}" class="${"svelte-a28day"}">Playground</a></div>
 </nav>`;
 });
 const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -1685,27 +1685,24 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const footer_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "footer.svelte-3r73c1.svelte-3r73c1{display:flex;justify-content:space-between;align-items:center;border-top:2px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-3r73c1 .foot-icons a.svelte-3r73c1{padding:0 0.5em;color:#FFFFFF}footer.svelte-3r73c1 .foot-icons a.svelte-3r73c1:hover{color:#C3C3C3}footer.svelte-3r73c1 .updated.svelte-3r73c1{text-align:right}",
+  code: ".svelte-13irvfj.svelte-13irvfj::-webkit-scrollbar,.svelte-13irvfj.svelte-13irvfj::-webkit-scrollbar-thumb{width:18px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-13irvfj.svelte-13irvfj::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-13irvfj.svelte-13irvfj{display:flex;justify-content:space-between;align-items:center;border-top:2px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-13irvfj .foot-icons a.svelte-13irvfj{padding:0 0.5em;color:#FFFFFF}footer.svelte-13irvfj .foot-icons a.svelte-13irvfj:hover{color:#C3C3C3}footer.svelte-13irvfj .updated.svelte-13irvfj{text-align:right}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let dateStr;
-  getLatestCommit();
-  async function getLatestCommit() {
-    const res = await fetch("https://api.github.com/repos/milkcee12/milkcee12.github.io/commits");
-    let commits = await res.json();
-    let date = new Date(commits[0].commit.committer.date);
-    var options = {
+  let date = "undefined";
+  fetch("https://api.github.com/repos/milkcee12/milkcee12.github.io/commits").then((response) => response.json()).then((commits) => {
+    const options = {
       weekday: "long",
       year: "numeric",
       month: "long",
       day: "numeric"
     };
-    dateStr = date.toLocaleDateString("en-US", options);
-  }
+    var dateISO = new Date(commits[0].commit.committer.date);
+    date = dateISO.toLocaleDateString("en-US", options);
+  });
   $$result.css.add(css);
-  return `<footer class="${"svelte-3r73c1"}"><p>\xA9 2022 All right reserved.</p>
-    <div class="${"foot-icons"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-3r73c1"}">${validate_component(Icon, "Icon").$$render(
+  return `<footer class="${"svelte-13irvfj"}"><p class="${"svelte-13irvfj"}">\xA9 2022 All right reserved.</p>
+    <div class="${"foot-icons svelte-13irvfj"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-13irvfj"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:instagram",
@@ -1715,7 +1712,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-3r73c1"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-13irvfj"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:github",
@@ -1725,7 +1722,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-3r73c1"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-13irvfj"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:twitter",
@@ -1735,7 +1732,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a></div>
-    <p class="${"updated svelte-3r73c1"}">Last updated: <br> ${escape(dateStr)}</p>
+    <p class="${"updated svelte-13irvfj"}">Last updated: <br class="${"svelte-13irvfj"}"> ${escape(date)}</p>
 </footer>`;
 });
 export {
