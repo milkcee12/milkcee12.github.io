@@ -4,6 +4,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     body {
         overflow-x: hidden;
+        overflow: overlay;
         font-family: 'Inter', sans-serif;
         background-color: $dark;
         color: $light;
