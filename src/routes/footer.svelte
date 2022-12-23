@@ -1,15 +1,14 @@
 <script>
     import Icon from '@iconify/svelte';
 
-    let dateStr;
-    getLatestCommit();
-    async function getLatestCommit() {
-        const res = await fetch('https://api.github.com/repos/milkcee12/milkcee12.github.io/commits');
-        let commits = await res.json();
-        let date = new Date(commits[0].commit.committer.date);
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        dateStr = date.toLocaleDateString("en-US", options);
-    }
+    let date = 'undefined';
+    fetch('https://api.github.com/repos/milkcee12/milkcee12.github.io/commits')
+        .then(response => response.json())
+        .then(commits => {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var dateISO = new Date(commits[0].commit.committer.date);
+            date = dateISO.toLocaleDateString("en-US", options);
+        });
 </script>
 
 <footer>
@@ -19,7 +18,7 @@
         <a href="https://github.com/milkcee12/" target="_blank" rel="noreferrer"><Icon icon="fa6-brands:github" width="25" height="25" /></a>
         <a href="https://twitter.com/milkcee12" target="_blank" rel="noreferrer"><Icon icon="fa6-brands:twitter" width="25" height="25" /></a>
     </div>
-    <p class="updated">Last updated: <br> {dateStr}</p>
+    <p class="updated">Last updated: <br> {date}</p>
 </footer>
 
 <style lang="scss">
