@@ -19,6 +19,9 @@ function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
+function null_to_empty(value) {
+  return value == null ? "" : value;
+}
 function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
   const e = document.createEvent("CustomEvent");
   e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -170,6 +173,13 @@ function escape_object(obj) {
   }
   return result;
 }
+function each(items, fn) {
+  let str = "";
+  for (let i = 0; i < items.length; i += 1) {
+    str += fn(items[i], i);
+  }
+  return str;
+}
 const missing_component = {
   $$render: () => ""
 };
@@ -235,6 +245,8 @@ export {
   getContext as g,
   createEventDispatcher as h,
   add_attribute as i,
+  each as j,
+  null_to_empty as k,
   missing_component as m,
   noop as n,
   onDestroy as o,

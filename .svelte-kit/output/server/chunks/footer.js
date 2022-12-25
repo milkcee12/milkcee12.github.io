@@ -1,15 +1,15 @@
 import { c as create_ssr_component, o as onDestroy, d as spread, f as escape_object, h as createEventDispatcher, v as validate_component, e as escape } from "./index.js";
 const navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".svelte-1gq0je5.svelte-1gq0je5::-webkit-scrollbar,.svelte-1gq0je5.svelte-1gq0je5::-webkit-scrollbar-thumb{width:18px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1gq0je5.svelte-1gq0je5::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-1gq0je5.svelte-1gq0je5{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}nav.svelte-1gq0je5 .nav-links a.svelte-1gq0je5{padding:0 1em}nav.svelte-1gq0je5 .nav-brand.svelte-1gq0je5{font-size:1.5rem}a.svelte-1gq0je5.svelte-1gq0je5{color:#FFFFFF}",
+  code: ".svelte-smd7d1.svelte-smd7d1::-webkit-scrollbar,.svelte-smd7d1.svelte-smd7d1::-webkit-scrollbar-thumb{width:18px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-smd7d1.svelte-smd7d1::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-smd7d1.svelte-smd7d1{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}nav.svelte-smd7d1 .nav-links a.svelte-smd7d1{padding:0 1em;font-weight:normal}nav.svelte-smd7d1 .nav-brand.svelte-smd7d1{font-size:1.5rem}a.svelte-smd7d1.svelte-smd7d1{color:#FFFFFF}",
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<nav class="${"svelte-1gq0je5"}"><a href="${"/"}" class="${"nav-brand svelte-1gq0je5"}"><b class="${"svelte-1gq0je5"}">MC</b></a>
-    <div class="${"nav-links svelte-1gq0je5"}"><a href="${"/work"}" class="${"svelte-1gq0je5"}">Work</a>
-        <a href="${"/about"}" class="${"svelte-1gq0je5"}">About</a>
-        <a href="${"/playground"}" class="${"svelte-1gq0je5"}">Playground</a></div>
+  return `<nav class="${"svelte-smd7d1"}"><a href="${"/"}" class="${"nav-brand svelte-smd7d1"}"><b class="${"svelte-smd7d1"}">MC</b></a>
+    <div class="${"nav-links svelte-smd7d1"}"><a href="${"/work"}" class="${"svelte-smd7d1"}">Work</a>
+        <a href="${"/about"}" class="${"svelte-smd7d1"}">About</a>
+        <a href="${"/playground"}" class="${"svelte-smd7d1"}">Playground</a></div>
 </nav>`;
 });
 const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
