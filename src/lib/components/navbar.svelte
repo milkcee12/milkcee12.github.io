@@ -16,6 +16,7 @@
 
         .nav-links a {
             padding: 0 1em;
+            font-weight: normal;
         }
 
         .nav-brand {
