@@ -3,8 +3,8 @@
 <style lang="scss" global>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     body {
-        overflow-x: hidden;
         overflow: overlay;
+        overflow-x: hidden;
         font-family: 'Inter', sans-serif;
         background-color: $dark;
         color: $light;
@@ -21,6 +21,7 @@
     a {
         color: $text-art;
         text-decoration: none;
+        font-weight: bold;
     }
 
     .container {

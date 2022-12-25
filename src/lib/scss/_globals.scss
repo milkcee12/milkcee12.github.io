@@ -4,6 +4,15 @@ $muted: #C3C3C3;
 $text-tech: #FF3062;
 $text-art: #12E599;
 
+.text-tech {
+    color: $text-tech;
+}
+.text-art {
+    color: $text-art;
+}
+
+// TODO: Make scrollbar disappear on hover
+
 // Scrollbar styling
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {

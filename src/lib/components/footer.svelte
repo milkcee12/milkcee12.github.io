@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-top: 2px solid $light;
+        border-top: 1.5px solid $light;
         padding: 3.5em 4em;
         color: $muted;
 
