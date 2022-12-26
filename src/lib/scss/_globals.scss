@@ -11,6 +11,21 @@ $text-art: #12E599;
     color: $text-art;
 }
 
+@media (max-width: 992px) {
+    p, li, p a, li a {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
+    
+}
+
 // TODO: Make scrollbar disappear on hover
 
 // Scrollbar styling

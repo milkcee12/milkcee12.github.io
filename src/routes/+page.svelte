@@ -4,6 +4,7 @@
     import TimelineElem from '../lib/components/timelineElem.svelte';
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
+    import Icon from '@iconify/svelte';
 
     let id = 0;
 </script>
@@ -26,15 +27,19 @@
 <Navbar />
 
 <div class="container">
-    <h2>Featured Work</h2>
+    <div class="title">
+        <h2>Featured Work</h2>
+        <p><a href="/work">See all <Icon icon="radix-icons:triangle-right" /></a></p>
+    </div>
     <section class="timeline">
         <TimelineElem 
             id={++id}
             title={"Milkcee Studios"}
             date={"2022"}
             blurb={"Designed my portfolio website. Implemented using SvelteKit and MySQL."}
-            expand={"View the creation process"}
+            expandName={"View the creation process"}
             expandHref={"#"}
+            expandColor={"text-art"}
             tags={[
                 {name: 'Front-End', type: 'tech'},
                 {name: 'Back-End', type: 'tech'},
@@ -47,8 +52,9 @@
             title={"Trojan Dining"}
             date={"2021 - Present"}
             blurb={"Student-first redesign of the USC Residential Dining Menu website. Implemented using React.js."}
-            expand={"View case study"}
+            expandName={"View case study"}
             expandHref={"#"}
+            expandColor={"text-tech"}
             tags={[
                 {name: 'Front-End', type: 'tech'},
                 {name: 'UI/UX', type: 'art'}
@@ -71,6 +77,7 @@
 
 <style lang="scss">
     section.hero {
+        overflow-x: hidden;
         height: 48em;
         display: flex;
         .block {
@@ -83,22 +90,20 @@
         img {
             position: absolute;
             pointer-events: none;
-
             &.hero-sig {
                 width: 85em;
-                left: 50%;
-                margin-left: -32em;
-                margin-top: -10em;
+                left: calc(50% - 32em);
+                top: -10em;
             }
             &.hero-figure {
                 width: 36em;
                 height: auto;
                 top: 2em;
-                left: 50%;
-                margin-left: -15em;
+                left: calc(50% - 15em);
             }
         }
 
+        // Decorative line on header
         .explore {
             position: absolute;
             display: flex;
@@ -122,6 +127,12 @@
     .container {
         h2 {
             font-size: 2.2rem;
+            padding-right: 1em;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
         }
 
         section {
@@ -136,4 +147,12 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    @media (max-width: 992px) {
+        .timeline {
+            width: 100%;
+            margin-top: 1em;
+        }
+    }
+
 </style>

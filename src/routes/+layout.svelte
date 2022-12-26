@@ -11,21 +11,30 @@
         padding: 0;
         margin: 0;
     }
-
     body > div {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
     }
-
     a {
         color: $text-art;
         text-decoration: none;
         font-weight: bold;
     }
-
     .container {
         flex: 1;
         margin: 8em 3em 0;
     }
+
+    @media (max-width: 992px) {
+        .container {
+            margin: 6em 3em 0;
+        }
+    }
+    @media (max-width: 768px) {
+        .container {
+            margin: 4em 2em 0;
+        }
+    }
+
 </style>

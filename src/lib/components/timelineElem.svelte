@@ -1,6 +1,6 @@
 <script>
-    export let id, title, date, blurb, expand, expandHref, tags;
-    import Icon from '@iconify/svelte';
+    export let id, title, date, blurb, expandName, expandHref, expandColor, tags;
+    import ArrowLink from './arrowLink.svelte';
 </script>
 
 <div class="block {id % 2 === 0 ? 'even' : 'odd'}">
@@ -9,21 +9,16 @@
             <h3 class="title">{title}</h3>
             <p class="date">{date}</p>
             <p class="blurb">{blurb}</p>
-            <p class="expand"><a href={expandHref}>{expand} <Icon icon="radix-icons:triangle-right" /></a></p>
+            <ArrowLink color={expandColor} href={expandHref}, name={expandName} />
         </div>
     </div>
-
     <div class="vl"></div>
-
     <div class="col">
         <div class="tags">
             <ul>
                 {#each tags as tag}
                     <li class={`tag-${tag.type}`}>{tag.name}</li>
                 {/each}
-                <!-- <li class="tag-tech">Front-End</li>
-                <li class="tag-tech">Back-End</li>
-                <li class="tag-art">UI/UX</li> -->
             </ul>
         </div>
     </div>
@@ -41,6 +36,7 @@
             position: relative;
             width: 15px;
             height: 15px;
+            margin-top: 3em;
             background-color: $light;
             border: 3px solid $text-art;
             border-radius: 50%;
@@ -49,6 +45,9 @@
 
         &:first-child .vl {
             margin-top: 3em;
+            &::before {
+                margin-top: 0;
+            }
         }
 
         // Bottom arrow
@@ -57,7 +56,7 @@
             position: relative;
             text-align: center;
             right: 1em;
-            top: calc(100% - 3.25em);
+            top: calc(100% - 6.25em);
         }
 
         // Content left pointing arrow
@@ -89,10 +88,6 @@
             padding-bottom: 5em;
             display: flex;
             align-items: center;
-            width: 100%;
-        }
-        .title {
-            font-size: 1.5rem;
         }
 
         .content {
@@ -103,14 +98,6 @@
             p {
                 color: $muted;
             }
-
-            a {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-            }
-
-            
         }
 
         .tags {
@@ -118,7 +105,6 @@
             display: flex;
             align-self: center;
             margin-bottom: 8em;
-
             ul {
                 display: flex;
                 flex-flow: column;
@@ -147,4 +133,66 @@
             margin: 0 5em;
         }
     }
+
+    @media (max-width: 992px) {
+        .block {
+            .vl {
+                margin: 0 3em;
+            }
+
+            .tags {
+                margin-bottom: 6em;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .block {
+            margin: 0;
+
+            .col.col-content {
+                flex: 2;
+            }
+            .vl {
+                order: -1;
+                margin: 0 3em 0;
+            }
+
+            &.odd, &.even {
+                flex-flow: row;
+                .col {
+                    justify-content: flex-start;
+                }
+            }
+
+            &.even .col.col-content::after {
+                content: unset;
+            }
+
+            .col-content {
+                flex: 3;
+                font-size: 0.9rem;
+
+                .title {
+                    font-size: 1.2rem;
+                }
+                &:before {
+                    content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                    align-self: flex-start;
+                    margin-top: 2.7em;
+                    margin-right: -6px;
+                }
+            }
+            .tags {
+                margin-left: 2em;
+                margin-bottom: 4em;
+            }
+
+            .vl {
+                margin-left: 1em;
+                margin-right: 2em;
+            }
+        }
+    }
+
 </style>
