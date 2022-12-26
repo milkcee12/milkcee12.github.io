@@ -132,6 +132,7 @@
             background-color: $light;
             margin: 0 5em;
         }
+
     }
 
     @media (max-width: 992px) {
@@ -142,6 +143,9 @@
 
             .tags {
                 margin-bottom: 6em;
+                li {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
@@ -149,38 +153,34 @@
     @media (max-width: 768px) {
         .block {
             margin: 0;
-
-            .col.col-content {
-                flex: 2;
-            }
             .vl {
                 order: -1;
                 margin: 0 3em 0;
             }
 
             &.odd, &.even {
-                flex-flow: row;
+                flex-direction: row;
                 .col {
                     justify-content: flex-start;
                 }
             }
 
             &.even .col.col-content::after {
-                content: unset;
+                content: none;
+            }
+            &.even .col.col-content::before, &.odd .col.col-content::before {
+                content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                align-self: flex-start;
+                margin-top: 2.7em;
+                margin-right: -5px;
             }
 
             .col-content {
                 flex: 3;
                 font-size: 0.9rem;
-
+                margin-top: 0.3em;
                 .title {
                     font-size: 1.2rem;
-                }
-                &:before {
-                    content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
-                    align-self: flex-start;
-                    margin-top: 2.7em;
-                    margin-right: -6px;
                 }
             }
             .tags {
@@ -189,8 +189,8 @@
             }
 
             .vl {
-                margin-left: 1em;
-                margin-right: 2em;
+                margin-left: 0;
+                margin-right: 1.5em;
             }
         }
     }

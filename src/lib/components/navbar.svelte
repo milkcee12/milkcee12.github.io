@@ -26,4 +26,13 @@
     a {
         color: $light;
     }
+
+    @media (max-width: 992px) {
+        nav {
+            padding: 3.5em 2em;
+            .nav-links a {
+                padding: 0 0.3em;
+            }
+        }
+    }
 </style>
