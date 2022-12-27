@@ -15,6 +15,7 @@ Hello! This README is an informal document of records to mark the things I still
 - [ ] Add OAuth to Github for more API calls
 - [ ] Polish: Locomotive scroll
 - [ ] Use GET method (URL parameter passing) to query and build project page dynamically
+- [ ] Add accessibility and SEO labels (aria-label to section, etc)
 
 
 ## Done
