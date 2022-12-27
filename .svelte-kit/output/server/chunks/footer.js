@@ -2,15 +2,15 @@ import { c as create_ssr_component, o as onDestroy, d as spread, f as escape_obj
 import { P as PUBLIC_GITHUB_URL } from "./public.js";
 const navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "@media(max-width: 992px){}.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar,.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-1vrp9gu.svelte-1vrp9gu{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}nav.svelte-1vrp9gu .nav-links a.svelte-1vrp9gu{padding:0 1em;font-weight:normal}nav.svelte-1vrp9gu .nav-brand.svelte-1vrp9gu{font-size:1.5rem}a.svelte-1vrp9gu.svelte-1vrp9gu{color:#FFFFFF}@media(max-width: 992px){nav.svelte-1vrp9gu.svelte-1vrp9gu{padding:3.5em 2em}nav.svelte-1vrp9gu .nav-links a.svelte-1vrp9gu{padding:0 0.3em}}",
+  code: "@media(max-width: 992px){}.svelte-1aaowr0.svelte-1aaowr0::-webkit-scrollbar,.svelte-1aaowr0.svelte-1aaowr0::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1aaowr0.svelte-1aaowr0::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-1aaowr0.svelte-1aaowr0{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}nav.svelte-1aaowr0 .nav-links a.svelte-1aaowr0{padding:0 1em;font-weight:normal}nav.svelte-1aaowr0 .nav-brand.svelte-1aaowr0{font-size:1.5rem}a.svelte-1aaowr0.svelte-1aaowr0{color:#FFFFFF}@media(max-width: 992px){nav.svelte-1aaowr0.svelte-1aaowr0{padding:3.5em 2em}nav.svelte-1aaowr0 .nav-links a.svelte-1aaowr0{padding:0 0.3em}}",
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<nav class="${"svelte-1vrp9gu"}"><a href="${"/"}" class="${"nav-brand svelte-1vrp9gu"}"><b class="${"svelte-1vrp9gu"}">MC</b></a>
-    <div class="${"nav-links svelte-1vrp9gu"}"><a href="${"/work"}" class="${"svelte-1vrp9gu"}">Work</a>
-        <a href="${"/about"}" class="${"svelte-1vrp9gu"}">About</a>
-        <a href="${"/playground"}" class="${"svelte-1vrp9gu"}">Playground</a></div>
+  return `<nav class="${"svelte-1aaowr0"}"><a href="${"/"}" class="${"nav-brand svelte-1aaowr0"}"><b class="${"svelte-1aaowr0"}">MC</b></a>
+    <div class="${"nav-links svelte-1aaowr0"}"><a href="${"/work"}" class="${"svelte-1aaowr0"}">Work</a>
+        <a href="${"/about"}" class="${"svelte-1aaowr0"}">About</a>
+        <a href="${"/playground"}" class="${"svelte-1aaowr0"}">Playground</a></div>
 </nav>`;
 });
 const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -1686,7 +1686,7 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const footer_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@media(max-width: 992px){p.svelte-xp8ajb.svelte-xp8ajb{font-size:0.9rem}}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar,.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-xp8ajb.svelte-xp8ajb{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex:1}footer.svelte-xp8ajb .foot-icons.svelte-xp8ajb{display:flex;justify-content:center}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb{padding:0 0.5em;color:#FFFFFF}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb:hover{color:#C3C3C3}footer.svelte-xp8ajb .updated.svelte-xp8ajb{text-align:right}@media(max-width: 992px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:2em 2em;flex-wrap:wrap}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex-basis:100%;text-align:center;justify-content:center}}",
+  code: "@media(max-width: 992px){p.svelte-ryt03.svelte-ryt03{font-size:0.9rem}}.svelte-ryt03.svelte-ryt03::-webkit-scrollbar,.svelte-ryt03.svelte-ryt03::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-ryt03.svelte-ryt03::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-ryt03.svelte-ryt03{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-ryt03 .flex-item.svelte-ryt03{flex:1}footer.svelte-ryt03 .foot-icons.svelte-ryt03{display:flex;justify-content:center}footer.svelte-ryt03 .foot-icons a.svelte-ryt03{padding:0 0.5em;color:#FFFFFF}footer.svelte-ryt03 .foot-icons a.svelte-ryt03:hover{color:#C3C3C3}footer.svelte-ryt03 .updated.svelte-ryt03{text-align:right}@media(max-width: 992px){footer.svelte-ryt03.svelte-ryt03{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-ryt03.svelte-ryt03{padding:2em 2em;flex-wrap:wrap}footer.svelte-ryt03 .flex-item.svelte-ryt03{flex-basis:100%;text-align:center;justify-content:center}}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -1702,8 +1702,8 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     date = dateISO.toLocaleDateString("en-US", options);
   });
   $$result.css.add(css);
-  return `<footer class="${"svelte-xp8ajb"}"><p class="${"flex-item svelte-xp8ajb"}">\xA9 2022 All right reserved.</p>
-    <div class="${"foot-icons flex-item svelte-xp8ajb"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
+  return `<footer class="${"svelte-ryt03"}"><p class="${"flex-item svelte-ryt03"}">\xA9 2022 All right reserved.</p>
+    <div class="${"foot-icons flex-item svelte-ryt03"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ryt03"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:instagram",
@@ -1713,7 +1713,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ryt03"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:github",
@@ -1723,7 +1723,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ryt03"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:twitter",
@@ -1733,7 +1733,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a></div>
-    <p class="${"updated flex-item svelte-xp8ajb"}">Last updated: <br class="${"svelte-xp8ajb"}"> ${escape(date)}</p>
+    <p class="${"updated flex-item svelte-ryt03"}">Last updated: <br class="${"svelte-ryt03"}"> ${escape(date)}</p>
 </footer>`;
 });
 export {
