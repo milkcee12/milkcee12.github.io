@@ -1688,18 +1688,8 @@ const css = {
   code: "@media(max-width: 992px){p.svelte-gyaxry.svelte-gyaxry{font-size:0.9rem}}.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar,.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-gyaxry.svelte-gyaxry{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-gyaxry .foot-icons a.svelte-gyaxry{padding:0 0.5em;color:#FFFFFF}footer.svelte-gyaxry .foot-icons a.svelte-gyaxry:hover{color:#C3C3C3}footer.svelte-gyaxry .updated.svelte-gyaxry{text-align:right}@media(max-width: 992px){footer.svelte-gyaxry.svelte-gyaxry{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-gyaxry.svelte-gyaxry{padding:2em 2em;flex-wrap:wrap}footer.svelte-gyaxry .flex-item.svelte-gyaxry{flex-basis:100%;text-align:center;justify-content:center}}",
   map: null
 };
+let date = "undefined";
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let date = "undefined";
-  fetch("https://api.github.com/repos/milkcee12/milkcee12.github.io/commits").then((response) => response.json()).then((commits) => {
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    };
-    var dateISO = new Date(commits[0].commit.committer.date);
-    date = dateISO.toLocaleDateString("en-US", options);
-  });
   $$result.css.add(css);
   return `<footer class="${"svelte-gyaxry"}"><p class="${"flex-item svelte-gyaxry"}">\xA9 2022 All right reserved.</p>
     <div class="${"foot-icons flex-item svelte-gyaxry"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-gyaxry"}">${validate_component(Icon, "Icon").$$render(
