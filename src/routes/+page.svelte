@@ -2,6 +2,7 @@
     import Navbar from '../lib/components/navbar.svelte';
     import Footer from '../lib/components/footer.svelte';
     import TimelineElem from '../lib/components/timelineElem.svelte';
+    import ArrowLink from '../lib/components/arrowLink.svelte';
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
     import Icon from '@iconify/svelte';
@@ -31,14 +32,18 @@
 <div class="container">
     <div class="title">
         <h2>Featured Work</h2>
-        <p><a href="/work">See all <Icon icon="radix-icons:triangle-right" /></a></p>
+        <ArrowLink href="/work" color="art" name="See all" />
     </div>
     <section class="timeline">
         {#each Object.keys(data) as idx}
             <TimelineElem 
-                id={++id}
+                id={idx}
                 title={data[idx].title}
-                date={data[idx].end_yr === null ? `${data[idx].start_yr}` : `${data[idx].start_yr} to ${data[idx].end_yr}`}
+                date={data[idx].end_yr === null ? 
+                    `${data[idx].start_yr} - Present` : 
+                    `${data[idx].start_yr === data[idx].end_yr ? 
+                        `${data[idx].start_yr}` : 
+                        `${data[idx].start_yr} - ${data[idx].end_yr}`}`}
                 blurb={data[idx].blurb}
                 expandName={data[idx].see_more}
                 expandColor={data[idx].project_type.name}
@@ -148,6 +153,9 @@
             display: flex;
             align-items: center;
         }
+        .title h2 {
+            flex-basis: content;
+        }
 
         section {
             padding-bottom: 8em;
@@ -186,9 +194,6 @@
 
         .container {
             margin: 3em 2em 0;
-            .title h2 {
-                flex: 1;
-            }
         }
         .timeline {
             width: 100%;

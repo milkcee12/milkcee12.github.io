@@ -30,7 +30,13 @@
         padding: 3.5em 4em;
         color: $muted;
 
+        .flex-item {
+            flex: 1;
+        }
+
         .foot-icons {
+            display: flex;
+            justify-content: center;
             a {
                 padding: 0 0.5em;
                 color: $light;

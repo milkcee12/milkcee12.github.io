@@ -4,17 +4,17 @@
     import ArrowLink from './arrowLink.svelte';
 </script>
 
-<div class="block ${id % 2 === 0 ? 'even' : 'odd'}">
+<div class={`block ${id % 2 === 0 ? 'even' : 'odd'}`}>
     <div class="col col-content">
         <div class="content">
             <h3 class="title">{title}</h3>
             <p class="date">{date}</p>
             <p class="blurb">{blurb}</p>
-            <ArrowLink color={expandColor} href={expandHref}, name={expandName} />
+            <ArrowLink color={`text-${expandColor}`} href={expandHref}, name={expandName} />
         </div>
     </div>
     <div class="vl"></div>
-    <div class="col">
+    <div class="col col-tags">
         <div class="tags">
             <ul>
                 {#each tags as tag}
@@ -61,7 +61,7 @@
         }
 
         // Content left pointing arrow
-        &.odd {
+        &.even {
             flex-flow: row-reverse;
             .col {
                 justify-content: flex-end;
@@ -75,7 +75,7 @@
         }
 
         // Content right-pointing arrow
-        &.even {
+        &.odd {
             .col.col-content::after {
                 content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
                 align-self: flex-start;
@@ -133,11 +133,6 @@
             background-color: $light;
             margin: 0 5em;
         }
-
-        &:last-child .vl::after {
-            top: calc(100% - 3.25em);
-        }
-
     }
 
     @media (max-width: 992px) {
@@ -145,7 +140,6 @@
             .vl {
                 margin: 0 3em;
             }
-
             .tags {
                 margin-bottom: 6em;
                 li {
@@ -170,10 +164,10 @@
                 }
             }
 
-            &.even .col.col-content::after {
+            &.odd .col.col-content::after {
                 content: none;
             }
-            &.even .col.col-content::before, &.odd .col.col-content::before {
+            &.odd .col.col-content::before, &.even .col.col-content::before {
                 content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
                 align-self: flex-start;
                 margin-top: 2.7em;
@@ -182,15 +176,14 @@
 
             .col-content {
                 flex: 3;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 margin-top: 0.3em;
                 .title {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
             }
-            .tags {
-                margin-left: 2em;
-                margin-bottom: 4em;
+            .col-tags {
+                display: none;
             }
 
             .vl {
