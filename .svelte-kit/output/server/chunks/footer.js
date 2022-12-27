@@ -1685,14 +1685,14 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const footer_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@media(max-width: 992px){p.svelte-gyaxry.svelte-gyaxry{font-size:0.9rem}}.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar,.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-gyaxry.svelte-gyaxry::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-gyaxry.svelte-gyaxry{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-gyaxry .foot-icons a.svelte-gyaxry{padding:0 0.5em;color:#FFFFFF}footer.svelte-gyaxry .foot-icons a.svelte-gyaxry:hover{color:#C3C3C3}footer.svelte-gyaxry .updated.svelte-gyaxry{text-align:right}@media(max-width: 992px){footer.svelte-gyaxry.svelte-gyaxry{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-gyaxry.svelte-gyaxry{padding:2em 2em;flex-wrap:wrap}footer.svelte-gyaxry .flex-item.svelte-gyaxry{flex-basis:100%;text-align:center;justify-content:center}}",
+  code: "@media(max-width: 992px){p.svelte-xp8ajb.svelte-xp8ajb{font-size:0.9rem}}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar,.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-xp8ajb.svelte-xp8ajb{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex:1}footer.svelte-xp8ajb .foot-icons.svelte-xp8ajb{display:flex;justify-content:center}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb{padding:0 0.5em;color:#FFFFFF}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb:hover{color:#C3C3C3}footer.svelte-xp8ajb .updated.svelte-xp8ajb{text-align:right}@media(max-width: 992px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:2em 2em;flex-wrap:wrap}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex-basis:100%;text-align:center;justify-content:center}}",
   map: null
 };
 let date = "undefined";
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<footer class="${"svelte-gyaxry"}"><p class="${"flex-item svelte-gyaxry"}">\xA9 2022 All right reserved.</p>
-    <div class="${"foot-icons flex-item svelte-gyaxry"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-gyaxry"}">${validate_component(Icon, "Icon").$$render(
+  return `<footer class="${"svelte-xp8ajb"}"><p class="${"flex-item svelte-xp8ajb"}">\xA9 2022 All right reserved.</p>
+    <div class="${"foot-icons flex-item svelte-xp8ajb"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:instagram",
@@ -1702,7 +1702,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-gyaxry"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:github",
@@ -1712,7 +1712,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-gyaxry"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:twitter",
@@ -1722,7 +1722,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a></div>
-    <p class="${"updated flex-item svelte-gyaxry"}">Last updated: <br class="${"svelte-gyaxry"}"> ${escape(date)}</p>
+    <p class="${"updated flex-item svelte-xp8ajb"}">Last updated: <br class="${"svelte-xp8ajb"}"> ${escape(date)}</p>
 </footer>`;
 });
 export {

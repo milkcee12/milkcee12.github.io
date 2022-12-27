@@ -8,12 +8,12 @@
     "src": "src/lib/img/hero-figure.png"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-9234f103.js",
+    "file": "_app/immutable/start-d411fd4d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-7ec6916d.js",
-      "_singletons-1c39e358.js",
+      "_singletons-40dfdb72.js",
       "_preload-helper-b21cceae.js"
     ],
     "dynamicImports": [
@@ -38,33 +38,33 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-d5fdd12c.js",
+    "file": "_app/immutable/components/error.svelte-4bef682f.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-7ec6916d.js",
-      "_singletons-1c39e358.js"
+      "_singletons-40dfdb72.js"
     ]
   },
   "src/routes/(app)/+layout.svelte": {
-    "file": "_app/immutable/components/pages/(app)/_layout.svelte-150077bc.js",
+    "file": "_app/immutable/components/pages/(app)/_layout.svelte-1ed97faa.js",
     "src": "src/routes/(app)/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-7ec6916d.js",
-      "_footer-868a9432.js"
+      "_footer-537fabb7.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-714fcee0.js",
+    "file": "_app/immutable/components/pages/_page.svelte-2df55771.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-7ec6916d.js",
-      "_footer-868a9432.js"
+      "_footer-537fabb7.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-57e9503f.css"
+      "_app/immutable/assets/_page-7e503024.css"
     ],
     "assets": [
       "_app/immutable/assets/hero-figure-932cc342.png",
@@ -111,8 +111,8 @@
       "__page-91724ea8.js"
     ]
   },
-  "_singletons-1c39e358.js": {
-    "file": "_app/immutable/chunks/singletons-1c39e358.js",
+  "_singletons-40dfdb72.js": {
+    "file": "_app/immutable/chunks/singletons-40dfdb72.js",
     "imports": [
       "_index-7ec6916d.js"
     ]
@@ -126,13 +126,13 @@
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
-  "_footer-868a9432.js": {
-    "file": "_app/immutable/chunks/footer-868a9432.js",
+  "_footer-537fabb7.js": {
+    "file": "_app/immutable/chunks/footer-537fabb7.js",
     "imports": [
       "_index-7ec6916d.js"
     ],
     "css": [
-      "_app/immutable/assets/footer-5c5916fc.css"
+      "_app/immutable/assets/footer-cdecb94a.css"
     ]
   },
   "__page-91724ea8.js": {
@@ -151,7 +151,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-be7a3d5d.js",
+    "file": "_app/immutable/chunks/1-45de9139.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -159,7 +159,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-0e6be468.js",
+    "file": "_app/immutable/chunks/2-c634b848.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -167,7 +167,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-cd885996.js",
+    "file": "_app/immutable/chunks/3-91a8d8d9.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -200,15 +200,15 @@
     ]
   },
   "footer.css": {
-    "file": "_app/immutable/assets/footer-5c5916fc.css",
+    "file": "_app/immutable/assets/footer-cdecb94a.css",
     "src": "footer.css"
-  },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-57e9503f.css",
-    "src": "src/routes/+page.css"
   },
   "src/routes/+layout.css": {
     "file": "_app/immutable/assets/_layout-cd1018b9.css",
     "src": "src/routes/+layout.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-7e503024.css",
+    "src": "src/routes/+page.css"
   }
 }
