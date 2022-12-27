@@ -4,6 +4,8 @@ Hello! This README is an informal document of records to mark the things I still
   ✅ Used Supabase API to dynamically fill contents of timeline.
   
   ✅ Designed relational projects database in Supabase.
+
+  🎄 Merry Christmas!
   
   ✅ Styled timeline to be responsive with pure CSS (flexbox)!
   

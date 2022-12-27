@@ -26,8 +26,6 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const GITHUB_URL: string;
-	export const GITHUB_TOKEN: string;
 	export const ACLOCAL_PATH: string;
 	export const ACSetupSvcPort: string;
 	export const ACSvcPort: string;
@@ -151,6 +149,8 @@ declare module '$env/static/private' {
 declare module '$env/static/public' {
 	export const PUBLIC_SUPABASE_URL: string;
 	export const PUBLIC_SUPABASE_KEY: string;
+	export const PUBLIC_GITHUB_URL: string;
+	export const PUBLIC_GITHUB_TOKEN: string;
 }
 
 /**
@@ -167,8 +167,6 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		GITHUB_URL: string;
-		GITHUB_TOKEN: string;
 		ACLOCAL_PATH: string;
 		ACSetupSvcPort: string;
 		ACSvcPort: string;
@@ -296,6 +294,8 @@ declare module '$env/dynamic/public' {
 	export const env: {
 		PUBLIC_SUPABASE_URL: string;
 		PUBLIC_SUPABASE_KEY: string;
+		PUBLIC_GITHUB_URL: string;
+		PUBLIC_GITHUB_TOKEN: string;
 		[key: string]: string | undefined;
 	}
 }
