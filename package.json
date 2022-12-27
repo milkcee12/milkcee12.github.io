@@ -17,6 +17,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^2.2.2",
 		"sass": "^1.57.1",
 		"svelte-preprocess": "^5.0.0"
 	}

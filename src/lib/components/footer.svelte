@@ -2,13 +2,13 @@
     import Icon from '@iconify/svelte';
 
     let date = 'undefined';
-    fetch('https://api.github.com/repos/milkcee12/milkcee12.github.io/commits')
-        .then(response => response.json())
-        .then(commits => {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var dateISO = new Date(commits[0].commit.committer.date);
-            date = dateISO.toLocaleDateString("en-US", options);
-        });
+    // fetch('https://api.github.com/repos/milkcee12/milkcee12.github.io/commits')
+    //     .then(response => response.json())
+    //     .then(commits => {
+    //         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    //         var dateISO = new Date(commits[0].commit.committer.date);
+    //         date = dateISO.toLocaleDateString("en-US", options);
+    //     });
 </script>
 
 <footer>

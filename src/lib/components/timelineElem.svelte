@@ -1,9 +1,10 @@
 <script>
     export let id, title, date, blurb, expandName, expandHref, expandColor, tags;
+    // console.log(tags);
     import ArrowLink from './arrowLink.svelte';
 </script>
 
-<div class="block {id % 2 === 0 ? 'even' : 'odd'}">
+<div class="block ${id % 2 === 0 ? 'even' : 'odd'}">
     <div class="col col-content">
         <div class="content">
             <h3 class="title">{title}</h3>
@@ -17,7 +18,7 @@
         <div class="tags">
             <ul>
                 {#each tags as tag}
-                    <li class={`tag-${tag.type}`}>{tag.name}</li>
+                    <li class={`tag-${tag.tags.type.name}`}>{tag.tags.name}</li>
                 {/each}
             </ul>
         </div>
@@ -131,6 +132,10 @@
             width: 3px;
             background-color: $light;
             margin: 0 5em;
+        }
+
+        &:last-child .vl::after {
+            top: calc(100% - 3.25em);
         }
 
     }

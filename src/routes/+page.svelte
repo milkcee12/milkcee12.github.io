@@ -6,6 +6,8 @@
     import heroSig from '/src/lib/img/hero-signature.png';
     import Icon from '@iconify/svelte';
 
+    /** @type {import('./$types').PageData} */
+    export let data;
     let id = 0;
 </script>
 
@@ -32,7 +34,19 @@
         <p><a href="/work">See all <Icon icon="radix-icons:triangle-right" /></a></p>
     </div>
     <section class="timeline">
-        <TimelineElem 
+        {#each Object.keys(data) as idx}
+            <TimelineElem 
+                id={++id}
+                title={data[idx].title}
+                date={data[idx].end_yr === null ? `${data[idx].start_yr}` : `${data[idx].start_yr} to ${data[idx].end_yr}`}
+                blurb={data[idx].blurb}
+                expandName={data[idx].see_more}
+                expandColor={data[idx].project_type.name}
+                expandHref={"#"}
+                tags={data[idx].tags}
+            />
+        {/each}
+        <!-- <TimelineElem 
             id={++id}
             title={"Milkcee Studios"}
             date={"2022"}
@@ -59,7 +73,7 @@
                 {name: 'Front-End', type: 'tech'},
                 {name: 'UI/UX', type: 'art'}
             ]}
-        />
+        /> -->
     </section>
     
     <section>
