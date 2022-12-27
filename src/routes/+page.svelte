@@ -59,7 +59,13 @@
     
     <section>
         <h2>Hello World &#128075;</h2>
-        <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+        <div class="text-muted">
+            <p>Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
+            <p>I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
+        </div>
+        <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab="true" />
+        <ArrowLink href="https://instagram.com/milkcee12" color="art" name="Instagram" arrowColor="white" newTab="true" />
+        <ArrowLink href="https://twitter.com/milkcee12" color="art" name="Twitter" arrowColor="white" newTab="true" />
     </section>
 </div>
 

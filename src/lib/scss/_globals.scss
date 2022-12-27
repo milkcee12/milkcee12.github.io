@@ -10,6 +10,9 @@ $text-art: #12E599;
 .text-art {
     color: $text-art;
 }
+.text-muted {
+    color: $muted;
+}
 
 @media (max-width: 992px) {
     p, li, p a, li a {
