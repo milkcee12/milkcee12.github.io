@@ -118,8 +118,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
       {},
       {}
     )}`;
-  })}
-        </section>
+  })}</section>
     
     <section class="${"svelte-18y1amk"}"><h2 class="${"svelte-18y1amk"}">Works</h2>
         <p class="${"svelte-18y1amk"}">Visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-18y1amk"}">kit.svelte.dev</a> to read the documentation</p></section>

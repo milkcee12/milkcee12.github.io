@@ -1,4 +1,5 @@
 import { c as create_ssr_component, o as onDestroy, d as spread, f as escape_object, h as createEventDispatcher, v as validate_component, e as escape } from "./index.js";
+import { P as PUBLIC_GITHUB_URL } from "./public.js";
 const navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "@media(max-width: 992px){}.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar,.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1vrp9gu.svelte-1vrp9gu::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}nav.svelte-1vrp9gu.svelte-1vrp9gu{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}nav.svelte-1vrp9gu .nav-links a.svelte-1vrp9gu{padding:0 1em;font-weight:normal}nav.svelte-1vrp9gu .nav-brand.svelte-1vrp9gu{font-size:1.5rem}a.svelte-1vrp9gu.svelte-1vrp9gu{color:#FFFFFF}@media(max-width: 992px){nav.svelte-1vrp9gu.svelte-1vrp9gu{padding:3.5em 2em}nav.svelte-1vrp9gu .nav-links a.svelte-1vrp9gu{padding:0 0.3em}}",
@@ -1688,8 +1689,18 @@ const css = {
   code: "@media(max-width: 992px){p.svelte-xp8ajb.svelte-xp8ajb{font-size:0.9rem}}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar,.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-xp8ajb.svelte-xp8ajb::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}footer.svelte-xp8ajb.svelte-xp8ajb{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex:1}footer.svelte-xp8ajb .foot-icons.svelte-xp8ajb{display:flex;justify-content:center}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb{padding:0 0.5em;color:#FFFFFF}footer.svelte-xp8ajb .foot-icons a.svelte-xp8ajb:hover{color:#C3C3C3}footer.svelte-xp8ajb .updated.svelte-xp8ajb{text-align:right}@media(max-width: 992px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:3.5em 2em}}@media(max-width: 768px){footer.svelte-xp8ajb.svelte-xp8ajb{padding:2em 2em;flex-wrap:wrap}footer.svelte-xp8ajb .flex-item.svelte-xp8ajb{flex-basis:100%;text-align:center;justify-content:center}}",
   map: null
 };
-let date = "undefined";
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let date = "undefined";
+  fetch(PUBLIC_GITHUB_URL).then((response) => response.json()).then((commits) => {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+    var dateISO = new Date(commits[0].commit.committer.date);
+    date = dateISO.toLocaleDateString("en-US", options);
+  });
   $$result.css.add(css);
   return `<footer class="${"svelte-xp8ajb"}"><p class="${"flex-item svelte-xp8ajb"}">\xA9 2022 All right reserved.</p>
     <div class="${"foot-icons flex-item svelte-xp8ajb"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-xp8ajb"}">${validate_component(Icon, "Icon").$$render(

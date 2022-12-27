@@ -1,7 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
-const supabaseUrl = "https://sosljyjiiejzxtbmguax.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvc2xqeWppaWVqenh0Ym1ndWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzE3Nzg3ODAsImV4cCI6MTk4NzM1NDc4MH0.AnkqtBmgZo8sIaIWPgu7cCzgbPD7y_UDbB-UExJVCS8";
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { a as PUBLIC_SUPABASE_URL, b as PUBLIC_SUPABASE_KEY } from "../../chunks/public.js";
+const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 async function load() {
   try {
     const { data: featured, error } = await supabase.from("projects").select(`
