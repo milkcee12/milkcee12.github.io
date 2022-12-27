@@ -5,7 +5,6 @@
     import ArrowLink from '../lib/components/arrowLink.svelte';
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
-    import Icon from '@iconify/svelte';
 
     /** @type {import('./$types').PageData} */
     export let data;
@@ -51,34 +50,6 @@
                 tags={data[idx].tags}
             />
         {/each}
-        <!-- <TimelineElem 
-            id={++id}
-            title={"Milkcee Studios"}
-            date={"2022"}
-            blurb={"Designed my portfolio website. Implemented using SvelteKit and MySQL."}
-            expandName={"View the creation process"}
-            expandHref={"#"}
-            expandColor={"text-art"}
-            tags={[
-                {name: 'Front-End', type: 'tech'},
-                {name: 'Back-End', type: 'tech'},
-                {name: 'UI/UX', type: 'art'}
-            ]}
-        />
-
-        <TimelineElem 
-            id={++id}
-            title={"Trojan Dining"}
-            date={"2021 - Present"}
-            blurb={"Student-first redesign of the USC Residential Dining Menu website. Implemented using React.js."}
-            expandName={"View case study"}
-            expandHref={"#"}
-            expandColor={"text-tech"}
-            tags={[
-                {name: 'Front-End', type: 'tech'},
-                {name: 'UI/UX', type: 'art'}
-            ]}
-        /> -->
     </section>
     
     <section>

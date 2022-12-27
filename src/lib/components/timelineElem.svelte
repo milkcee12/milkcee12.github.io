@@ -1,6 +1,5 @@
 <script>
     export let id, title, date, blurb, expandName, expandHref, expandColor, tags;
-    // console.log(tags);
     import ArrowLink from './arrowLink.svelte';
 </script>
 

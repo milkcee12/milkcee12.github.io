@@ -1,9 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
 
-const supabaseUrl = 'https://sosljyjiiejzxtbmguax.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvc2xqeWppaWVqenh0Ym1ndWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzE3Nzg3ODAsImV4cCI6MTk4NzM1NDc4MH0.AnkqtBmgZo8sIaIWPgu7cCzgbPD7y_UDbB-UExJVCS8';
-// console.log(supabaseKey);
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
