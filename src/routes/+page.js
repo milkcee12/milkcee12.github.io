@@ -11,7 +11,8 @@ export async function load() {
             .select(`
             project_id, title, blurb, see_more, start_yr, end_yr, project_type:tag_types(name)
             `)
-            .eq('is_featured', true);
+            .eq('is_featured', true)
+            .order('start_yr', {ascending: false});
 
         if (error) throw error;
 
