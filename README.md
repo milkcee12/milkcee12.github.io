@@ -14,6 +14,8 @@ Hello! This README is an informal document of records to mark the things I still
 - [ ] Abstract Supabase call like reccomended in the docs for SvelteKit
 - [ ] Add OAuth to Github for more API calls
 - [ ] Polish: Locomotive scroll
+- [ ] Add loading timeline thing that follows scrolling
+- [ ] Make returning to homepage faster (or add preloader)
 - [ ] Use GET method (URL parameter passing) to query and build project page dynamically
 - [ ] Add accessibility and SEO labels (aria-label to section, etc)
 

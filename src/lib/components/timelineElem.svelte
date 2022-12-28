@@ -9,7 +9,7 @@
             <h3 class="title">{title}</h3>
             <p class="date">{date}</p>
             <p class="blurb">{blurb}</p>
-            <ArrowLink color={`text-${expandColor}`} href={expandHref}, name={expandName} />
+            <ArrowLink color={expandColor} href={expandHref}, name={expandName} />
         </div>
     </div>
     <div class="vl"></div>
