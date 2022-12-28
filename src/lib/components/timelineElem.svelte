@@ -137,6 +137,14 @@
     @media (max-width: 992px) {
         .block {
             .vl {
+                margin: 0 4em;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .block {
+            .vl {
                 margin: 0 3em;
             }
             .tags {
@@ -148,7 +156,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .block {
             margin: 0;
             .vl {

@@ -13,12 +13,15 @@ Hello! This README is an informal document of records to mark the things I still
 ## To-Do List
 - [ ] Abstract Supabase call like reccomended in the docs for SvelteKit
 - [ ] Add OAuth to Github for more API calls
-- [ ] Polish: Locomotive scroll
-- [ ] Add loading timeline thing that follows scrolling
-- [ ] Make returning to homepage faster (or add preloader)
+- [ ] Finish designing app in Figma
 - [ ] Use GET method (URL parameter passing) to query and build project page dynamically
 - [ ] Add accessibility and SEO labels (aria-label to section, etc)
-
+- [ ] Refactor hero section code so that the weird overflow-x with images doesn't happens
+### Polish
+- [ ] Locomotive scroll
+- [ ] Add loading timeline color line that follows scrolling
+- [ ] Make returning to homepage faster (or add preloader)
+- [ ] Add animations
 
 ## Done
 >(Dome dome dome dururu dome dome dome duruu) How you like that?

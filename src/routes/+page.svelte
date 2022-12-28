@@ -75,8 +75,9 @@
 
 <style lang="scss">
     section.hero {
-        overflow-x: hidden;
+        width: 100%;
         height: 48em;
+        overflow-x: clip;
         display: flex;
         .block {
             flex: 1;
