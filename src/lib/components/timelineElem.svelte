@@ -98,13 +98,20 @@
             p {
                 color: $muted;
             }
+
+            .date {
+                margin-top: 0.3em;
+            }
+            .title {
+                margin-bottom: 0.3em;
+            }
         }
 
         .tags {
             
             display: flex;
             align-self: center;
-            margin-bottom: 8em;
+            margin-bottom: 6em;
             ul {
                 display: flex;
                 flex-flow: column;
@@ -148,10 +155,7 @@
                 margin: 0 3em;
             }
             .tags {
-                margin-bottom: 6em;
-                li {
-                    font-size: 0.9rem;
-                }
+                margin-bottom: 7em;
             }
         }
     }

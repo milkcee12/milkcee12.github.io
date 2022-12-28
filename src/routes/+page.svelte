@@ -138,7 +138,7 @@
         }
 
         section {
-            padding-bottom: 8em;
+            margin-bottom: 8em;
         }
 
         .social-links {
@@ -152,6 +152,12 @@
         margin-top: 5em;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media (max-width: 1200px) {
+        .timeline {
+            width: 90%;
+        }
     }
 
     @media (max-width: 992px) {
