@@ -12,18 +12,18 @@
         });
 </script>
 
-<footer>
-    <p class="flex-item">© 2022 All right reserved.</p>
-    <div class="foot-icons flex-item">
+<footer class="mc-c-footer">
+    <p class="mc-c-footer__item--copyright">© 2022 All right reserved.</p>
+    <div class="mc-c-footer__item--socials">
         <a href="https://www.instagram.com/milkcee12/" target="_blank" rel="noreferrer"><Icon icon="fa6-brands:instagram" width="25" height="25" /></a>
         <a href="https://github.com/milkcee12/" target="_blank" rel="noreferrer"><Icon icon="fa6-brands:github" width="25" height="25" /></a>
         <a href="https://twitter.com/milkcee12" target="_blank" rel="noreferrer"><Icon icon="fa6-brands:twitter" width="25" height="25" /></a>
     </div>
-    <p class="updated flex-item">Last updated: <br> {date}</p>
+    <p class="mc-c-footer__item--updated">Last updated: <br> {date}</p>
 </footer>
 
 <style lang="scss">
-    footer {
+    .mc-c-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,40 +31,47 @@
         padding: 3.5em 4em;
         color: $color-muted;
 
-        .flex-item {
-            flex: 1;
-        }
-
-        .foot-icons {
-            display: flex;
-            justify-content: center;
-            a {
-                padding: 0 0.5em;
-                color: $color-light;
-                &:hover {
-                    color: $color-muted;
-                }
-            }
-        }
-        .updated {
-            text-align: right;
-        }
-    }
-
-    @media (max-width: 992px) {
-        footer {
+        @media (max-width: $breakpoint-lg) {
             padding: 3.5em 2em;
         }
-    }
 
-    @media (max-width: 768px) {
-        footer {
+        @media (max-width: $breakpoint-md) {
             padding: 2em 2em;
             flex-wrap: wrap;
-            .flex-item {
+        }
+
+        %item {
+            flex: 1;
+
+            @media (max-width: $breakpoint-md) {
                 flex-basis: 100%;
                 text-align: center;
                 justify-content: center;
+            }
+        }
+
+        &__item {
+            &--copyright {
+                @extend %item;
+            }
+
+            &--socials {
+                @extend %item;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    color: $color-light;
+                    padding: 0 0.5em;
+                    &:hover {
+                        color: $color-muted;
+                    }
+                }
+            }
+
+            &--updated {
+                @extend %item;
+                text-align: right;
             }
         }
     }

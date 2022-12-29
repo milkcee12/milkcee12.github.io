@@ -4,6 +4,11 @@ $color-muted: #C3C3C3;
 $color-tech: #FF3062;
 $color-art: #12E599;
 
+$breakpoint-s: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
 .color-tech {
     color: $color-tech;
 }
