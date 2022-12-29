@@ -21,18 +21,15 @@
         text-decoration: none;
         font-weight: bold;
     }
-    .container {
+    .mc-l-container {
         flex: 1;
         margin: 8em 3em 0;
-    }
 
-    @media (max-width: 992px) {
-        .container {
+        @media (max-width: $breakpoint-lg) {
             margin: 6em 3em 0;
         }
-    }
-    @media (max-width: 768px) {
-        .container {
+
+        @media (max-width: $breakpoint-md) {
             margin: 4em 2em 0;
         }
     }

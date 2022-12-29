@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<div class="container">
+<div class="mc-l-container">
     <slot></slot>
 </div>
 
