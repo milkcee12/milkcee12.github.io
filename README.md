@@ -19,7 +19,8 @@ Hello! This README is an informal document of records to mark the things I still
 ### Polish
 - [ ] Locomotive scroll
 - [ ] Add loading timeline color line that follows scrolling
-- [ ] Make returning to homepage faster (or add preloader)
+- [ ] Add preloader
+- [ ] Add library to preload page on link hover
 - [ ] Add animations
 
 ## Done

@@ -37,8 +37,8 @@
             width: 15px;
             height: 15px;
             margin-top: 3em;
-            background-color: $light;
-            border: 3px solid $text-art;
+            background-color: $color-light;
+            border: 3px solid $color-art;
             border-radius: 50%;
             right: 0.5em;
         }
@@ -91,12 +91,12 @@
         }
 
         .content {
-            border: 3px solid $light;
+            border: 3px solid $color-light;
             border-radius: 0.8em;
             padding: 1em 2em;
             
             p {
-                color: $muted;
+                color: $color-muted;
             }
 
             .date {
@@ -121,22 +121,22 @@
                 font-size: 1.1rem;
                 font-weight: bold;
                 list-style: none;
-                border-left: 6px solid $muted;
+                border-left: 6px solid $color-muted;
                 padding: 0.2em 0 0.2em 1.2em;
             }
 
             .tag-tech {
-                border-color: $text-tech;
+                border-color: $color-tech;
             }
 
             .tag-art {
-                border-color: $text-art;
+                border-color: $color-art;
             }
         }
 
         .vl {
             width: 3px;
-            background-color: $light;
+            background-color: $color-light;
             margin: 0 5em;
         }
     }

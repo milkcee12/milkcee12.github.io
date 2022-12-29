@@ -1,17 +1,17 @@
-$dark: #1E1E1E;
-$light: #FFFFFF;
-$muted: #C3C3C3;
-$text-tech: #FF3062;
-$text-art: #12E599;
+$color-dark: #1E1E1E;
+$color-light: #FFFFFF;
+$color-muted: #C3C3C3;
+$color-tech: #FF3062;
+$color-art: #12E599;
 
-.text-tech {
-    color: $text-tech;
+.color-tech {
+    color: $color-tech;
 }
-.text-art {
-    color: $text-art;
+.color-art {
+    color: $color-art;
 }
 .text-muted {
-    color: $muted;
+    color: $color-muted;
 }
 
 @media (max-width: 992px) {

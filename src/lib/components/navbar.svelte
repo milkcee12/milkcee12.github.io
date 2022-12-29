@@ -11,7 +11,7 @@
     nav {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1.5px solid $light;
+        border-bottom: 1.5px solid $color-light;
         padding: 3.5em 3em;
 
         .nav-links a {
@@ -24,7 +24,7 @@
         }
     }
     a {
-        color: $light;
+        color: $color-light;
     }
 
     @media (max-width: 992px) {

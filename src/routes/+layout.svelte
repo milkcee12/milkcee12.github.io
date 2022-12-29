@@ -6,8 +6,8 @@
         overflow: overlay;
         overflow-x: clip;
         font-family: 'Inter', sans-serif;
-        background-color: $dark;
-        color: $light;
+        background-color: $color-dark;
+        color: $color-light;
         padding: 0;
         margin: 0;
     }
@@ -17,7 +17,7 @@
         flex-direction: column;
     }
     a {
-        color: $text-art;
+        color: $color-art;
         text-decoration: none;
         font-weight: bold;
     }

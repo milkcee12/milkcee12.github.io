@@ -15,14 +15,14 @@
     <title>Milkcee Studios</title>
 </svelte:head>
 
-<section class="hero">
-    <div class="block left"></div>
-    <div class="block right"></div>
-    <img class="hero-sig" src={heroSig} alt="Hero section signature" />
-    <img class="hero-figure" src={heroFigure} alt="Hero section figure" />
-    <div class="explore">
+<section class="mc-c-hero">
+    <div class="mc-c-hero__block--left"></div>
+    <div class="mc-c-hero__block--right"></div>
+    <img class="mc-c-hero__img--sig" src={heroSig} alt="Hero section signature" />
+    <img class="mc-c-hero__img--figure" src={heroFigure} alt="Hero section figure" />
+    <div class="mc-c-hero__explore">
         <p>Explore</p>
-        <div class="line"></div>
+        <div class="mc-c-hero__explore__line"></div>
     </div>
 </section>
 
@@ -74,27 +74,33 @@
 <Footer />
 
 <style lang="scss">
-    section.hero {
+    .mc-c-hero {
         width: 100%;
         height: 48em;
         overflow-x: clip;
         display: flex;
-        .block {
+        &__block {
             flex: 1;
-        }
-        .right {
-            background-color: $text-art;
+            &--left {
+                @extend .mc-c-hero__block;
+            }
+            &--right {
+                @extend .mc-c-hero__block;
+                background-color: $color-art;
+            }
         }
 
-        img {
+        &__img {
             position: absolute;
             pointer-events: none;
-            &.hero-sig {
+            &--sig {
+                @extend .mc-c-hero__img;
                 width: 85em;
                 left: calc(50% - 32em);
                 top: -10em;
             }
-            &.hero-figure {
+            &--figure {
+                @extend .mc-c-hero__img;
                 width: 36em;
                 height: auto;
                 top: 2em;
@@ -103,7 +109,7 @@
         }
 
         // Decorative line on header
-        .explore {
+        &__explore {
             position: absolute;
             display: flex;
             align-items: center;
@@ -114,11 +120,11 @@
                 padding-right: 1em;
             }
 
-            .line {
+            &__line {
                 width: 4em;
                 flex-grow: 1;
                 height: 3px;
-                background-color: $text-tech;
+                background-color: $color-tech;
             }
         }
     }

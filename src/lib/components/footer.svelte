@@ -27,9 +27,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-top: 1.5px solid $light;
+        border-top: 1.5px solid $color-light;
         padding: 3.5em 4em;
-        color: $muted;
+        color: $color-muted;
 
         .flex-item {
             flex: 1;
@@ -40,9 +40,9 @@
             justify-content: center;
             a {
                 padding: 0 0.5em;
-                color: $light;
+                color: $color-light;
                 &:hover {
-                    color: $muted;
+                    color: $color-muted;
                 }
             }
         }
