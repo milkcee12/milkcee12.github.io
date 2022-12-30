@@ -1,22 +1,24 @@
 <script>
-    export let id, title, date, blurb, expandName, expandHref, expandColor, tags;
+    export let id, project;
     import ArrowLink from './ArrowLink.svelte';
 </script>
 
 <div class={`mc-c-timeblock --${id % 2 === 0 ? 'even' : 'odd'}`}>
     <div class="mc-c-timeblock__col--content">
         <div class="mc-c-timeblock__col--content__bubble">
-            <h3 class="mc-c-timeblock__col--content__bubble_title">{title}</h3>
-            <p class="mc-c-timeblock__col--content__bubble_date">{date}</p>
-            <p class="mc-c-timeblock__col--content__bubble_blurb">{blurb}</p>
-            <ArrowLink color={expandColor} href={expandHref}, name={expandName} />
+            <h3 class="mc-c-timeblock__col--content__bubble_title">{project.title}</h3>
+            <p class="mc-c-timeblock__col--content__bubble_date">
+                {project.end_yr === null ? `${project.start_yr} - Present` : `${project.start_yr} - ${project.end_yr}`}
+            </p>
+            <p class="mc-c-timeblock__col--content__bubble_blurb">{project.blurb}</p>
+            <ArrowLink color={project.project_type.name} href={project.url ? project.url : `#`} name={project.see_more} newTab={project.url ? true : false} />
         </div>
     </div>
     <div class="mc-c-timeblock__vl"></div>
     <div class="mc-c-timeblock__col--tags">
         <div class="tags">
             <ul>
-                {#each tags as tag}
+                {#each project.tags as tag}
                     <li class={`tag-${tag.tags.type.name}`}>{tag.tags.name}</li>
                 {/each}
             </ul>
@@ -24,40 +26,37 @@
     </div>
 </div>
 
-<style lang="scss">
-    .mc-c-timeblock {
-        @mixin timeblock() {
-            display: flex;
-            @media (max-width: $breakpoint-md) { margin: 0; }
-            @media (max-width: $breakpoint-s) { 
-                flex-direction: row;
-                margin: 0 0 0 0.5em ; 
-            }
-        }
+<style lang="scss"> 
+    %__col {
+        flex: 1;
+        padding-bottom: 5em;
+        display: flex;
+        align-items: center;
+        @media (max-width: $breakpoint-s) { justify-content: flex-start; }
+    }
 
+    .mc-c-timeblock {
+        display: flex;
+        @media (max-width: $breakpoint-md) { margin: 0; }
+        @media (max-width: $breakpoint-s) { 
+            flex-direction: row;
+            margin: 0 0 0 0.5em ; 
+        }
         &.--even {
-            @include timeblock();
+            @extend .mc-c-timeblock;
             flex-flow: row-reverse;
             @media (max-width: $breakpoint-s) { flex-flow: row; }
         }
 
         &.--odd {
-            @include timeblock();
+            @extend .mc-c-timeblock;
         }
 
 
         // Content within timeblock layout
-        @mixin __col() {
-            flex: 1;
-            padding-bottom: 5em;
-            display: flex;
-            align-items: center;
-            @media (max-width: $breakpoint-s) { justify-content: flex-start; }
-        }
-
         // Bubble content
         &__col--content {
-            @include __col();
+            @extend %__col;
 
             @media (max-width: $breakpoint-s) {
                 flex: 3;
@@ -126,7 +125,7 @@
             justify-content: flex-end;
         }
         &__col--tags {
-            @include __col();
+            @extend %__col;
             align-self: center;
             margin-bottom: 6em;
 

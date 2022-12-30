@@ -8,7 +8,6 @@
 
     /** @type {import('./$types').PageData} */
     export let data;
-    let id = 0;
 </script>
 
 <svelte:head>
@@ -37,17 +36,7 @@
         {#each Object.keys(data) as idx}
             <TimeBlock 
                 id={idx}
-                title={data[idx].title}
-                date={data[idx].end_yr === null ? 
-                    `${data[idx].start_yr} - Present` : 
-                    `${data[idx].start_yr === data[idx].end_yr ? 
-                        `${data[idx].start_yr}` : 
-                        `${data[idx].start_yr} - ${data[idx].end_yr}`}`}
-                blurb={data[idx].blurb}
-                expandName={data[idx].see_more}
-                expandColor={data[idx].project_type.name}
-                expandHref={"#"}
-                tags={data[idx].tags}
+                project={data[idx]}
             />
         {/each}
     </section>
@@ -89,12 +78,12 @@
             height: 36em;
         }
         &__block {
-            @mixin __block() { flex: 1; }
+            flex: 1;
             &--left {
-                @include __block();
+                @extend .mc-c-hero__block;
             }
             &--right {
-                @include __block();
+                @extend .mc-c-hero__block;
                 background-color: $color-art;
             }
         }
