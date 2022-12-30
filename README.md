@@ -2,13 +2,15 @@
 Hello! This README is an informal document of records to mark the things I still have to do as well as major project milestones.
 ## Milestones
   
-  ✅ Designed relational projects database in Supabase, used components, environment variables, and Supabase API to dynamically fill contents of timeline.
+  🎉 Learned about SASS suffix selectors. Updated class design of the pages to follow the SASS styleguide and be more modular.
+
+  🎉 Designed relational projects database in Supabase, used components, environment variables, and Supabase API to dynamically fill contents of timeline.
 
   🎄 Merry Christmas!
   
-  ✅ Styled timeline to be responsive with pure CSS (flexbox)!
+  🎉 Styled timeline to be responsive with pure CSS (flexbox)!
   
-  ✅ Created skeleton SvelteKit file structure for project, taking my first steps into SvelteKit :)
+  🎉 Created skeleton SvelteKit file structure for project, taking my first steps into SvelteKit :)
 
 ## To-Do List
 - [ ] Abstract Supabase call like reccomended in the docs for SvelteKit

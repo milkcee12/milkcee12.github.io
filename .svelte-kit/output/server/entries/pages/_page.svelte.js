@@ -77,7 +77,7 @@ const heroFigure = "/_app/immutable/assets/hero-figure-932cc342.png";
 const heroSig = "/_app/immutable/assets/hero-signature-a659ed62.png";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@media(max-width: 992px){p.svelte-d19vdn.svelte-d19vdn,p.svelte-d19vdn a.svelte-d19vdn{font-size:0.9rem}h2.svelte-d19vdn.svelte-d19vdn{font-size:1.8rem !important}}.svelte-d19vdn.svelte-d19vdn::-webkit-scrollbar,.svelte-d19vdn.svelte-d19vdn::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-d19vdn.svelte-d19vdn::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-hero.svelte-d19vdn.svelte-d19vdn{width:100%;height:48em;overflow-x:clip;display:flex}@media(max-width: 992px){.mc-c-hero.svelte-d19vdn.svelte-d19vdn{height:40em}}@media(max-width: 768px){.mc-c-hero.svelte-d19vdn.svelte-d19vdn{width:100%;height:36em}}.mc-c-hero__block--right.svelte-d19vdn.svelte-d19vdn,.mc-c-hero__block--left.svelte-d19vdn.svelte-d19vdn{flex:1}.mc-c-hero__block--right.svelte-d19vdn.svelte-d19vdn{background-color:#12E599}.mc-c-hero__img--figure.svelte-d19vdn.svelte-d19vdn,.mc-c-hero__img--sig.svelte-d19vdn.svelte-d19vdn{position:absolute;pointer-events:none}.mc-c-hero__img--sig.svelte-d19vdn.svelte-d19vdn{width:85em;left:calc(50% - 32em);top:-10em}@media(max-width: 992px){.mc-c-hero__img--sig.svelte-d19vdn.svelte-d19vdn{width:60em;left:calc(50% - 20em);top:-10em}}@media(max-width: 768px){.mc-c-hero__img--sig.svelte-d19vdn.svelte-d19vdn{width:40em;left:calc(50% - 15em);top:-2em}}.mc-c-hero__img--figure.svelte-d19vdn.svelte-d19vdn{width:36em;height:auto;top:2em;left:calc(50% - 15em)}@media(max-width: 992px){.mc-c-hero__img--figure.svelte-d19vdn.svelte-d19vdn{width:30em;height:auto;top:2em;left:calc(50% - 13em)}}@media(max-width: 768px){.mc-c-hero__img--figure.svelte-d19vdn.svelte-d19vdn{width:26em;height:auto;top:3em;left:calc(50% - 13em)}}.mc-c-hero__explore.svelte-d19vdn.svelte-d19vdn{position:absolute;display:flex;align-items:center;margin-top:38em;transform:rotate(90deg)}@media(max-width: 992px){.mc-c-hero__explore.svelte-d19vdn.svelte-d19vdn{margin-top:32em}}@media(max-width: 768px){.mc-c-hero__explore.svelte-d19vdn.svelte-d19vdn{margin-left:-2em;margin-top:28em}}.mc-c-hero__explore.svelte-d19vdn p.svelte-d19vdn{flex-grow:0;padding-right:1em}.mc-c-hero__explore__line.svelte-d19vdn.svelte-d19vdn{width:4em;flex-grow:1;height:3px;background-color:#FF3062}.mc-c-title.svelte-d19vdn.svelte-d19vdn{display:flex;align-items:center}.mc-c-title.svelte-d19vdn h2.svelte-d19vdn{flex-grow:0;font-size:2.2rem;padding-right:1em}@media(max-width: 992px){.mc-l-container.svelte-d19vdn.svelte-d19vdn{margin:3em 2em 0}}.mc-l-container.svelte-d19vdn section.svelte-d19vdn{margin-bottom:8em}.mc-l-timeline.svelte-d19vdn.svelte-d19vdn{width:80%;margin-top:5em;margin-left:auto;margin-right:auto}@media(max-width: 1200px){.mc-l-timeline.svelte-d19vdn.svelte-d19vdn{width:90%}}@media(max-width: 992px){.mc-l-timeline.svelte-d19vdn.svelte-d19vdn{width:100%;margin-top:1em}}.mc-c-about__blurb.svelte-d19vdn.svelte-d19vdn{color:#C3C3C3}.mc-c-about__social-links.svelte-d19vdn.svelte-d19vdn{display:flex}",
+  code: "@media(max-width: 992px){p.svelte-14xlg51.svelte-14xlg51,p.svelte-14xlg51 a.svelte-14xlg51{font-size:0.9rem}h2.svelte-14xlg51.svelte-14xlg51{font-size:1.8rem !important}}.svelte-14xlg51.svelte-14xlg51::-webkit-scrollbar,.svelte-14xlg51.svelte-14xlg51::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-14xlg51.svelte-14xlg51::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-hero.svelte-14xlg51.svelte-14xlg51{width:100%;height:48em;display:flex;overflow-x:hidden}@media(max-width: 992px){.mc-c-hero.svelte-14xlg51.svelte-14xlg51{height:40em}}@media(max-width: 768px){.mc-c-hero.svelte-14xlg51.svelte-14xlg51{width:100%;height:36em}}.mc-c-hero__block--right.svelte-14xlg51.svelte-14xlg51,.mc-c-hero__block--left.svelte-14xlg51.svelte-14xlg51{flex:1}.mc-c-hero__block--right.svelte-14xlg51.svelte-14xlg51{background-color:#12E599}.mc-c-hero__img--figure.svelte-14xlg51.svelte-14xlg51,.mc-c-hero__img--sig.svelte-14xlg51.svelte-14xlg51{position:absolute;pointer-events:none}.mc-c-hero__img--sig.svelte-14xlg51.svelte-14xlg51{width:85em;left:calc(50% - 32em);top:-10em}@media(max-width: 992px){.mc-c-hero__img--sig.svelte-14xlg51.svelte-14xlg51{width:60em;left:calc(50% - 20em);top:-10em}}@media(max-width: 768px){.mc-c-hero__img--sig.svelte-14xlg51.svelte-14xlg51{width:40em;left:calc(50% - 15em);top:-2em}}.mc-c-hero__img--figure.svelte-14xlg51.svelte-14xlg51{width:36em;height:auto;top:2em;left:calc(50% - 15em)}@media(max-width: 992px){.mc-c-hero__img--figure.svelte-14xlg51.svelte-14xlg51{width:30em;height:auto;top:2em;left:calc(50% - 13em)}}@media(max-width: 768px){.mc-c-hero__img--figure.svelte-14xlg51.svelte-14xlg51{width:26em;height:auto;top:3em;left:calc(50% - 13em)}}.mc-c-hero__explore.svelte-14xlg51.svelte-14xlg51{position:absolute;display:flex;align-items:center;margin-top:38em;transform:rotate(90deg)}@media(max-width: 992px){.mc-c-hero__explore.svelte-14xlg51.svelte-14xlg51{margin-top:32em}}@media(max-width: 768px){.mc-c-hero__explore.svelte-14xlg51.svelte-14xlg51{margin-left:-2em;margin-top:28em}}.mc-c-hero__explore.svelte-14xlg51 p.svelte-14xlg51{flex-grow:0;padding-right:1em}.mc-c-hero__explore__line.svelte-14xlg51.svelte-14xlg51{width:4em;flex-grow:1;height:3px;background-color:#FF3062}.mc-c-title.svelte-14xlg51.svelte-14xlg51{display:flex;align-items:center}.mc-c-title.svelte-14xlg51 h2.svelte-14xlg51{flex-grow:0;font-size:2.2rem;padding-right:1em}@media(max-width: 992px){.mc-l-container.svelte-14xlg51.svelte-14xlg51{margin:3em 2em 0}}.mc-l-container.svelte-14xlg51 section.svelte-14xlg51{margin-bottom:8em}.mc-l-timeline.svelte-14xlg51.svelte-14xlg51{width:80%;margin-top:5em;margin-left:auto;margin-right:auto}@media(max-width: 1200px){.mc-l-timeline.svelte-14xlg51.svelte-14xlg51{width:90%}}@media(max-width: 992px){.mc-l-timeline.svelte-14xlg51.svelte-14xlg51{width:100%;margin-top:1em}}.mc-c-about__blurb.svelte-14xlg51.svelte-14xlg51{color:#C3C3C3}.mc-c-about__social-links.svelte-14xlg51.svelte-14xlg51{display:flex}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -87,16 +87,16 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-t6sc9g_START -->${$$result.title = `<title>Milkcee Studios</title>`, ""}<!-- HEAD_svelte-t6sc9g_END -->`, ""}
 
-<section class="${"mc-c-hero svelte-d19vdn"}"><div class="${"mc-c-hero__block--left svelte-d19vdn"}"></div>
-    <div class="${"mc-c-hero__block--right svelte-d19vdn"}"></div>
-    <img class="${"mc-c-hero__img--sig svelte-d19vdn"}"${add_attribute("src", heroSig, 0)} alt="${"Hero section signature"}">
-    <img class="${"mc-c-hero__img--figure svelte-d19vdn"}"${add_attribute("src", heroFigure, 0)} alt="${"Hero section figure"}">
-    <div class="${"mc-c-hero__explore svelte-d19vdn"}"><p class="${"svelte-d19vdn"}">Explore</p>
-        <div class="${"mc-c-hero__explore__line svelte-d19vdn"}"></div></div></section>
+<section class="${"mc-c-hero svelte-14xlg51"}"><div class="${"mc-c-hero__block--left svelte-14xlg51"}"></div>
+    <div class="${"mc-c-hero__block--right svelte-14xlg51"}"></div>
+    <img class="${"mc-c-hero__img--sig svelte-14xlg51"}"${add_attribute("src", heroSig, 0)} alt="${"Hero section signature"}">
+    <img class="${"mc-c-hero__img--figure svelte-14xlg51"}"${add_attribute("src", heroFigure, 0)} alt="${"Hero section figure"}">
+    <div class="${"mc-c-hero__explore svelte-14xlg51"}"><p class="${"svelte-14xlg51"}">Explore</p>
+        <div class="${"mc-c-hero__explore__line svelte-14xlg51"}"></div></div></section>
 
 ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 
-<div class="${"mc-l-container svelte-d19vdn"}"><div class="${"mc-c-title svelte-d19vdn"}"><h2 class="${"svelte-d19vdn"}">Featured Work</h2>
+<div class="${"mc-l-container svelte-14xlg51"}"><div class="${"mc-c-title svelte-14xlg51"}"><h2 class="${"svelte-14xlg51"}">Featured Work</h2>
         ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
@@ -107,7 +107,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-    <section class="${"mc-l-timeline svelte-d19vdn"}">${each(Object.keys(data), (idx) => {
+    <section class="${"mc-l-timeline svelte-14xlg51"}">${each(Object.keys(data), (idx) => {
     return `${validate_component(TimelineElem, "TimelineElem").$$render(
       $$result,
       {
@@ -125,7 +125,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     )}`;
   })}</section>
     
-    <section class="${"svelte-d19vdn"}"><div class="${"mc-c-title svelte-d19vdn"}"><h2 class="${"svelte-d19vdn"}">Playground</h2>
+    <section class="${"svelte-14xlg51"}"><div class="${"mc-c-title svelte-14xlg51"}"><h2 class="${"svelte-14xlg51"}">Playground</h2>
             ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
@@ -136,12 +136,12 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-        <p class="${"svelte-d19vdn"}">Visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-d19vdn"}">kit.svelte.dev</a> to read the documentation</p></section>
+        <p class="${"svelte-14xlg51"}">Visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-14xlg51"}">kit.svelte.dev</a> to read the documentation</p></section>
     
-    <section class="${"mc-c-about svelte-d19vdn"}"><h2 class="${"svelte-d19vdn"}">Hello World \u{1F44B}</h2>
-        <div class="${"mc-c-about__blurb svelte-d19vdn"}"><p class="${"svelte-d19vdn"}">Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
-            <p class="${"svelte-d19vdn"}">I\u2019m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p></div>
-        <div class="${"mc-c-about__social-links svelte-d19vdn"}">${validate_component(ArrowLink, "ArrowLink").$$render(
+    <section class="${"mc-c-about svelte-14xlg51"}"><h2 class="${"svelte-14xlg51"}">Hello World \u{1F44B}</h2>
+        <div class="${"mc-c-about__blurb svelte-14xlg51"}"><p class="${"svelte-14xlg51"}">Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
+            <p class="${"svelte-14xlg51"}">I\u2019m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p></div>
+        <div class="${"mc-c-about__social-links svelte-14xlg51"}">${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
       href: "https://github.com/milkcee12",
