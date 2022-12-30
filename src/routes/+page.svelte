@@ -1,8 +1,8 @@
 <script>
-    import Navbar from '../lib/components/navbar.svelte';
-    import Footer from '../lib/components/footer.svelte';
-    import TimelineElem from '../lib/components/timelineElem.svelte';
-    import ArrowLink from '../lib/components/arrowLink.svelte';
+    import Navbar from '../lib/components/Navbar.svelte';
+    import Footer from '../lib/components/Footer.svelte';
+    import TimeBlock from '../lib/components/TimeBlock.svelte';
+    import ArrowLink from '../lib/components/ArrowLink.svelte';
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
 
@@ -35,7 +35,7 @@
     </div>
     <section class="mc-l-timeline">
         {#each Object.keys(data) as idx}
-            <TimelineElem 
+            <TimeBlock 
                 id={idx}
                 title={data[idx].title}
                 date={data[idx].end_yr === null ? 
@@ -89,12 +89,12 @@
             height: 36em;
         }
         &__block {
-            flex: 1;
+            @mixin __block() { flex: 1; }
             &--left {
-                @extend .mc-c-hero__block;
+                @include __block();
             }
             &--right {
-                @extend .mc-c-hero__block;
+                @include __block();
                 background-color: $color-art;
             }
         }

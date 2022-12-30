@@ -1,16 +1,5 @@
 # milkcee12.github.io
-Hello! This README is an informal document of records to mark the things I still have to do as well as major project milestones.
-## Milestones
-  
-  🎉 Learned about SASS suffix selectors. Updated class design of the pages to follow the SASS styleguide and be more modular.
-
-  🎉 Designed relational projects database in Supabase, used components, environment variables, and Supabase API to dynamically fill contents of timeline.
-
-  🎄 Merry Christmas!
-  
-  🎉 Styled timeline to be responsive with pure CSS (flexbox)!
-  
-  🎉 Created skeleton SvelteKit file structure for project, taking my first steps into SvelteKit :)
+Hello! This README is an informal document of records of tasks that need to be done and have been completed, as well as major project milestones.
 
 ## To-Do List
 - [ ] Abstract Supabase call like reccomended in the docs for SvelteKit
@@ -24,13 +13,23 @@ Hello! This README is an informal document of records to mark the things I still
 - [ ] Add preloader
 - [ ] Add library to preload page on link hover
 - [ ] Add animations
+- [ ] On hover over playground images on homepage, display a blurb
+- [ ] On hover over timeline bubbles, show preview image of project
 
 ## Done
 >(Dome dome dome dururu dome dome dome duruu) How you like that?
 — Blackpink, <i>How You Like That</i> 
 
-  ✅ (12/28/22): Refactor hero section code so that the weird overflow-x with images doesn't happens
+  🎉 (12/29/22): Learned about SASS suffix selectors! Updated class design of the pages and global variables to follow the SASS styleguide and be more modular.
 
-  ✅ (12/27/22): Created environment variables for more secure API calls.
+  ✅ (12/29/22): Refactored hero section code so that overflow-x on mobile and responsive sizes is properly hidden.
+
+  🎉 (12/27/22): Learned about environment variables! In combination with Supabase API and custom .svelte components, refactored code to dynamically fill contents of timeline.
 
   ✅ (12/27/22): Created Supabase database with some initial content. Queried database to dynamically populate timeline.
+
+  ✅ (12/26/22): Styled timeline to be responsive with flexbox!
+
+  🎄 Merry Christmas!
+
+  🎉 (12/22/22): Created skeleton SvelteKit file structure for project, taking my first steps into SvelteKit :)
