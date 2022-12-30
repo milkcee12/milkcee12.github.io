@@ -2,9 +2,13 @@
 
 <style lang="scss" global>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body {
+    html, body {
         overflow: overlay;
         overflow-x: hidden;
+    }
+    
+    body {
+        position: relative;
         font-family: 'Inter', sans-serif;
         background-color: $color-dark;
         color: $color-light;

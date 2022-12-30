@@ -80,6 +80,7 @@
     .mc-c-hero {
         width: 100%;
         height: 48em;
+        overflow-x: hidden;
         display: flex;
 
         @media (max-width: $breakpoint-lg) { height: 40em; }
@@ -140,8 +141,6 @@
             }
         }
 
-        overflow-x: hidden;
-        
         // Decorative line on header
         &__explore {
             position: absolute;
