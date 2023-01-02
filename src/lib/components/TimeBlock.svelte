@@ -1,11 +1,13 @@
 <script>
     import { onMount } from 'svelte';
-    export let id, project;
+    export let id, project, timelineHeight;
     import ArrowLink from './ArrowLink.svelte';
+    import { pxToFloat } from '../util.js';
 
-    let vFill, currScroll;
+    let vLine, vFill, fillHeight, currScroll;
 
     onMount(() => {
+        fillHeight = timelineHeight - pxToFloat(getComputedStyle(vLine).getPropertyValue('margin-top'));
         vFill.classList.add('nofill');
         vFill.style.position = 'absolute';
         updateFill();
@@ -16,26 +18,29 @@
     const BREAKPOINT_LG = 992;
     const MIN_HEIGHT = 20;
 
+    // let fillHeight = 900;
     const updateFill = () => {
         currScroll = window.scrollY;
+        fillHeight = timelineHeight - pxToFloat(getComputedStyle(vLine).getPropertyValue('margin-top'));
+        if (!fillHeight) return;
 
         // Calculate styling
         let fillActive = true, newHeight;
         if (window.innerWidth <= BREAKPOINT_S) {
             if (currScroll <= 570 + MIN_HEIGHT) fillActive = false;
-            else newHeight = Math.min(Math.max(currScroll - 570, MIN_HEIGHT), 929);
+            else newHeight = Math.min(Math.max(currScroll - 570, MIN_HEIGHT), fillHeight);
         }
         else if (window.innerWidth <= BREAKPOINT_MD) {
             if (currScroll <= 480 + MIN_HEIGHT) fillActive = false;
-            else newHeight = Math.min(Math.max(currScroll - 480, MIN_HEIGHT), 985);
+            else newHeight = Math.min(Math.max(currScroll - 480, MIN_HEIGHT), fillHeight);
         }
         else if (window.innerWidth <= BREAKPOINT_LG) {
             if (currScroll <= 500 + MIN_HEIGHT) fillActive = false;
-            else newHeight = Math.min(Math.max(currScroll - 500, MIN_HEIGHT), 900);
+            else newHeight = Math.min(Math.max(currScroll - 500, MIN_HEIGHT), fillHeight);
         }
         else {
             if (currScroll <= 900 + MIN_HEIGHT) fillActive = false;
-            else newHeight = Math.min(Math.max(currScroll - 900, MIN_HEIGHT), 891);
+            else newHeight = Math.min(Math.max(currScroll - 900, MIN_HEIGHT), fillHeight);
         }
 
         // Apply styling to component
@@ -46,14 +51,7 @@
         else {
             vFill.classList.add('nofill');
         }
-
-        console.log(vFill.style.height);
-        console.log(currScroll);
     };
-
-    // Modify based on breakpoint
-    
-    
 
     // Adapted from https://www.sitepoint.com/throttle-scroll-events/
     function throttle(fn, wait) {
@@ -70,6 +68,7 @@
 
 <svelte:window 
     on:scroll={throttle(updateFill, 30)} 
+    on:resize={updateFill}
 />
 
 <div class={`mc-c-timeblock --${id % 2 === 0 ? 'even' : 'odd'}`}>
@@ -84,7 +83,7 @@
             <ArrowLink color={project.project_type.name} href={project.url ? project.url : `#`} name={project.see_more} newTab={project.url ? true : false} />
         </div>
     </div>
-    <div class="mc-c-timeblock__vl">
+    <div class="mc-c-timeblock__vl" bind:this={vLine}>
         <div class="mc-c-timeblock__vl--empty"></div>
         <div class="mc-c-timeblock__vl--fill" bind:this={vFill}></div>
     </div>

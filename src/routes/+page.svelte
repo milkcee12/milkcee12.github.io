@@ -1,18 +1,38 @@
 <script>
+    import { onMount } from 'svelte';
+    import { pxToFloat } from '../lib/util'
+
     import Navbar from '../lib/components/Navbar.svelte';
     import Footer from '../lib/components/Footer.svelte';
     import TimeBlock from '../lib/components/TimeBlock.svelte';
     import ArrowLink from '../lib/components/ArrowLink.svelte';
+
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
 
     /** @type {import('./$types').PageData} */
     export let data;
+
+    let timeline, timelineHeight;
+    onMount(() => {
+        getTimelineHeight();
+    })
+
+    function getTimelineHeight() {
+        let height = pxToFloat(getComputedStyle(timeline).getPropertyValue('height'));
+        let m_top = pxToFloat(getComputedStyle(timeline).getPropertyValue('margin-top'));
+        let m_bot = pxToFloat(getComputedStyle(timeline).getPropertyValue('margin-bottom'));
+
+        timelineHeight = height;
+    }
+
 </script>
 
 <svelte:head>
     <title>Milkcee Studios</title>
 </svelte:head>
+
+<svelte:window on:resize={getTimelineHeight} />
 
 <section class="mc-c-hero">
     <div class="mc-c-hero__block--left"></div>
@@ -32,11 +52,12 @@
         <h2>Featured Work</h2>
         <ArrowLink href="/work" color="art" name="See all" newTab={false} />
     </div>
-    <section class="mc-l-timeline">
+    <section class="mc-l-timeline" bind:this={timeline}>
         {#each Object.keys(data) as idx}
             <TimeBlock 
                 id={idx}
                 project={data[idx]}
+                timelineHeight={timelineHeight}
             />
         {/each}
     </section>
