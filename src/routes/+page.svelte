@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { pxToFloat } from '../lib/util'
+    import { pxToFloat } from '../lib/util';
 
     import Navbar from '../lib/components/Navbar.svelte';
     import Footer from '../lib/components/Footer.svelte';
