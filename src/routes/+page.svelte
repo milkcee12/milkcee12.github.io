@@ -15,14 +15,11 @@
 
     let timeline, timelineHeight;
     onMount(() => {
-        getTimelineHeight();
+        calcTimelineHeight();
     })
 
-    function getTimelineHeight() {
+    function calcTimelineHeight() {
         let height = pxToFloat(getComputedStyle(timeline).getPropertyValue('height'));
-        let m_top = pxToFloat(getComputedStyle(timeline).getPropertyValue('margin-top'));
-        let m_bot = pxToFloat(getComputedStyle(timeline).getPropertyValue('margin-bottom'));
-
         timelineHeight = height;
     }
 
@@ -32,7 +29,7 @@
     <title>Milkcee Studios</title>
 </svelte:head>
 
-<svelte:window on:resize={getTimelineHeight} />
+<svelte:window on:resize={calcTimelineHeight} />
 
 <section class="mc-c-hero">
     <div class="mc-c-hero__block--left"></div>

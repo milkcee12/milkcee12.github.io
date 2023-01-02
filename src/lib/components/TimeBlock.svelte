@@ -18,7 +18,6 @@
     const BREAKPOINT_LG = 992;
     const MIN_HEIGHT = 20;
 
-    // let fillHeight = 900;
     const updateFill = () => {
         currScroll = window.scrollY;
         fillHeight = timelineHeight - pxToFloat(getComputedStyle(vLine).getPropertyValue('margin-top'));

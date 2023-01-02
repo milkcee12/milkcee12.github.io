@@ -2,14 +2,15 @@
     import { PUBLIC_GITHUB_URL } from '$env/static/public';
     import Icon from '@iconify/svelte';
 
-    let date = 'undefined';
+    let date;
     fetch(PUBLIC_GITHUB_URL)
         .then(response => response.json())
         .then(commits => {
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             var dateISO = new Date(commits[0].commit.committer.date);
             date = dateISO.toLocaleDateString("en-US", options);
-        });
+        })
+        .finally(function() { date = null });
 </script>
 
 <footer class="mc-c-footer">
