@@ -1,14 +1,13 @@
 <script>
-    import { onMount } from 'svelte';
-    import { pxToFloat } from '../lib/util';
-
     import Navbar from '../lib/components/Navbar.svelte';
     import Footer from '../lib/components/Footer.svelte';
     import TimeBlock from '../lib/components/TimeBlock.svelte';
     import ArrowLink from '../lib/components/ArrowLink.svelte';
-
     import heroFigure from '/src/lib/img/hero-figure.png';
     import heroSig from '/src/lib/img/hero-signature.png';
+
+    import { onMount } from 'svelte';
+    import { pxToFloat } from '../lib/util';
 
     /** @type {import('./$types').PageData} */
     export let data;
