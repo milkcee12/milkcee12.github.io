@@ -36,12 +36,14 @@ const css$1 = {
   map: null
 };
 const TimeBlock = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { id, project } = $$props;
-  let vFill;
+  let { id, project, timelineHeight } = $$props;
+  let vLine, vFill;
   if ($$props.id === void 0 && $$bindings.id && id !== void 0)
     $$bindings.id(id);
   if ($$props.project === void 0 && $$bindings.project && project !== void 0)
     $$bindings.project(project);
+  if ($$props.timelineHeight === void 0 && $$bindings.timelineHeight && timelineHeight !== void 0)
+    $$bindings.timelineHeight(timelineHeight);
   $$result.css.add(css$1);
   return `
 
@@ -59,7 +61,7 @@ const TimeBlock = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     {},
     {}
   )}</div></div>
-    <div class="${"mc-c-timeblock__vl svelte-11cwi6a"}"><div class="${"mc-c-timeblock__vl--empty svelte-11cwi6a"}"></div>
+    <div class="${"mc-c-timeblock__vl svelte-11cwi6a"}"${add_attribute("this", vLine, 0)}><div class="${"mc-c-timeblock__vl--empty svelte-11cwi6a"}"></div>
         <div class="${"mc-c-timeblock__vl--fill svelte-11cwi6a"}"${add_attribute("this", vFill, 0)}></div></div>
     <div class="${"mc-c-timeblock__col--tags svelte-11cwi6a"}"><div class="${"tags svelte-11cwi6a"}"><ul class="${"svelte-11cwi6a"}">${each(project.tags, (tag) => {
     return `<li class="${escape(null_to_empty(`tag-${tag.tags.type.name}`), true) + " svelte-11cwi6a"}">${escape(tag.tags.name)}</li>`;
@@ -75,10 +77,13 @@ const css = {
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
+  let timeline, timelineHeight;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-t6sc9g_START -->${$$result.title = `<title>Milkcee Studios</title>`, ""}<!-- HEAD_svelte-t6sc9g_END -->`, ""}
+
+
 
 <section class="${"mc-c-hero svelte-1ephx79"}"><div class="${"mc-c-hero__block--left svelte-1ephx79"}"></div>
     <div class="${"mc-c-hero__block--right svelte-1ephx79"}"></div>
@@ -101,8 +106,17 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-    <section class="${"mc-l-timeline svelte-1ephx79"}">${each(Object.keys(data), (idx) => {
-    return `${validate_component(TimeBlock, "TimeBlock").$$render($$result, { id: idx, project: data[idx] }, {}, {})}`;
+    <section class="${"mc-l-timeline svelte-1ephx79"}"${add_attribute("this", timeline, 0)}>${each(Object.keys(data), (idx) => {
+    return `${validate_component(TimeBlock, "TimeBlock").$$render(
+      $$result,
+      {
+        id: idx,
+        project: data[idx],
+        timelineHeight
+      },
+      {},
+      {}
+    )}`;
   })}</section>
     
     <section class="${"svelte-1ephx79"}"><div class="${"mc-c-title svelte-1ephx79"}"><h2 class="${"svelte-1ephx79"}">Playground</h2>
