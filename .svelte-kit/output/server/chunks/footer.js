@@ -1690,7 +1690,7 @@ const css = {
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let date = "undefined";
+  let date;
   fetch(PUBLIC_GITHUB_URL).then((response) => response.json()).then((commits) => {
     const options = {
       weekday: "long",
@@ -1700,6 +1700,8 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     };
     var dateISO = new Date(commits[0].commit.committer.date);
     date = dateISO.toLocaleDateString("en-US", options);
+  }).finally(function() {
+    date = null;
   });
   $$result.css.add(css);
   return `<footer class="${"mc-c-footer svelte-1a7f8c"}"><p class="${"mc-c-footer__item--copyright svelte-1a7f8c"}">\xA9 2022 All right reserved.</p>
