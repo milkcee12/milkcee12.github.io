@@ -1,6 +1,6 @@
 import { c as create_ssr_component, e as escape, i as null_to_empty, j as add_attribute, v as validate_component, k as each } from "../../chunks/index.js";
-import { I as Icon, N as Navbar, F as Footer } from "../../chunks/footer.js";
-const arrowLink_svelte_svelte_type_style_lang = "";
+import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
+const ArrowLink_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".color-tech.svelte-1su6xts.svelte-1su6xts{color:#FF3062}.color-art.svelte-1su6xts.svelte-1su6xts{color:#12E599}.color-muted.svelte-1su6xts.svelte-1su6xts{color:#C3C3C3}@media(max-width: 992px){p.svelte-1su6xts.svelte-1su6xts,p.svelte-1su6xts a.svelte-1su6xts{font-size:0.9rem}}.svelte-1su6xts.svelte-1su6xts::-webkit-scrollbar,.svelte-1su6xts.svelte-1su6xts::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1su6xts.svelte-1su6xts::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-arrow-link.svelte-1su6xts a.svelte-1su6xts{display:flex;align-items:center}",
   map: null
@@ -30,46 +30,36 @@ const ArrowLink = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     {}
   )}</a></p>`;
 });
-const timelineElem_svelte_svelte_type_style_lang = "";
+const TimeBlock_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: `.color-tech.svelte-1ji3po.svelte-1ji3po{color:#FF3062}.color-art.svelte-1ji3po.svelte-1ji3po{color:#12E599}.color-muted.svelte-1ji3po.svelte-1ji3po{color:#C3C3C3}@media(max-width: 992px){p.svelte-1ji3po.svelte-1ji3po,li.svelte-1ji3po.svelte-1ji3po{font-size:0.9rem}h3.svelte-1ji3po.svelte-1ji3po{font-size:1.3rem !important}}.svelte-1ji3po.svelte-1ji3po::-webkit-scrollbar,.svelte-1ji3po.svelte-1ji3po::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1ji3po.svelte-1ji3po::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-timeblock.--odd.svelte-1ji3po.svelte-1ji3po,.mc-c-timeblock.--even.svelte-1ji3po.svelte-1ji3po{display:flex}@media(max-width: 768px){.mc-c-timeblock.--odd.svelte-1ji3po.svelte-1ji3po,.mc-c-timeblock.--even.svelte-1ji3po.svelte-1ji3po{margin:0}}@media(max-width: 576px){.mc-c-timeblock.--odd.svelte-1ji3po.svelte-1ji3po,.mc-c-timeblock.--even.svelte-1ji3po.svelte-1ji3po{flex-direction:row;margin:0 0 0 0.5em}}.mc-c-timeblock__col--tags.svelte-1ji3po.svelte-1ji3po,.mc-c-timeblock__col--content.svelte-1ji3po.svelte-1ji3po{flex:1;padding-bottom:5em;display:flex;align-items:center}@media(max-width: 576px){.mc-c-timeblock__col--tags.svelte-1ji3po.svelte-1ji3po,.mc-c-timeblock__col--content.svelte-1ji3po.svelte-1ji3po{justify-content:flex-start}}.mc-c-timeblock.--even.svelte-1ji3po.svelte-1ji3po{flex-flow:row-reverse}@media(max-width: 576px){.mc-c-timeblock.--even.svelte-1ji3po.svelte-1ji3po{flex-flow:row}}@media(max-width: 576px){.mc-c-timeblock__col--content.svelte-1ji3po.svelte-1ji3po{flex:3;font-size:0.8rem;margin-top:0.3em}}.--even.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po{justify-content:flex-end}.--even.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-6px}@media(max-width: 576px){.--even.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-5px}}.--odd.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po::after{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-left:-6px}@media(max-width: 576px){.--odd.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po::after{content:none}}@media(max-width: 576px){.--odd.svelte-1ji3po .mc-c-timeblock__col--content.svelte-1ji3po::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-5px}}.mc-c-timeblock__col--content__bubble.svelte-1ji3po.svelte-1ji3po{border:3px solid #FFFFFF;border-radius:0.8em;padding:1em 2em}.mc-c-timeblock__col--content__bubble.svelte-1ji3po p.svelte-1ji3po{color:#C3C3C3}.mc-c-timeblock__col--content__bubble__date.svelte-1ji3po.svelte-1ji3po{margin-top:0.3em}.mc-c-timeblock__col--content__bubble__title.svelte-1ji3po.svelte-1ji3po{margin-bottom:0.3em}@media(max-width: 576px){.mc-c-timeblock__col--content__bubble__title.svelte-1ji3po.svelte-1ji3po{font-size:1.1rem}}.mc-c-timeblock.--even.svelte-1ji3po .mc-c-timeblock__col--tags.svelte-1ji3po{justify-content:flex-end}.mc-c-timeblock__col--tags.svelte-1ji3po.svelte-1ji3po{align-self:center;margin-bottom:6em}@media(max-width: 768px){.mc-c-timeblock__col--tags.svelte-1ji3po.svelte-1ji3po{margin-bottom:7em}}@media(max-width: 576px){.mc-c-timeblock__col--tags.svelte-1ji3po.svelte-1ji3po{display:none}}.mc-c-timeblock__col--tags.svelte-1ji3po ul.svelte-1ji3po{display:flex;flex-flow:column;padding:0}.mc-c-timeblock__col--tags.svelte-1ji3po li.svelte-1ji3po{font-size:1.1rem;font-weight:bold;list-style:none;border-left:6px solid #C3C3C3;padding:0.2em 0 0.2em 1.2em}.mc-c-timeblock__col--tags.svelte-1ji3po .tag-tech.svelte-1ji3po{border-color:#FF3062}.mc-c-timeblock__col--tags.svelte-1ji3po .tag-art.svelte-1ji3po{border-color:#12E599}.mc-c-timeblock__vl.svelte-1ji3po.svelte-1ji3po{width:3px;background-color:#FFFFFF;margin:0 5em}@media(max-width: 992px){.mc-c-timeblock__vl.svelte-1ji3po.svelte-1ji3po{margin:0 4em}}@media(max-width: 768px){.mc-c-timeblock__vl.svelte-1ji3po.svelte-1ji3po{margin:0 3em}}@media(max-width: 576px){.mc-c-timeblock__vl.svelte-1ji3po.svelte-1ji3po{order:-1;margin:0 2em 0 0}}.mc-c-timeblock__vl.svelte-1ji3po.svelte-1ji3po::before{content:"";z-index:10;display:block;position:relative;width:15px;height:15px;margin-top:3em;background-color:#FFFFFF;border:3px solid #12E599;border-radius:50%;right:0.5em}.mc-c-timeblock.svelte-1ji3po:first-child .mc-c-timeblock__vl.svelte-1ji3po{margin-top:3em}.mc-c-timeblock.svelte-1ji3po:first-child .mc-c-timeblock__vl.svelte-1ji3po::before{margin-top:0}.mc-c-timeblock.svelte-1ji3po:last-child .mc-c-timeblock__vl.svelte-1ji3po::after{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="white" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');position:relative;text-align:center;right:1em;top:calc(100% - 6.25em)}`,
+  code: `.color-tech.svelte-r0p22x.svelte-r0p22x{color:#FF3062}.color-art.svelte-r0p22x.svelte-r0p22x{color:#12E599}.color-muted.svelte-r0p22x.svelte-r0p22x{color:#C3C3C3}@media(max-width: 992px){p.svelte-r0p22x.svelte-r0p22x,li.svelte-r0p22x.svelte-r0p22x{font-size:0.9rem}h3.svelte-r0p22x.svelte-r0p22x{font-size:1.3rem !important}}.svelte-r0p22x.svelte-r0p22x::-webkit-scrollbar,.svelte-r0p22x.svelte-r0p22x::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-r0p22x.svelte-r0p22x::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-timeblock__col--tags.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__col--content.svelte-r0p22x.svelte-r0p22x{flex:1;padding-bottom:5em;display:flex;align-items:center}@media(max-width: 576px){.mc-c-timeblock__col--tags.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__col--content.svelte-r0p22x.svelte-r0p22x{justify-content:flex-start}}.mc-c-timeblock.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--odd.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--even.svelte-r0p22x.svelte-r0p22x{display:flex}@media(max-width: 768px){.mc-c-timeblock.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--odd.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--even.svelte-r0p22x.svelte-r0p22x{margin:0}}@media(max-width: 576px){.mc-c-timeblock.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--odd.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock.--even.svelte-r0p22x.svelte-r0p22x{flex-direction:row;margin:0 0 0 0.5em}}.mc-c-timeblock.--even.svelte-r0p22x.svelte-r0p22x{flex-flow:row-reverse}@media(max-width: 576px){.mc-c-timeblock.--even.svelte-r0p22x.svelte-r0p22x{flex-flow:row}}@media(max-width: 576px){.mc-c-timeblock__col--content.svelte-r0p22x.svelte-r0p22x{flex:3;font-size:0.8rem;margin-top:0.3em}}.--even.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x{justify-content:flex-end}.--even.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-6px}@media(max-width: 576px){.--even.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-5px}}.--odd.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x::after{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-left:-6px}@media(max-width: 576px){.--odd.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x::after{content:none}}@media(max-width: 576px){.--odd.svelte-r0p22x .mc-c-timeblock__col--content.svelte-r0p22x::before{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="27" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');align-self:flex-start;margin-top:2.7em;margin-right:-5px}}.mc-c-timeblock__col--content__bubble.svelte-r0p22x.svelte-r0p22x{border:3px solid #FFFFFF;border-radius:0.8em;padding:1em 2em}.mc-c-timeblock__col--content__bubble.svelte-r0p22x p.svelte-r0p22x{color:#C3C3C3}.mc-c-timeblock__col--content__bubble__date.svelte-r0p22x.svelte-r0p22x{margin-top:0.3em}.mc-c-timeblock__col--content__bubble__title.svelte-r0p22x.svelte-r0p22x{margin-bottom:0.3em}@media(max-width: 576px){.mc-c-timeblock__col--content__bubble__title.svelte-r0p22x.svelte-r0p22x{font-size:1.1rem}}.mc-c-timeblock.--even.svelte-r0p22x .mc-c-timeblock__col--tags.svelte-r0p22x{justify-content:flex-end}.mc-c-timeblock__col--tags.svelte-r0p22x.svelte-r0p22x{align-self:center;margin-bottom:6em}@media(max-width: 768px){.mc-c-timeblock__col--tags.svelte-r0p22x.svelte-r0p22x{margin-bottom:7em}}@media(max-width: 576px){.mc-c-timeblock__col--tags.svelte-r0p22x.svelte-r0p22x{display:none}}.mc-c-timeblock__col--tags.svelte-r0p22x ul.svelte-r0p22x{display:flex;flex-flow:column;padding:0}.mc-c-timeblock__col--tags.svelte-r0p22x li.svelte-r0p22x{font-size:1.1rem;font-weight:bold;list-style:none;border-left:6px solid #C3C3C3;padding:0.2em 0 0.2em 1.2em}.mc-c-timeblock__col--tags.svelte-r0p22x .tag-tech.svelte-r0p22x{border-color:#FF3062}.mc-c-timeblock__col--tags.svelte-r0p22x .tag-art.svelte-r0p22x{border-color:#12E599}.mc-c-timeblock__vl.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x{width:3px;background-color:#FFFFFF;margin:0 5em}@media(max-width: 992px){.mc-c-timeblock__vl.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x{margin:0 4em}}@media(max-width: 768px){.mc-c-timeblock__vl.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x{margin:0 3em}}@media(max-width: 576px){.mc-c-timeblock__vl.svelte-r0p22x.svelte-r0p22x,.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x{order:-1;margin:0 2em 0 0}}.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x{margin:0;position:relative;background-color:#12E599}.mc-c-timeblock__vl.svelte-r0p22x.svelte-r0p22x::before,.mc-c-timeblock__vl--fill.svelte-r0p22x.svelte-r0p22x::before{content:"";z-index:10;display:block;position:relative;width:15px;height:15px;margin-top:3em;background-color:#FFFFFF;border:3px solid #12E599;border-radius:50%;right:0.5em}.mc-c-timeblock.svelte-r0p22x:first-child .mc-c-timeblock__vl.svelte-r0p22x,.mc-c-timeblock.svelte-r0p22x:first-child .mc-c-timeblock__vl--fill.svelte-r0p22x{margin-top:3em}.mc-c-timeblock.svelte-r0p22x:first-child .mc-c-timeblock__vl.svelte-r0p22x::before,.mc-c-timeblock.svelte-r0p22x:first-child .mc-c-timeblock__vl--fill.svelte-r0p22x::before{margin-top:0}.mc-c-timeblock.svelte-r0p22x:last-child .mc-c-timeblock__vl.svelte-r0p22x::after,.mc-c-timeblock.svelte-r0p22x:last-child .mc-c-timeblock__vl--fill.svelte-r0p22x::after{content:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="white" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');position:relative;text-align:center;right:1em;top:calc(100% - 6.25em)}`,
   map: null
 };
-const TimelineElem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { id, title, date, blurb, expandName, expandHref, expandColor, tags } = $$props;
+const TimeBlock = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { id, project } = $$props;
   if ($$props.id === void 0 && $$bindings.id && id !== void 0)
     $$bindings.id(id);
-  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-    $$bindings.title(title);
-  if ($$props.date === void 0 && $$bindings.date && date !== void 0)
-    $$bindings.date(date);
-  if ($$props.blurb === void 0 && $$bindings.blurb && blurb !== void 0)
-    $$bindings.blurb(blurb);
-  if ($$props.expandName === void 0 && $$bindings.expandName && expandName !== void 0)
-    $$bindings.expandName(expandName);
-  if ($$props.expandHref === void 0 && $$bindings.expandHref && expandHref !== void 0)
-    $$bindings.expandHref(expandHref);
-  if ($$props.expandColor === void 0 && $$bindings.expandColor && expandColor !== void 0)
-    $$bindings.expandColor(expandColor);
-  if ($$props.tags === void 0 && $$bindings.tags && tags !== void 0)
-    $$bindings.tags(tags);
+  if ($$props.project === void 0 && $$bindings.project && project !== void 0)
+    $$bindings.project(project);
   $$result.css.add(css$1);
-  return `<div class="${escape(null_to_empty(`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`), true) + " svelte-1ji3po"}"><div class="${"mc-c-timeblock__col--content svelte-1ji3po"}"><div class="${"mc-c-timeblock__col--content__bubble svelte-1ji3po"}"><h3 class="${"mc-c-timeblock__col--content__bubble_title svelte-1ji3po"}">${escape(title)}</h3>
-            <p class="${"mc-c-timeblock__col--content__bubble_date svelte-1ji3po"}">${escape(date)}</p>
-            <p class="${"mc-c-timeblock__col--content__bubble_blurb svelte-1ji3po"}">${escape(blurb)}</p>
+  return `<div class="${escape(null_to_empty(`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`), true) + " svelte-r0p22x"}"><div class="${"mc-c-timeblock__col--content svelte-r0p22x"}"><div class="${"mc-c-timeblock__col--content__bubble svelte-r0p22x"}"><h3 class="${"mc-c-timeblock__col--content__bubble_title svelte-r0p22x"}">${escape(project.title)}</h3>
+            <p class="${"mc-c-timeblock__col--content__bubble_date svelte-r0p22x"}">${escape(project.end_yr === null ? `${project.start_yr} - Present` : project.end_yr == project.start_yr ? `project.end_yr` : `${project.start_yr} - ${project.end_yr}`)}</p>
+            <p class="${"mc-c-timeblock__col--content__bubble_blurb svelte-r0p22x"}">${escape(project.blurb)}</p>
             ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
-      color: expandColor,
-      href: expandHref + ",",
-      name: expandName
+      color: project.project_type.name,
+      href: project.url ? project.url : `#`,
+      name: project.see_more,
+      newTab: project.url ? true : false
     },
     {},
     {}
   )}</div></div>
-    <div class="${"mc-c-timeblock__vl svelte-1ji3po"}"></div>
-    <div class="${"mc-c-timeblock__col--tags svelte-1ji3po"}"><div class="${"tags svelte-1ji3po"}"><ul class="${"svelte-1ji3po"}">${each(tags, (tag) => {
-    return `<li class="${escape(null_to_empty(`tag-${tag.tags.type.name}`), true) + " svelte-1ji3po"}">${escape(tag.tags.name)}</li>`;
+    <div class="${"mc-c-timeblock__vl svelte-r0p22x"}"></div>
+    <div class="${"mc-c-timeblock__vl--fill svelte-r0p22x"}"></div>
+    <div class="${"mc-c-timeblock__col--tags svelte-r0p22x"}"><div class="${"tags svelte-r0p22x"}"><ul class="${"svelte-r0p22x"}">${each(project.tags, (tag) => {
+    return `<li class="${escape(null_to_empty(`tag-${tag.tags.type.name}`), true) + " svelte-r0p22x"}">${escape(tag.tags.name)}</li>`;
   })}</ul></div></div>
 </div>`;
 });
@@ -102,27 +92,14 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {
       href: "/work",
       color: "art",
-      name: "See all"
+      name: "See all",
+      newTab: false
     },
     {},
     {}
   )}</div>
     <section class="${"mc-l-timeline svelte-1ephx79"}">${each(Object.keys(data), (idx) => {
-    return `${validate_component(TimelineElem, "TimelineElem").$$render(
-      $$result,
-      {
-        id: idx,
-        title: data[idx].title,
-        date: data[idx].end_yr === null ? `${data[idx].start_yr} - Present` : `${data[idx].start_yr === data[idx].end_yr ? `${data[idx].start_yr}` : `${data[idx].start_yr} - ${data[idx].end_yr}`}`,
-        blurb: data[idx].blurb,
-        expandName: data[idx].see_more,
-        expandColor: data[idx].project_type.name,
-        expandHref: "#",
-        tags: data[idx].tags
-      },
-      {},
-      {}
-    )}`;
+    return `${validate_component(TimeBlock, "TimeBlock").$$render($$result, { id: idx, project: data[idx] }, {}, {})}`;
   })}</section>
     
     <section class="${"svelte-1ephx79"}"><div class="${"mc-c-title svelte-1ephx79"}"><h2 class="${"svelte-1ephx79"}">Playground</h2>
@@ -131,14 +108,16 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {
       href: "/playground",
       color: "art",
-      name: "See all"
+      name: "See all",
+      newTab: false
     },
     {},
     {}
   )}</div>
         <p class="${"svelte-1ephx79"}">Visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-1ephx79"}">kit.svelte.dev</a> to read the documentation</p></section>
     
-    <section class="${"mc-c-about svelte-1ephx79"}"><h2 class="${"svelte-1ephx79"}">Hello World \u{1F44B}</h2>
+    <section class="${"svelte-1ephx79"}"><div class="${"mc-c-title svelte-1ephx79"}"><h2 class="${"svelte-1ephx79"}">Hello World \u{1F44B}</h2>
+            </div>
         <div class="${"mc-c-about__blurb svelte-1ephx79"}"><p class="${"svelte-1ephx79"}">Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
             <p class="${"svelte-1ephx79"}">I\u2019m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p></div>
         <div class="${"mc-c-about__social-links svelte-1ephx79"}">${validate_component(ArrowLink, "ArrowLink").$$render(
@@ -148,7 +127,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
       color: "tech",
       name: "Github",
       arrowColor: "white",
-      newTab: "true"
+      newTab: true
     },
     {},
     {}
@@ -160,7 +139,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
       color: "art",
       name: "Instagram",
       arrowColor: "white",
-      newTab: "true"
+      newTab: true
     },
     {},
     {}
@@ -172,7 +151,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
       color: "art",
       name: "Twitter",
       arrowColor: "white",
-      newTab: "true"
+      newTab: true
     },
     {},
     {}

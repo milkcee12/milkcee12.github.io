@@ -8,13 +8,15 @@
         <div class="mc-c-timeblock__col--content__bubble">
             <h3 class="mc-c-timeblock__col--content__bubble_title">{project.title}</h3>
             <p class="mc-c-timeblock__col--content__bubble_date">
-                {project.end_yr === null ? `${project.start_yr} - Present` : `${project.start_yr} - ${project.end_yr}`}
+                {project.end_yr === null ? `${project.start_yr} - Present` 
+                : project.end_yr == project.start_yr ? `project.end_yr` : `${project.start_yr} - ${project.end_yr}`}
             </p>
             <p class="mc-c-timeblock__col--content__bubble_blurb">{project.blurb}</p>
             <ArrowLink color={project.project_type.name} href={project.url ? project.url : `#`} name={project.see_more} newTab={project.url ? true : false} />
         </div>
     </div>
     <div class="mc-c-timeblock__vl"></div>
+    <div class="mc-c-timeblock__vl--fill"></div>
     <div class="mc-c-timeblock__col--tags">
         <div class="tags">
             <ul>
@@ -165,7 +167,17 @@
                 order: -1;
                 margin: 0 2em 0 0;
             }
- 
+
+            // TODO: Sticky fill :)
+            &--fill {
+                @extend .mc-c-timeblock__vl;
+                margin: 0;
+                position: relative;
+                background-color: $color-art;
+
+                
+            }
+            
             &::before {
                 content: '';
                 z-index: 10;

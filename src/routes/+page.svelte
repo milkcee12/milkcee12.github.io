@@ -30,7 +30,7 @@
 <div class="mc-l-container">
     <div class="mc-c-title">
         <h2>Featured Work</h2>
-        <ArrowLink href="/work" color="art" name="See all" />
+        <ArrowLink href="/work" color="art" name="See all" newTab={false} />
     </div>
     <section class="mc-l-timeline">
         {#each Object.keys(data) as idx}
@@ -44,21 +44,24 @@
     <section>
         <div class="mc-c-title">
             <h2>Playground</h2>
-            <ArrowLink href="/playground" color="art" name="See all" />
+            <ArrowLink href="/playground" color="art" name="See all" newTab={false} />
         </div>
         <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
     </section>
     
-    <section class="mc-c-about">
-        <h2>Hello World &#128075;</h2>
+    <section>
+        <div class="mc-c-title">
+            <h2>Hello World &#128075;</h2>
+            <!-- <ArrowLink href="/about" color="art" name="See all" newTab={false} /> -->
+        </div>
         <div class="mc-c-about__blurb">
             <p>Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
             <p>I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
         </div>
         <div class="mc-c-about__social-links">
-            <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab="true" />
-            <ArrowLink href="https://instagram.com/milkcee12" color="art" name="Instagram" arrowColor="white" newTab="true" />
-            <ArrowLink href="https://twitter.com/milkcee12" color="art" name="Twitter" arrowColor="white" newTab="true" />
+            <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab={true} />
+            <ArrowLink href="https://instagram.com/milkcee12" color="art" name="Instagram" arrowColor="white" newTab={true} />
+            <ArrowLink href="https://twitter.com/milkcee12" color="art" name="Twitter" arrowColor="white" newTab={true} />
         </div>
     </section>
 </div>

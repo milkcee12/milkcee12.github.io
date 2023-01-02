@@ -1,6 +1,6 @@
 import { c as create_ssr_component, o as onDestroy, d as spread, f as escape_object, h as createEventDispatcher, v as validate_component, e as escape } from "./index.js";
 import { P as PUBLIC_GITHUB_URL } from "./public.js";
-const navbar_svelte_svelte_type_style_lang = "";
+const Navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "@media(max-width: 992px){}.svelte-1l20xui.svelte-1l20xui::-webkit-scrollbar,.svelte-1l20xui.svelte-1l20xui::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1l20xui.svelte-1l20xui::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-navbar.svelte-1l20xui.svelte-1l20xui{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}@media(max-width: 992px){.mc-c-navbar.svelte-1l20xui.svelte-1l20xui{padding:3.5em 2em}}.mc-c-navbar__links.svelte-1l20xui a.svelte-1l20xui{padding:0 1em;font-weight:normal;color:#FFFFFF}@media(max-width: 992px){.mc-c-navbar__links.svelte-1l20xui a.svelte-1l20xui{padding:0 0.3em}}.mc-c-navbar__brand.svelte-1l20xui.svelte-1l20xui{font-size:1.5rem;color:#FFFFFF}",
   map: null
@@ -1684,7 +1684,7 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   }
   return `${data ? `${data.svg ? `<svg${spread([escape_object(data.attributes)], {})}><!-- HTML_TAG_START -->${data.body}<!-- HTML_TAG_END --></svg>` : `<span${spread([escape_object(data.attributes)], {})}></span>`}` : ``}`;
 });
-const footer_svelte_svelte_type_style_lang = "";
+const Footer_svelte_svelte_type_style_lang = "";
 const css = {
   code: "@media(max-width: 992px){p.svelte-1a7f8c.svelte-1a7f8c{font-size:0.9rem}}.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar,.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}@media(max-width: 992px){.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{padding:3.5em 2em}}@media(max-width: 768px){.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{padding:2em 2em;flex-wrap:wrap}}.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--updated.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--socials.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--copyright.svelte-1a7f8c{flex:1}@media(max-width: 768px){.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--updated.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--socials.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--copyright.svelte-1a7f8c{flex-basis:100%;text-align:center;justify-content:center}}.mc-c-footer__item--socials.svelte-1a7f8c.svelte-1a7f8c{display:flex;justify-content:center}.mc-c-footer__item--socials.svelte-1a7f8c a.svelte-1a7f8c{color:#FFFFFF;padding:0 0.5em}.mc-c-footer__item--socials.svelte-1a7f8c a.svelte-1a7f8c:hover{color:#C3C3C3}.mc-c-footer__item--updated.svelte-1a7f8c.svelte-1a7f8c{text-align:right}",
   map: null
