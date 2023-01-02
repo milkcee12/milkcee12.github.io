@@ -1,7 +1,76 @@
 <script>
+    import { onMount } from 'svelte';
     export let id, project;
     import ArrowLink from './ArrowLink.svelte';
+
+    let vFill, currScroll;
+
+    onMount(() => {
+        vFill.classList.add('nofill');
+        vFill.style.position = 'absolute';
+        updateFill();
+     });
+
+    const BREAKPOINT_S = 576;
+    const BREAKPOINT_MD = 768;
+    const BREAKPOINT_LG = 992;
+    const MIN_HEIGHT = 20;
+
+    const updateFill = () => {
+        currScroll = window.scrollY;
+
+        // Calculate styling
+        let fillActive = true, newHeight;
+        if (window.innerWidth <= BREAKPOINT_S) {
+            if (currScroll <= 570 + MIN_HEIGHT) fillActive = false;
+            else newHeight = Math.min(Math.max(currScroll - 570, MIN_HEIGHT), 929);
+        }
+        else if (window.innerWidth <= BREAKPOINT_MD) {
+            if (currScroll <= 480 + MIN_HEIGHT) fillActive = false;
+            else newHeight = Math.min(Math.max(currScroll - 480, MIN_HEIGHT), 985);
+        }
+        else if (window.innerWidth <= BREAKPOINT_LG) {
+            if (currScroll <= 500 + MIN_HEIGHT) fillActive = false;
+            else newHeight = Math.min(Math.max(currScroll - 500, MIN_HEIGHT), 900);
+        }
+        else {
+            if (currScroll <= 900 + MIN_HEIGHT) fillActive = false;
+            else newHeight = Math.min(Math.max(currScroll - 900, MIN_HEIGHT), 891);
+        }
+
+        // Apply styling to component
+        if (fillActive) {
+            vFill.classList.remove('nofill');
+            vFill.style.height = newHeight + 'px'; 
+        }
+        else {
+            vFill.classList.add('nofill');
+        }
+
+        console.log(vFill.style.height);
+        console.log(currScroll);
+    };
+
+    // Modify based on breakpoint
+    
+    
+
+    // Adapted from https://www.sitepoint.com/throttle-scroll-events/
+    function throttle(fn, wait) {
+        var time = Date.now();
+        return function() {
+            if ((time + wait - Date.now()) < 0) {
+                if (id == 0) fn();
+                time = Date.now();
+            }
+        }
+    }
+
 </script>
+
+<svelte:window 
+    on:scroll={throttle(updateFill, 30)} 
+/>
 
 <div class={`mc-c-timeblock --${id % 2 === 0 ? 'even' : 'odd'}`}>
     <div class="mc-c-timeblock__col--content">
@@ -15,8 +84,10 @@
             <ArrowLink color={project.project_type.name} href={project.url ? project.url : `#`} name={project.see_more} newTab={project.url ? true : false} />
         </div>
     </div>
-    <div class="mc-c-timeblock__vl"></div>
-    <div class="mc-c-timeblock__vl--fill"></div>
+    <div class="mc-c-timeblock__vl">
+        <div class="mc-c-timeblock__vl--empty"></div>
+        <div class="mc-c-timeblock__vl--fill" bind:this={vFill}></div>
+    </div>
     <div class="mc-c-timeblock__col--tags">
         <div class="tags">
             <ul>
@@ -35,6 +106,12 @@
         display: flex;
         align-items: center;
         @media (max-width: $breakpoint-s) { justify-content: flex-start; }
+    }
+
+    .nofill {
+        height: 0 !important;
+        display: none !important;
+        ::after { display: none !important; }
     }
 
     .mc-c-timeblock {
@@ -157,52 +234,69 @@
 
         // Centerline of timeline
         &__vl {
-            width: 3px;
-            background-color: $color-light;
+            display: grid;
+            justify-content: center;
             margin: 0 5em;
-
+            align-self: stretch;
             @media (max-width: $breakpoint-lg) { margin: 0 4em; }
             @media (max-width: $breakpoint-md) { margin: 0 3em; }
-            @media (max-width: $breakpoint-s) {
-                order: -1;
-                margin: 0 2em 0 0;
-            }
-
-            // TODO: Sticky fill :)
-            &--fill {
-                @extend .mc-c-timeblock__vl;
-                margin: 0;
-                position: relative;
-                background-color: $color-art;
-
-                
+            @media (max-width: $breakpoint-s) { order: -1; margin: 0 2em 0 0; }
+            &--empty, &--fill {
+                grid-column-start: 1;
+                grid-row-start: 1;
             }
             
-            &::before {
-                content: '';
-                z-index: 10;
-                display: block;
-                position: relative;
-                width: 15px; 
-                height: 15px;
-                margin-top: 3em;
+            &--fill { display: none; }
+            &--empty {
                 background-color: $color-light;
-                border: 3px solid $color-art;
-                border-radius: 50%;
-                right: 0.5em;
+                width: 3px;
+                height: 100%;
+                &::before {
+                    content: '';
+                    z-index: 10;
+                    display: block;
+                    position: relative;
+                    width: 15px; 
+                    height: 15px;
+                    margin-top: 3em;
+                    background-color: $color-light;
+                    border: 3px solid $color-art;
+                    border-radius: 50%;
+                    right: 0.5em;
+                }
             }
+            
         }
 
         // Makes vl line of first timeblock shorter but still lets all other blocks look connected by a centerline
         &:first-child &__vl {
             margin-top: 3em;
-            &::before {
+            &--empty::before {
                 margin-top: 0;
             }
         }
 
+        &:first-child &__vl {
+            &--fill {
+                display: block;
+                position: absolute;
+                height: 50px;
+                background-color: $color-art;
+                width: 3px;
+                z-index: 9;
+                &::after {
+                    content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="%2312E599" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+                    position: relative;
+                    z-index: 10;
+                    text-align: center;
+                    right: 1em;
+                    top: calc(100% - 1.94em);
+                }
+            }
+        }
+
         // Adds down pointing arrow to vl of last timeblock
-        &:last-child &__vl::after {
+        &:last-child &__vl--empty::after {
             content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="white" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
             position: relative;
             text-align: center;
