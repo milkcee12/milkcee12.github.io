@@ -10,7 +10,7 @@
             var dateISO = new Date(commits[0].commit.committer.date);
             date = dateISO.toLocaleDateString("en-US", options);
         })
-        .finally(function() { date = null });
+        .catch(function(err) { date = null });
 </script>
 
 <footer class="mc-c-footer">
