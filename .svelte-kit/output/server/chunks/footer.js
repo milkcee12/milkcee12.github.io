@@ -1700,7 +1700,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     };
     var dateISO = new Date(commits[0].commit.committer.date);
     date = dateISO.toLocaleDateString("en-US", options);
-  }).finally(function() {
+  }).catch(function(err) {
     date = null;
   });
   $$result.css.add(css);
