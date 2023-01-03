@@ -44,8 +44,8 @@
 
         // Apply styling to component
         if (fillActive) {
-            vFill.classList.remove('nofill');
             vFill.style.height = newHeight + 'px'; 
+            vFill.classList.remove('nofill');
         }
         else {
             vFill.classList.add('nofill');
@@ -122,8 +122,12 @@
         }
         &.--even {
             @extend .mc-c-timeblock;
-            flex-flow: row-reverse;
-            @media (max-width: $breakpoint-s) { flex-flow: row; }
+            // flex-flow: row-reverse;
+            // @media (max-width: $breakpoint-s) { flex-flow: row; }
+            
+            // &__col--content { order: 3; }
+            // &__vl { order: 2; }
+            // &__col--tags { order: 1; }
         }
 
         &.--odd {
@@ -143,6 +147,7 @@
             }
             .--even & {
                 // Right time bubble
+                order: 2;
                 &::before {
                     content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
                     align-self: flex-start;
@@ -199,6 +204,7 @@
 
         // Tags
         &.--even &__col--tags {
+            order: 0;
             justify-content: flex-end;
         }
         &__col--tags {
@@ -231,6 +237,7 @@
         }
 
         // Centerline of timeline
+        &.--even &__vl { order: 1; } 
         &__vl {
             display: grid;
             flex: 0 1 auto;
