@@ -24,6 +24,16 @@
 </footer>
 
 <style lang="scss">
+    %item {
+        flex: 1;
+
+        @media (max-width: $breakpoint-md) {
+            flex-basis: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    
     .mc-c-footer {
         display: flex;
         justify-content: space-between;
@@ -39,16 +49,6 @@
         @media (max-width: $breakpoint-md) {
             padding: 2em 2em;
             flex-wrap: wrap;
-        }
-
-        %item {
-            flex: 1;
-
-            @media (max-width: $breakpoint-md) {
-                flex-basis: 100%;
-                text-align: center;
-                justify-content: center;
-            }
         }
 
         &__item {

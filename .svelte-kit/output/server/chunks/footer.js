@@ -1686,7 +1686,7 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Footer_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@media(max-width: 992px){p.svelte-1a7f8c.svelte-1a7f8c{font-size:0.9rem}}.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar,.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1a7f8c.svelte-1a7f8c::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}@media(max-width: 992px){.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{padding:3.5em 2em}}@media(max-width: 768px){.mc-c-footer.svelte-1a7f8c.svelte-1a7f8c{padding:2em 2em;flex-wrap:wrap}}.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--updated.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--socials.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--copyright.svelte-1a7f8c{flex:1}@media(max-width: 768px){.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--updated.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--socials.svelte-1a7f8c,.mc-c-footer.svelte-1a7f8c .mc-c-footer__item--copyright.svelte-1a7f8c{flex-basis:100%;text-align:center;justify-content:center}}.mc-c-footer__item--socials.svelte-1a7f8c.svelte-1a7f8c{display:flex;justify-content:center}.mc-c-footer__item--socials.svelte-1a7f8c a.svelte-1a7f8c{color:#FFFFFF;padding:0 0.5em}.mc-c-footer__item--socials.svelte-1a7f8c a.svelte-1a7f8c:hover{color:#C3C3C3}.mc-c-footer__item--updated.svelte-1a7f8c.svelte-1a7f8c{text-align:right}",
+  code: "@media(max-width: 992px){p.svelte-pacxw.svelte-pacxw{font-size:0.9rem}}.svelte-pacxw.svelte-pacxw::-webkit-scrollbar,.svelte-pacxw.svelte-pacxw::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-pacxw.svelte-pacxw::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-footer__item--updated.svelte-pacxw.svelte-pacxw,.mc-c-footer__item--socials.svelte-pacxw.svelte-pacxw,.mc-c-footer__item--copyright.svelte-pacxw.svelte-pacxw{flex:1}@media(max-width: 768px){.mc-c-footer__item--updated.svelte-pacxw.svelte-pacxw,.mc-c-footer__item--socials.svelte-pacxw.svelte-pacxw,.mc-c-footer__item--copyright.svelte-pacxw.svelte-pacxw{flex-basis:100%;text-align:center;justify-content:center}}.mc-c-footer.svelte-pacxw.svelte-pacxw{display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid #FFFFFF;padding:3.5em 4em;color:#C3C3C3}@media(max-width: 992px){.mc-c-footer.svelte-pacxw.svelte-pacxw{padding:3.5em 2em}}@media(max-width: 768px){.mc-c-footer.svelte-pacxw.svelte-pacxw{padding:2em 2em;flex-wrap:wrap}}.mc-c-footer__item--socials.svelte-pacxw.svelte-pacxw{display:flex;justify-content:center}.mc-c-footer__item--socials.svelte-pacxw a.svelte-pacxw{color:#FFFFFF;padding:0 0.5em}.mc-c-footer__item--socials.svelte-pacxw a.svelte-pacxw:hover{color:#C3C3C3}.mc-c-footer__item--updated.svelte-pacxw.svelte-pacxw{text-align:right}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -1704,8 +1704,8 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     date = null;
   });
   $$result.css.add(css);
-  return `<footer class="${"mc-c-footer svelte-1a7f8c"}"><p class="${"mc-c-footer__item--copyright svelte-1a7f8c"}">\xA9 2022 All right reserved.</p>
-    <div class="${"mc-c-footer__item--socials svelte-1a7f8c"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-1a7f8c"}">${validate_component(Icon, "Icon").$$render(
+  return `<footer class="${"mc-c-footer svelte-pacxw"}"><p class="${"mc-c-footer__item--copyright svelte-pacxw"}">\xA9 2022 All right reserved.</p>
+    <div class="${"mc-c-footer__item--socials svelte-pacxw"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-pacxw"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:instagram",
@@ -1715,7 +1715,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-1a7f8c"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-pacxw"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:github",
@@ -1725,7 +1725,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-1a7f8c"}">${validate_component(Icon, "Icon").$$render(
+        <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-pacxw"}">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:twitter",
@@ -1735,7 +1735,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a></div>
-    <p class="${"mc-c-footer__item--updated svelte-1a7f8c"}">Last updated: <br class="${"svelte-1a7f8c"}"> ${escape(date)}</p>
+    <p class="${"mc-c-footer__item--updated svelte-pacxw"}">Last updated: <br class="${"svelte-pacxw"}"> ${escape(date)}</p>
 </footer>`;
 });
 export {

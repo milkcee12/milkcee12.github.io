@@ -9,7 +9,6 @@ Hello! This README is an informal document of records of tasks that need to be d
 - [ ] Add accessibility and SEO labels (aria-label to section, etc)
 ### Polish
 - [ ] Locomotive scroll
-- [ ] Add loading timeline color line that follows scrolling
 - [ ] Add preloader
 - [ ] Add library to preload page on link hover
 - [ ] Add animations
@@ -20,7 +19,9 @@ Hello! This README is an informal document of records of tasks that need to be d
 >(Dome dome dome dururu dome dome dome duruu) How you like that?
 — Blackpink, <i>How You Like That</i> 
 
-  🎉 (12/29/22): Learned about SASS suffix selectors! Updated class design of the pages and global variables to follow the SASS styleguide and be more modular.
+  ✅ (01/02/23): Happy New Year! Added timeline arrow that fills timeline as you scroll down. Also fixed pixel misalignments in the timeline.
+
+  🎉 (12/29/22): Learned about SASS suffix selectors! Updated class design of the pages and global variables to follow the SASS style guide and be more modular.
 
   ✅ (12/29/22): Refactored hero section code so that overflow-x on mobile and responsive sizes is properly hidden.
 
