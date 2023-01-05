@@ -5,4 +5,4 @@ export const component = async () => (await import('../entries/pages/_layout.sve
 export const file = '_app/immutable/components/pages/_layout.svelte-cc2fd59d.js';
 export { shared };
 export const imports = ["_app/immutable/components/pages/_layout.svelte-cc2fd59d.js","_app/immutable/chunks/index-1133d749.js","_app/immutable/modules/pages/_layout.js-7b9cbfbc.js","_app/immutable/chunks/_layout-8d2a742b.js"];
-export const stylesheets = ["_app/immutable/assets/_layout-130db98e.css"];
+export const stylesheets = ["_app/immutable/assets/_layout-fb4d9b35.css"];
