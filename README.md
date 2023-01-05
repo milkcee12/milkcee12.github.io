@@ -12,8 +12,10 @@ Hello! This README is an informal document of records of tasks that need to be d
 - [ ] Add preloader
 - [ ] Add library to preload page on link hover
 - [ ] Add animations
-- [ ] On hover over playground images on homepage, display a blurb
+- [ ] On hover over playground images on homepage, display a blurb (covers bubble, or perhaps expands directly from cursor)
 - [ ] On hover over timeline bubbles, show preview image of project
+- [ ] Fancy cursor
+- [ ] Timeline fill not visible on horizontal mobile devices
 
 ## Done
 >(Dome dome dome dururu dome dome dome duruu) How you like that?

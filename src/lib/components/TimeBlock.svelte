@@ -122,12 +122,6 @@
         }
         &.--even {
             @extend .mc-c-timeblock;
-            // flex-flow: row-reverse;
-            // @media (max-width: $breakpoint-s) { flex-flow: row; }
-            
-            // &__col--content { order: 3; }
-            // &__vl { order: 2; }
-            // &__col--tags { order: 1; }
         }
 
         &.--odd {

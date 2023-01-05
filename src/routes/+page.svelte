@@ -88,15 +88,9 @@
 <style lang="scss">
     .mc-c-hero {
         width: 100%;
-        height: 48em;
+        height: 100vh;
         overflow-x: hidden;
         display: flex;
-
-        @media (max-width: $breakpoint-lg) { height: 40em; }
-        @media (max-width: $breakpoint-md) {
-            width: 100%;
-            height: 36em;
-        }
         &__block {
             flex: 1;
             &--left {
@@ -113,40 +107,24 @@
             pointer-events: none;
             &--sig {
                 @extend .mc-c-hero__img;
-                width: 85em;
-                left: calc(50% - 32em);
+                // width: 100em;
+                height: 110vh;
+                left: calc(50% - 35em);
                 top: -10em;
-
-                @media (max-width: $breakpoint-lg) {
-                    width: 60em;
+                @media (max-width: $breakpoint-md) and (orientation: portrait) {
+                    height: 80vh;
                     left: calc(50% - 20em);
-                    top: -10em;
-                }
-                @media (max-width: $breakpoint-md) {
-                    width: 40em;
-                    left: calc(50% - 15em);
                     top: -2em;
                 }
             }
             &--figure {
                 @extend .mc-c-hero__img;
-                width: 36em;
-                height: auto;
+                // width: 42em;
+                height: 102vh;
                 top: 2em;
-                left: calc(50% - 15em);
+                left: calc(50% - 19em);
 
-                @media (max-width: $breakpoint-lg) {
-                    width: 30em;
-                    height: auto;
-                    top: 2em;
-                    left: calc(50% - 13em);
-                }
-                @media (max-width: $breakpoint-md) {
-                    width: 26em;
-                    height: auto;
-                    top: 3em;
-                    left: calc(50% - 13em);
-                }
+                @media (max-width: $breakpoint-md) and (orientation: portrait) { left: calc(50% - 16em); }
             }
         }
 
@@ -155,14 +133,8 @@
             position: absolute;
             display: flex;
             align-items: center;
-            margin-top: 38em;
+            margin-top: calc(100vh - 130px);
             transform: rotate(90deg);
-
-            @media (max-width: $breakpoint-lg) { margin-top: 32em; }
-            @media (max-width: $breakpoint-md) {
-                margin-left: -2em;
-                margin-top: 28em;
-            }
             p {
                 flex-grow: 0;
                 padding-right: 1em;
