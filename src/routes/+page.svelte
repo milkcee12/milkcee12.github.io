@@ -109,22 +109,28 @@
                 @extend .mc-c-hero__img;
                 // width: 100em;
                 height: 110vh;
-                left: calc(50% - 35em);
-                top: -10em;
+                top: -10vh;
+                left: calc(50% - 60vh);
                 @media (max-width: $breakpoint-md) and (orientation: portrait) {
                     height: 80vh;
-                    left: calc(50% - 20em);
-                    top: -2em;
+                    left: calc(50% - 45vh);
+                }
+                @media (max-width: $breakpoint-lg) and (max-height: 415px) and (orientation: landscape) {
+                    height: 100vh;
+                    left: calc(50% - 55vh);
                 }
             }
             &--figure {
                 @extend .mc-c-hero__img;
-                // width: 42em;
                 height: 102vh;
                 top: 2em;
-                left: calc(50% - 19em);
+                left: calc(50% - 30vh);
 
-                @media (max-width: $breakpoint-md) and (orientation: portrait) { left: calc(50% - 16em); }
+                // @media (max-width: $breakpoint-md) and (orientation: portrait) { left: calc(50% - 50vh); }
+
+                @media (max-width: $breakpoint-lg) and (max-height: 415px) and (orientation: landscape) {
+                    left: calc(50% - 30vh);
+                }
             }
         }
 
