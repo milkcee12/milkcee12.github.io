@@ -3,8 +3,9 @@
     import Footer from '../lib/components/Footer.svelte';
     import TimeBlock from '../lib/components/TimeBlock.svelte';
     import ArrowLink from '../lib/components/ArrowLink.svelte';
-    import heroFigure from '/src/lib/img/hero-figure.png';
-    import heroSig from '/src/lib/img/hero-signature.png';
+    import heroFigure from '../lib/img/hero-figure.png';
+    import heroSig from '../lib/img/hero-signature.png';
+    import aboutProfile from '../lib/img/about-profile-1.jpg';
 
     import { onMount } from 'svelte';
     import { pxToFloat } from '../lib/util';
@@ -67,18 +68,26 @@
     </section>
     
     <section>
-        <div class="mc-c-title">
-            <h2>Hello World &#128075;</h2>
-            <!-- <ArrowLink href="/about" color="art" name="See all" newTab={false} /> -->
-        </div>
-        <div class="mc-c-about__blurb">
-            <p>Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
-            <p>I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
-        </div>
-        <div class="mc-c-about__social-links">
-            <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab={true} />
-            <ArrowLink href="https://instagram.com/milkcee12" color="art" name="Instagram" arrowColor="white" newTab={true} />
-            <ArrowLink href="https://twitter.com/milkcee12" color="art" name="Twitter" arrowColor="white" newTab={true} />
+        <div class="mc-l-about">
+            <div class="mc-c-about__blurb">
+                <div class="mc-c-title">
+                    <h2>Hello World &#128075;</h2>
+                    <ArrowLink href="/about" color="art" name="See all" newTab={false} />
+                </div>
+                <div class="mc-c-about__blurb__desc">
+                    <p>Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
+                    <p>I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
+                </div>
+                <div class="mc-c-about__blurb__social-links">
+                    <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab={true} />
+                    <ArrowLink href="https://instagram.com/milkcee12" color="art" name="Instagram" arrowColor="white" newTab={true} />
+                    <ArrowLink href="https://twitter.com/milkcee12" color="art" name="Twitter" arrowColor="white" newTab={true} />
+                </div>
+            </div>
+            <!-- TODO: Replace with fancy borders -->
+            <div class="mc-c-about__profile">
+                <img class="mc-c-about__profile__img" src={aboutProfile} alt="About section face profile" />
+            </div>
         </div>
     </section>
 </div>
@@ -107,7 +116,6 @@
             pointer-events: none;
             &--sig {
                 @extend .mc-c-hero__img;
-                // width: 100em;
                 height: 110vh;
                 top: -10vh;
                 left: calc(50% - 60vh);
@@ -162,6 +170,7 @@
             flex-grow: 0;
             font-size: 2.2rem;
             padding-right: 1em;
+            color: $color-light;
         }
     }
 
@@ -186,12 +195,36 @@
         }
     }
 
+    // === ABOUT SECTION ===
+    .mc-l-about {
+        display: flex;
+        column-gap: 10em;
+        @media (max-width: $breakpoint-xl) { column-gap: 7em; }
+        @media (max-width: $breakpoint-lg) { column-gap: 5em; }
+        @media (max-width: $breakpoint-md) { flex-wrap: wrap; row-gap: 3em; }
+    }
     .mc-c-about {
         &__blurb {
+            flex: 3;
             color: $color-muted;
+
+            @media (max-width: $breakpoint-md) { flex: 1 0 100%; }
+            &__social-links { display: flex; }
         }
-        &__social-links {
-            display: flex;
+
+        &__profile {
+            flex: 2;
+            text-align: center;
+
+            @media (max-width: $breakpoint-md) { flex: 1 0 100%; }
+            &__img { 
+                width: 80%;
+                border-radius: 25px;
+                @media (max-width: $breakpoint-xl) { width: 90%; }
+                @media (max-width: $breakpoint-lg) { width: 100%; }
+                @media (max-width: $breakpoint-md) { width: 60%; }
+                @media (max-width: $breakpoint-s) { width: 80%; }
+            }
         }
     }
 </style>
