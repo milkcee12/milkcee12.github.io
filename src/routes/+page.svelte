@@ -3,8 +3,8 @@
     import Footer from '../lib/components/Footer.svelte';
     import TimeBlock from '../lib/components/TimeBlock.svelte';
     import ArrowLink from '../lib/components/ArrowLink.svelte';
-    import heroFigure from '../lib/img/hero-figure.png';
-    import heroSig from '../lib/img/hero-signature.png';
+    import heroFigure from '../lib/img/hero-figure.webp';
+    import heroSig from '../lib/img/hero-signature.webp';
     import aboutProfile from '../lib/img/about-profile-1.jpg';
 
     import { onMount } from 'svelte';
@@ -75,8 +75,8 @@
                     <ArrowLink href="/about" color="art" name="See all" newTab={false} />
                 </div>
                 <div class="mc-c-about__blurb__desc">
-                    <p>Hi, my name is Michaela. I also go by Milkcee on my art accounts.</p>
-                    <p>I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
+                    <p>Hi there! I'm Michaela or Milkcee, depending on where you found me from.</p>
+                    <p>I'm an artist and a programmer, with a small fixation on cute cows. I’m a student at University of Southern California majoring in Computer Science and minoring in 3-D Animation. [Insert more good first impression things.]</p>
                 </div>
                 <div class="mc-c-about__blurb__social-links">
                     <ArrowLink href="https://github.com/milkcee12" color="tech" name="Github" arrowColor="white" newTab={true} />
@@ -118,7 +118,7 @@
                 @extend .mc-c-hero__img;
                 height: 110vh;
                 top: -10vh;
-                left: calc(50% - 60vh);
+                left: calc(50% - 59vh);
                 @media (max-width: $breakpoint-md) and (orientation: portrait) {
                     height: 80vh;
                     left: calc(50% - 45vh);

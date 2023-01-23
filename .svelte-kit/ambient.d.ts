@@ -115,7 +115,9 @@ declare module '$env/static/private' {
 	export const SESSIONNAME: string;
 	export const SHELL: string;
 	export const SHLVL: string;
+	export const SSH_AGENT_PID: string;
 	export const SSH_ASKPASS: string;
+	export const SSH_AUTH_SOCK: string;
 	export const SYSTEMDRIVE: string;
 	export const SYSTEMROOT: string;
 	export const TEMP: string;
@@ -128,11 +130,15 @@ declare module '$env/static/private' {
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
+	export const VBOX_MSI_INSTALL_PATH: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const WINDIR: string;
+	export const WSLENV: string;
+	export const WT_PROFILE_ID: string;
+	export const WT_SESSION: string;
 	export const _: string;
 }
 
@@ -255,7 +261,9 @@ declare module '$env/dynamic/private' {
 		SESSIONNAME: string;
 		SHELL: string;
 		SHLVL: string;
+		SSH_AGENT_PID: string;
 		SSH_ASKPASS: string;
+		SSH_AUTH_SOCK: string;
 		SYSTEMDRIVE: string;
 		SYSTEMROOT: string;
 		TEMP: string;
@@ -268,11 +276,15 @@ declare module '$env/dynamic/private' {
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
+		VBOX_MSI_INSTALL_PATH: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		WINDIR: string;
+		WSLENV: string;
+		WT_PROFILE_ID: string;
+		WT_SESSION: string;
 		_: string;
 		[key: string]: string | undefined;
 	}
