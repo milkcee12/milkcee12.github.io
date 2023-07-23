@@ -1,10 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import ArrowLink from "./ArrowLink.svelte";
-  import { pxToFloat } from "../util.js";
 
   export let id, project, timelineHeight;
-  let vLine, vFill, fillHeight, currScroll;
+  let vLine, vFill, currScroll;
+
+  const MIN_HEIGHT = 65;
 
   onMount(() => {
     vFill.classList.add("nofill");
@@ -12,48 +13,16 @@
     updateFill();
   });
 
-  const BREAKPOINT_S = 576;
-  const BREAKPOINT_MD = 768;
-  const BREAKPOINT_LG = 992;
-  const MIN_HEIGHT = 20;
-
   // Arrow timeline fill
   const updateFill = () => {
+    // Calculate new height of fill
     currScroll = window.scrollY;
-    fillHeight = Math.max(
-      timelineHeight -
-        pxToFloat(getComputedStyle(vLine).getPropertyValue("margin-top")),
-      0
-    );
-    if (fillHeight == 0) return;
-
-    // Calculate styling
-    let fillActive = true;
-    let newHeight = 0;
-
-    newHeight = Math.max(currScroll - 900, 0);
+    let newHeight = Math.max(currScroll - window.innerHeight, 0);
     newHeight = Math.min(newHeight, timelineHeight);
 
-    // if (window.innerWidth <= BREAKPOINT_S) {
-    //     if (currScroll <= 570 + MIN_HEIGHT) fillActive = false;
-    //     else newHeight = Math.min(Math.max(currScroll - 570, MIN_HEIGHT), fillHeight);
-    // }
-    // else if (window.innerWidth <= BREAKPOINT_MD) {
-    //     if (currScroll <= 480 + MIN_HEIGHT) fillActive = false;
-    //     else newHeight = Math.min(Math.max(currScroll - 480, MIN_HEIGHT), fillHeight);
-    // }
-    // else if (window.innerWidth <= BREAKPOINT_LG) {
-    //     if (currScroll <= 500 + MIN_HEIGHT) fillActive = false;
-    //     else newHeight = Math.min(Math.max(currScroll - 500, MIN_HEIGHT), fillHeight);
-    // }
-    // else {
-    // if (currScroll <= 900 + MIN_HEIGHT) fillActive = false;
-    // else newHeight = Math.min(Math.max(currScroll - 900, MIN_HEIGHT), fillHeight);
-    // }
-
-    // Update height of scroll fill
-    if (fillActive) {
-      vFill.style.height = newHeight + "px";
+    // Update height of scroll fill in
+    if (newHeight > MIN_HEIGHT) {
+      vFill.style.height = `calc(${newHeight}px - 3em)`;
       vFill.classList.remove("nofill");
     } else {
       vFill.classList.add("nofill");
@@ -288,6 +257,7 @@
       &--empty {
         background-color: $color-light;
         width: 3px;
+        // Timeline node
         &::before {
           content: "";
           z-index: 10;
@@ -316,18 +286,19 @@
       &--fill {
         display: block;
         position: absolute;
-        height: 50px;
+        height: 0;
         background-color: $color-art;
         width: 3px;
         z-index: 9;
         transition: height 0.15s ease;
+        // Adds down pointing arrow to vl of fill
         &::after {
           content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="%2312E599" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
           position: relative;
           z-index: 10;
           text-align: center;
           right: 1em;
-          top: calc(100% - 1.94em);
+          top: calc(100% - 2em);
         }
       }
     }
