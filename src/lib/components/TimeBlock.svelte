@@ -5,7 +5,7 @@
   export let id, project, timelineHeight;
   let vLine, vFill, currScroll;
 
-  const MIN_HEIGHT = 65;
+  const MIN_HEIGHT = 70;
 
   onMount(() => {
     vFill.classList.add("nofill");
