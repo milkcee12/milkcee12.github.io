@@ -12,17 +12,17 @@ export async function load() {
             project_id, title, blurb, see_more, url, start_yr, end_yr, project_type:tag_types(name)
             `)
             .eq('is_featured', true)
-            .order('start_yr', {ascending: false});
+            .order('start_yr', { ascending: false });
 
         if (error) throw error;
 
         for (let idx in featured) {
             const { data: tags, error } = await supabase
-            .from('project_tags')
-            .select(`
+                .from('project_tags')
+                .select(`
                 tags (name, type: tag_types(name))
             `)
-            .eq('project_id', featured[idx].project_id);
+                .eq('project_id', featured[idx].project_id);
 
             featured[idx].tags = tags;
 

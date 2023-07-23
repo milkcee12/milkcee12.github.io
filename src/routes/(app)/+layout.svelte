@@ -4,9 +4,7 @@
 </script>
 
 <Navbar />
-
 <div class="mc-l-container">
     <slot></slot>
 </div>
-
 <Footer />
