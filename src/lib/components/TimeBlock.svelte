@@ -65,8 +65,8 @@
       />
     </div>
   </div>
-  <div class="mc-c-timeblock__vl" bind:this={vLine}>
-    <div class="mc-c-timeblock__vl--empty" />
+  <div class="mc-c-timeblock__vl">
+    <div class="mc-c-timeblock__vl--empty" bind:this={vLine} />
     <div class="mc-c-timeblock__vl--fill" bind:this={vFill} />
   </div>
   <div class="mc-c-timeblock__col--tags">
@@ -309,7 +309,7 @@
       position: relative;
       text-align: center;
       right: 1em;
-      top: calc(100% - 6.25em);
+      top: calc(100% - 4em - 36px);
     }
   }
 </style>
