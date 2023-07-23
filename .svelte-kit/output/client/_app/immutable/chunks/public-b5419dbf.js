@@ -1,0 +1,1 @@
+const I="https://sosljyjiiejzxtbmguax.supabase.co",i="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvc2xqeWppaWVqenh0Ym1ndWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzE3Nzg3ODAsImV4cCI6MTk4NzM1NDc4MH0.AnkqtBmgZo8sIaIWPgu7cCzgbPD7y_UDbB-UExJVCS8",s="https://api.github.com/repos/milkcee12/milkcee12.github.io/commits";export{s as P,i as a,I as b};
