@@ -41,7 +41,7 @@
   }
 </script>
 
-<svelte:window on:scroll={throttle(updateFill, 50)} on:resize={updateFill} />
+<svelte:window on:scroll={throttle(updateFill, 10)} on:resize={updateFill} />
 
 <div class={`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`}>
   <div class="mc-c-timeblock__col--content">
