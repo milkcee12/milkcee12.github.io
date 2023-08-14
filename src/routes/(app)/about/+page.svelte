@@ -1,6 +1,5 @@
 <script>
   import ArrowLink from "../../../lib/components/ArrowLink.svelte";
-  import resume from "../../../lib/pdf/MichaelaChang_Resume.pdf";
 </script>
 
 <svelte:head>
@@ -16,7 +15,6 @@
   </h1>
   <p>Here is a little blurb that talks more about my intended disciplines.</p>
 
-  <ArrowLink href={resume} color="art" name="Resume" newTab={true} />
 </section>
 <section class="mc-c-lists">
   <h2>Fun Lists</h2>

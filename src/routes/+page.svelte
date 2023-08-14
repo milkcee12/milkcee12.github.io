@@ -63,16 +63,6 @@
   </section>
 
   <section>
-    <div class="mc-c-title">
-      <h2>Playground</h2>
-      <ArrowLink href="/playground" color="art" name="See all" newTab={false} />
-    </div>
-    <p>
-      Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-    </p>
-  </section>
-
-  <section>
     <div class="mc-l-about">
       <div class="mc-c-about__blurb">
         <div class="mc-c-title">
