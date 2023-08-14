@@ -5,7 +5,7 @@
   export let id, project, timelineHeight;
   let vLine, vFill, currScroll;
 
-  const MIN_HEIGHT = 70;
+  const MIN_HEIGHT = 80;
 
   onMount(() => {
     vFill.classList.add("nofill");
@@ -41,7 +41,10 @@
   }
 </script>
 
-<svelte:window on:scroll={throttle(updateFill, 10)} on:resize={throttle(updateFill, 10)} />
+<svelte:window
+  on:scroll={throttle(updateFill, 10)}
+  on:resize={throttle(updateFill, 10)}
+/>
 
 <div class={`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`}>
   <div class="mc-c-timeblock__col--content">
@@ -257,6 +260,7 @@
       &--empty {
         background-color: $color-light;
         width: 3px;
+
         // Timeline node
         &::before {
           content: "";
@@ -304,12 +308,18 @@
     }
 
     // Adds down pointing arrow to vl of last timeblock
-    &:last-child &__vl--empty::after {
-      content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="white" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
-      position: relative;
-      text-align: center;
-      right: 1em;
-      top: calc(100% - 4em - 36px);
+    &:last-child &__vl--empty {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &::after {
+        content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="35" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cg transform="rotate(-90 12 12)"%3E%3Cpath fill="white" d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        width: 32px;
+        height: 32px;
+        position: relative;
+        text-align: center;
+        right: 1em;
+      }
     }
   }
 </style>
