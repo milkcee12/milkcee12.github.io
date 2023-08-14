@@ -50,14 +50,16 @@
 <Navbar />
 
 <div class="mc-l-container">
-  <div class="mc-c-title">
-    <h2>Featured Work</h2>
-    <ArrowLink href="/work" color="art" name="See all" newTab={false} />
-  </div>
-  <section class="mc-l-timeline" bind:this={timeline}>
-    {#each Object.keys(data) as idx}
-      <TimeBlock id={idx} project={data[idx]} {timelineHeight} />
-    {/each}
+  <section>
+    <div class="mc-c-title">
+      <h2>Featured Work</h2>
+      <ArrowLink href="/work" color="art" name="See all" newTab={false} />
+    </div>
+    <div class="mc-l-timeline" bind:this={timeline}>
+      {#each Object.keys(data) as idx}
+        <TimeBlock id={idx} project={data[idx]} {timelineHeight} />
+      {/each}
+    </div>
   </section>
 
   <section>
@@ -75,7 +77,12 @@
       <div class="mc-c-about__blurb">
         <div class="mc-c-title">
           <h2>Hello World &#128075;</h2>
-          <ArrowLink href="/about" color="art" name="See all" newTab={false} />
+          <ArrowLink
+            href="/about"
+            color="art"
+            name="More about me"
+            newTab={false}
+          />
         </div>
         <div class="mc-c-about__blurb__desc">
           <p>
@@ -83,10 +90,15 @@
             from.
           </p>
           <p>
-            I'm an artist and a programmer, with a small fixation on cute cows.
-            I’m a student at University of Southern California majoring in
-            Computer Science and minoring in 3-D Animation. [Insert more good
-            first impression things.]
+            I'm an artist and software engineer with a lot of cow-themed merch.
+            I'm a junior studying <span class="color-tech"
+              ><b>Computer Science</b></span
+            >
+            at
+            <span class="color-light"
+              ><b>University of Southern California</b></span
+            >
+            with a minor in <span class="color-art"><b>3-D Animation</b></span>.
           </p>
         </div>
         <div class="mc-c-about__blurb__social-links">
@@ -206,6 +218,7 @@
   }
 
   .mc-l-container {
+    margin-top: 8em;
     @media (max-width: $breakpoint-lg) {
       margin: 3em 2em 0;
     }
@@ -215,7 +228,7 @@
   }
 
   .mc-l-timeline {
-    width: 65%;
+    width: 80%;
     margin-top: 5em;
     margin-left: auto;
     margin-right: auto;

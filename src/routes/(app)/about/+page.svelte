@@ -1,3 +1,8 @@
+<script>
+  import ArrowLink from "../../../lib/components/ArrowLink.svelte";
+  import resume from "../../../lib/pdf/MichaelaChang_Resume.pdf";
+</script>
+
 <svelte:head>
   <title>About | Milkcee Studios</title>
 </svelte:head>
@@ -10,6 +15,8 @@
     and <span class="color-tech">programming</span>.
   </h1>
   <p>Here is a little blurb that talks more about my intended disciplines.</p>
+
+  <ArrowLink href={resume} color="art" name="Resume" newTab={true} />
 </section>
 <section class="mc-c-lists">
   <h2>Fun Lists</h2>
@@ -20,14 +27,32 @@
     <div class="mc-c-lists--col">
       <h3>Manga</h3>
       <ul>
-        <li>Chainsaw Man</li>
+        <li>Pandora Hearts</li>
+        <li>Blue Period</li>
+        <li>Kingdom</li>
+        <li>Jigokuraku (Hell's Paradise)</li>
+        <li>Hikaru no Go</li>
       </ul>
     </div>
     <div class="mc-c-lists--col">
       <h3>Anime</h3>
+      <ul>
+        <li>Bleach</li>
+        <li>Fairy Tail</li>
+        <li>Link Click</li>
+        <li>Haikyuu!</li>
+        <li>Birdie Wing</li>
+      </ul>
     </div>
     <div class="mc-c-lists--col">
       <h3>League of Legends</h3>
+      <ul>
+        <li>Lux</li>
+        <li>Seraphine</li>
+        <li>Vel'koz</li>
+        <li>Xerath</li>
+        <li>Ahri</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -37,27 +62,36 @@
     margin-bottom: 8em;
   }
   .mc-c-title {
-    width: 70%;
-    h1 {
-      font-size: 2em;
-    }
+    width: 80%;
   }
 
   .mc-c-lists {
+    width: 70%;
     h2 {
       font-size: 2em;
     }
     &--row {
       display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
     }
 
     &--col {
-      flex: 1;
+      flex: 1 1 30%;
       ul {
         list-style-type: none;
         padding: 0;
         color: $color-muted;
       }
+      li {
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .mc-c-lists {
+      width: 100%;
     }
   }
 

@@ -14,21 +14,58 @@ $breakpoint-xxxl: 1600px;
 .color-tech {
     color: $color-tech;
 }
+
 .color-art {
     color: $color-art;
 }
+
 .color-muted {
     color: $color-muted;
 }
 
-p, li, p a, li a { font-size: 1.1rem; }
+.color-light {
+    color: $color-light;
+}
+
+.color-dark {
+    color: $color-dark;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p,
+li,
+p a,
+li a {
+    font-size: 1.15rem;
+}
 
 @media (max-width: 992px) {
-    p, li, p a, li a { font-size: 1rem !important; }
 
-    h2 { font-size: 1.8rem !important; }
+    p,
+    li,
+    p a,
+    li a {
+        font-size: 1.05rem !important;
+    }
 
-    h3 { font-size: 1.3rem !important; }
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
 }
 
 // Scrollbar styling
@@ -40,6 +77,6 @@ p, li, p a, li a { font-size: 1.1rem; }
     border: 6px solid transparent;
 }
 
-*::-webkit-scrollbar-thumb {        
+*::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 0 10px;
 }
