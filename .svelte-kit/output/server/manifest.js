@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([".nojekyll","favicon.ico","favicon.png"]),
 	mimeTypes: {".ico":"image/vnd.microsoft.icon",".png":"image/png"},
 	_: {
-		entry: {"file":"_app/immutable/start-7b45798a.js","imports":["_app/immutable/start-7b45798a.js","_app/immutable/chunks/index-1133d749.js","_app/immutable/chunks/singletons-90b5b50a.js","_app/immutable/chunks/preload-helper-b21cceae.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-e089a4da.js","imports":["_app/immutable/start-e089a4da.js","_app/immutable/chunks/index-1133d749.js","_app/immutable/chunks/singletons-e39326cd.js","_app/immutable/chunks/preload-helper-b21cceae.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
