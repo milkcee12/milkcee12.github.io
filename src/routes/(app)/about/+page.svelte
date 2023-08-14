@@ -16,6 +16,20 @@
   <p>
     Art and code isn't all I do, here are some of my favorite things as lists!
   </p>
+  <div class="mc-c-lists--row">
+    <div class="mc-c-lists--col">
+      <h3>Manga</h3>
+      <ul>
+        <li>Chainsaw Man</li>
+      </ul>
+    </div>
+    <div class="mc-c-lists--col">
+      <h3>Anime</h3>
+    </div>
+    <div class="mc-c-lists--col">
+      <h3>League of Legends</h3>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
@@ -26,6 +40,24 @@
     width: 70%;
     h1 {
       font-size: 2em;
+    }
+  }
+
+  .mc-c-lists {
+    h2 {
+      font-size: 2em;
+    }
+    &--row {
+      display: flex;
+    }
+
+    &--col {
+      flex: 1;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        color: $color-muted;
+      }
     }
   }
 

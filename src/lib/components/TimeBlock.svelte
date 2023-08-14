@@ -53,19 +53,21 @@
         {project.title}
       </h3>
       <p class="mc-c-timeblock__col--content__bubble_date">
-        {project.end_yr === null
+        {!project.end_yr
           ? `${project.start_yr} - Present`
           : project.end_yr == project.start_yr
-          ? `project.end_yr`
+          ? `${project.end_yr}`
           : `${project.start_yr} - ${project.end_yr}`}
       </p>
       <p class="mc-c-timeblock__col--content__bubble_blurb">{project.blurb}</p>
-      <ArrowLink
-        color={project.project_type.name}
-        href={project.url ? project.url : `#`}
-        name={project.see_more}
-        newTab={project.url ? true : false}
-      />
+      {#if project.see_more}
+        <ArrowLink
+          color={project.project_type.name}
+          href={project.url ? project.url : `#`}
+          name={project.see_more}
+          newTab={project.url ? true : false}
+        />
+      {/if}
     </div>
   </div>
   <div class="mc-c-timeblock__vl">
