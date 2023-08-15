@@ -65,9 +65,6 @@
 
   .mc-c-lists {
     width: 70%;
-    h2 {
-      font-size: 2em;
-    }
     &--row {
       display: flex;
       flex-wrap: wrap;

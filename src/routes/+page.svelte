@@ -77,10 +77,10 @@
         <div class="mc-c-about__blurb__desc">
           <p>
             Hi there! I'm Michaela or Milkcee, depending on where you found me
-            from.
+            from. I'm a software engineer and illustrator. I like to talk about
+            drawing my own comics a lot but I've only made a handful of them.
           </p>
           <p>
-            I'm an artist and software engineer with a lot of cow-themed merch.
             I'm a junior studying <span class="color-tech"
               ><b>Computer Science</b></span
             >
@@ -89,6 +89,7 @@
               ><b>University of Southern California</b></span
             >
             with a minor in <span class="color-art"><b>3-D Animation</b></span>.
+            For some reason, I also own a lot of cow-themed merch.
           </p>
         </div>
         <div class="mc-c-about__blurb__social-links">
@@ -201,7 +202,6 @@
     align-items: center;
     h2 {
       flex-grow: 0;
-      font-size: 2.2rem;
       padding-right: 1em;
       color: $color-light;
     }
