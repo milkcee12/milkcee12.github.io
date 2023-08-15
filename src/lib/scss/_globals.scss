@@ -32,11 +32,11 @@ $breakpoint-xxxl: 1600px;
 }
 
 h1 {
-    font-size: 2.3rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.7rem;
 }
 
 h3 {
@@ -50,7 +50,7 @@ li a {
     font-size: 1.15rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-lg) {
 
     p,
     li,
@@ -59,8 +59,12 @@ li a {
         font-size: 1.05rem !important;
     }
 
+    h1 {
+        font-size: 2.2rem !important; 
+    }
+
     h2 {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important;
     }
 
     h3 {
