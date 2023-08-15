@@ -1,27 +1,27 @@
 {
-  "src/lib/img/hero-signature.webp": {
-    "file": "_app/immutable/assets/hero-signature-147470d3.webp",
-    "src": "src/lib/img/hero-signature.webp"
-  },
-  "src/lib/pdf/MichaelaChang_Resume.pdf": {
-    "file": "_app/immutable/assets/MichaelaChang_Resume-29cc4c2d.pdf",
-    "src": "src/lib/pdf/MichaelaChang_Resume.pdf"
-  },
   "src/lib/img/about-profile-1.jpg": {
     "file": "_app/immutable/assets/about-profile-1-ffd31c60.jpg",
     "src": "src/lib/img/about-profile-1.jpg"
+  },
+  "src/lib/img/hero-signature.webp": {
+    "file": "_app/immutable/assets/hero-signature-147470d3.webp",
+    "src": "src/lib/img/hero-signature.webp"
   },
   "src/lib/img/hero-figure.webp": {
     "file": "_app/immutable/assets/hero-figure-754e2dd3.webp",
     "src": "src/lib/img/hero-figure.webp"
   },
+  "src/lib/pdf/MichaelaChang_Resume.pdf": {
+    "file": "_app/immutable/assets/MichaelaChang_Resume-29cc4c2d.pdf",
+    "src": "src/lib/pdf/MichaelaChang_Resume.pdf"
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-e089a4da.js",
+    "file": "_app/immutable/start-6c384940.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js",
-      "_singletons-e39326cd.js",
+      "_singletons-6073a6ec.js",
       "_preload-helper-b21cceae.js"
     ],
     "dynamicImports": [
@@ -42,38 +42,38 @@
       "_index-1133d749.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-42bddb0f.css"
+      "_app/immutable/assets/_layout-0cf55396.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-cd4bae66.js",
+    "file": "_app/immutable/components/error.svelte-c21ceb1d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js",
-      "_singletons-e39326cd.js"
+      "_singletons-6073a6ec.js"
     ]
   },
   "src/routes/(app)/+layout.svelte": {
-    "file": "_app/immutable/components/pages/(app)/_layout.svelte-2a676b86.js",
+    "file": "_app/immutable/components/pages/(app)/_layout.svelte-ecaa3d8a.js",
     "src": "src/routes/(app)/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js",
-      "_Footer-bf62b429.js"
+      "_Footer-e722bbc6.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-892e823d.js",
+    "file": "_app/immutable/components/pages/_page.svelte-63db82c0.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js",
-      "_Footer-bf62b429.js",
-      "_ArrowLink-4d09f39e.js"
+      "_Footer-e722bbc6.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-951dff85.css"
+      "_app/immutable/assets/_page-15c4380c.css",
+      "_app/immutable/assets/ArrowLink-0ae68b2a.css"
     ],
     "assets": [
       "_app/immutable/assets/hero-figure-754e2dd3.webp",
@@ -82,29 +82,27 @@
     ]
   },
   "src/routes/(app)/about/+page.svelte": {
-    "file": "_app/immutable/components/pages/(app)/about/_page.svelte-c1caebe2.js",
+    "file": "_app/immutable/components/pages/(app)/about/_page.svelte-0ff87860.js",
     "src": "src/routes/(app)/about/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js",
-      "_ArrowLink-4d09f39e.js"
+      "_functions-dc903a50.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-7d7451ba.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/MichaelaChang_Resume-29cc4c2d.pdf"
+      "_app/immutable/assets/_page-c33a37b5.css",
+      "_app/immutable/assets/ArrowLink-0ae68b2a.css"
     ]
   },
-  "src/routes/(app)/playground/+page.svelte": {
-    "file": "_app/immutable/components/pages/(app)/playground/_page.svelte-ab3c2508.js",
-    "src": "src/routes/(app)/playground/+page.svelte",
+  "src/routes/(app)/art/+page.svelte": {
+    "file": "_app/immutable/components/pages/(app)/art/_page.svelte-33f16a1e.js",
+    "src": "src/routes/(app)/art/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-1133d749.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-14056de3.css"
+      "_app/immutable/assets/_page-5f825c6b.css"
     ]
   },
   "src/routes/(app)/work/+page.svelte": {
@@ -132,8 +130,8 @@
       "_public-b5419dbf.js"
     ]
   },
-  "_singletons-e39326cd.js": {
-    "file": "_app/immutable/chunks/singletons-e39326cd.js",
+  "_singletons-6073a6ec.js": {
+    "file": "_app/immutable/chunks/singletons-6073a6ec.js",
     "imports": [
       "_index-1133d749.js"
     ]
@@ -147,35 +145,25 @@
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
-  "_Footer-bf62b429.js": {
-    "file": "_app/immutable/chunks/Footer-bf62b429.js",
+  "_Footer-e722bbc6.js": {
+    "file": "_app/immutable/chunks/Footer-e722bbc6.js",
     "imports": [
       "_index-1133d749.js",
       "_public-b5419dbf.js",
-      "_Icon-779125e0.js"
+      "_functions-dc903a50.js"
     ],
     "css": [
-      "_app/immutable/assets/Footer-07c8da2d.css"
+      "_app/immutable/assets/Footer-a882e901.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/MichaelaChang_Resume-29cc4c2d.pdf"
     ]
   },
   "_public-b5419dbf.js": {
     "file": "_app/immutable/chunks/public-b5419dbf.js"
   },
-  "_Icon-779125e0.js": {
-    "file": "_app/immutable/chunks/Icon-779125e0.js",
-    "imports": [
-      "_index-1133d749.js"
-    ]
-  },
-  "_ArrowLink-4d09f39e.js": {
-    "file": "_app/immutable/chunks/ArrowLink-4d09f39e.js",
-    "imports": [
-      "_index-1133d749.js",
-      "_Icon-779125e0.js"
-    ],
-    "css": [
-      "_app/immutable/assets/ArrowLink-30cc6b70.css"
-    ]
+  "_functions-dc903a50.js": {
+    "file": "_app/immutable/chunks/functions-dc903a50.js"
   },
   "__page-fafbdb70.js": {
     "file": "_app/immutable/chunks/_page-fafbdb70.js",
@@ -194,7 +182,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-5535791a.js",
+    "file": "_app/immutable/chunks/1-536f96f9.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -202,7 +190,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-f6dec838.js",
+    "file": "_app/immutable/chunks/2-1fbfe68a.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -210,7 +198,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-eeaa2e3a.js",
+    "file": "_app/immutable/chunks/3-370f9f0c.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -219,7 +207,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-f6ad8d54.js",
+    "file": "_app/immutable/chunks/4-a9cc0a36.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -227,11 +215,11 @@
     ]
   },
   ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-ed56c7ed.js",
+    "file": "_app/immutable/chunks/5-ad9bc79b.js",
     "src": ".svelte-kit/generated/nodes/5.js",
     "isDynamicEntry": true,
     "imports": [
-      "src/routes/(app)/playground/+page.svelte"
+      "src/routes/(app)/art/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/6.js": {
@@ -242,28 +230,28 @@
       "src/routes/(app)/work/+page.svelte"
     ]
   },
-  "src/routes/(app)/about/+page.css": {
-    "file": "_app/immutable/assets/_page-7d7451ba.css",
-    "src": "src/routes/(app)/about/+page.css"
-  },
-  "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-42bddb0f.css",
-    "src": "src/routes/+layout.css"
-  },
-  "Footer.css": {
-    "file": "_app/immutable/assets/Footer-07c8da2d.css",
-    "src": "Footer.css"
+  "src/routes/(app)/art/+page.css": {
+    "file": "_app/immutable/assets/_page-5f825c6b.css",
+    "src": "src/routes/(app)/art/+page.css"
   },
   "ArrowLink.css": {
-    "file": "_app/immutable/assets/ArrowLink-30cc6b70.css",
+    "file": "_app/immutable/assets/ArrowLink-0ae68b2a.css",
     "src": "ArrowLink.css"
   },
-  "src/routes/(app)/playground/+page.css": {
-    "file": "_app/immutable/assets/_page-14056de3.css",
-    "src": "src/routes/(app)/playground/+page.css"
+  "Footer.css": {
+    "file": "_app/immutable/assets/Footer-a882e901.css",
+    "src": "Footer.css"
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-0cf55396.css",
+    "src": "src/routes/+layout.css"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-951dff85.css",
+    "file": "_app/immutable/assets/_page-15c4380c.css",
     "src": "src/routes/+page.css"
+  },
+  "src/routes/(app)/about/+page.css": {
+    "file": "_app/immutable/assets/_page-c33a37b5.css",
+    "src": "src/routes/(app)/about/+page.css"
   }
 }
