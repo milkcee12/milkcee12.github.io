@@ -7,8 +7,8 @@
   <div class="mc-c-navbar__links">
     <a href="/work">Work</a>
     <a href="/art">Art</a>
-    <a href={resume} target="_blank" rel="noreferrer">Resume</a>
     <a href="/about">About</a>
+    <a href={resume} target="_blank" rel="noreferrer">Resume</a>
   </div>
 </nav>
 
