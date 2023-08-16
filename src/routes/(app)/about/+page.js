@@ -20,8 +20,6 @@ export async function load() {
         })
     );
 
-    console.log(pfps);
-
     return {
         pfps: pfps,
     }

@@ -40,12 +40,17 @@
   </section>
   <section>
     <h2>Profile Picture Graveyard &#129702;</h2>
-    <p>An overview of how my art style has changed over the years! :)</p>
+    <p>
+      An overview of how my art has changed over the years! Some of these are
+      original characters, and some are fictional personas of myself.
+    </p>
     <div class="mc-c-pfp">
       {#each pfps as { url, date }}
         <div class="mc-c-pfp--item">
-          <img src={url} alt={date} />
-          <figcaption>{date}</figcaption>
+          <figure>
+            <img src={url} alt={date} />
+            <figcaption>{date}</figcaption>
+          </figure>
         </div>
       {/each}
     </div>
@@ -91,13 +96,12 @@
 <style lang="scss">
   section {
     margin-bottom: 8em;
-  }
 
-  .mc-c-about {
-    p {
-      width: 70%;
+    & > p {
+        width: 70%;
     }
   }
+
   .mc-c-lists {
     width: 70%;
     &--row {
@@ -123,13 +127,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 18px;
+    gap: 25px 16px;
+    margin-top: 3em;
 
     &--item {
       flex: 0 0 auto;
 
+      figure {
+        margin: 0;
+      }
+
       figcaption {
-        margin-top: 10px;
+        margin-top: 5px;
       }
 
       img {
@@ -161,6 +170,10 @@
 
   @media (max-width: 768px) {
     .title {
+      width: 100%;
+    }
+
+    section > p {
       width: 100%;
     }
   }
