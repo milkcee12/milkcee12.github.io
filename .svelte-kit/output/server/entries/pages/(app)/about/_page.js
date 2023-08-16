@@ -15,7 +15,6 @@ async function load() {
       return pfpData;
     })
   );
-  console.log(pfps);
   return {
     pfps
   };
