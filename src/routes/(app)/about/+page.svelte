@@ -32,7 +32,7 @@
         I grew up in San Diego as a fine artist. I did a lot of acrylic painting
         and pencil drawings, and even got a few awards for my art. But I was
         always looking for a way to get closer to the art I saw in video games
-        and anime I discovered digital art in high school, I was immediately
+        and anime—when I discovered digital art in high school, I was immediately
         hooked.
       </p>
       <p>
