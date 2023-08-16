@@ -1,10 +1,14 @@
 <script>
-  import ArrowLink from "../../../lib/components/ArrowLink.svelte";
+  import { onMount, tick } from "svelte";
 
   /** @type {import('./$types').PageData} */
   export let data;
 
-  console.log(data);
+  let pfps = [];
+  onMount(async () => {
+    await tick();
+    pfps = [...data.pfps].reverse();
+  });
 </script>
 
 <svelte:head>
@@ -38,7 +42,7 @@
     <h2>Profile Picture Graveyard &#129702;</h2>
     <p>An overview of how my art style has changed over the years! :)</p>
     <div class="mc-c-pfp">
-      {#each [...data.pfps].reverse() as { url, date }}
+      {#each pfps as { url, date }}
         <div class="mc-c-pfp--item">
           <img src={url} alt={date} />
           <p>{date}</p>
