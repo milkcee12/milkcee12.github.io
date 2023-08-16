@@ -45,7 +45,7 @@
       {#each pfps as { url, date }}
         <div class="mc-c-pfp--item">
           <img src={url} alt={date} />
-          <p>{date}</p>
+          <figcaption>{date}</figcaption>
         </div>
       {/each}
     </div>
@@ -128,7 +128,7 @@
     &--item {
       flex: 0 0 auto;
 
-      p {
+      figcaption {
         margin-top: 10px;
       }
 
