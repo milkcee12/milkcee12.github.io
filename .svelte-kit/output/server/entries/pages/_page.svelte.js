@@ -1,6 +1,7 @@
 import { c as create_ssr_component, e as escape, j as null_to_empty, d as add_attribute, v as validate_component, k as each } from "../../chunks/index.js";
 import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
-/* empty css                                                    */const css$2 = {
+const ArrowLink_svelte_svelte_type_style_lang = "";
+const css$2 = {
   code: ".color-tech.svelte-2coj5h.svelte-2coj5h{color:#FF3062}.color-art.svelte-2coj5h.svelte-2coj5h{color:#12E599}.color-muted.svelte-2coj5h.svelte-2coj5h{color:#C3C3C3}.color-light.svelte-2coj5h.svelte-2coj5h{color:#FFFFFF}.color-dark.svelte-2coj5h.svelte-2coj5h{color:#090A0D}p.svelte-2coj5h.svelte-2coj5h,p.svelte-2coj5h a.svelte-2coj5h{font-size:1.15rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-2coj5h.svelte-2coj5h,p.svelte-2coj5h a.svelte-2coj5h{font-size:1.05rem !important}}.svelte-2coj5h.svelte-2coj5h::-webkit-scrollbar,.svelte-2coj5h.svelte-2coj5h::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-2coj5h.svelte-2coj5h::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-arrow-link.svelte-2coj5h a.svelte-2coj5h{display:flex;align-items:center}",
   map: null
 };
