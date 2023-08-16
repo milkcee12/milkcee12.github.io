@@ -77,8 +77,9 @@
         <div class="mc-c-about__blurb__desc">
           <p>
             Hi there! I'm Michaela or Milkcee, depending on where you found me
-            from. I'm a software engineer and illustrator. I like to talk about
-            drawing my own comics a lot but I've only made a handful of them.
+            from. I'm a software engineer and illustrator. I read a lot of manga
+            and I like to talk about drawing my own comics, but I've only made a
+            handful of them.
           </p>
           <p>
             I'm a junior studying <span class="color-tech"

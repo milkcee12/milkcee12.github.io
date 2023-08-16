@@ -2,7 +2,7 @@
   <title>Playground | Milkcee Studios</title>
 </svelte:head>
 
-<h1>Playground</h1>
+<h1>Art</h1>
 
 <style lang="scss">
 </style>
