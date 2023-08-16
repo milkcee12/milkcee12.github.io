@@ -20,7 +20,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <div class="${"mc-c-about--content--text svelte-1emqext"}"><p class="${"svelte-1emqext"}">I grew up in San Diego as a fine artist. I did a lot of acrylic painting
         and pencil drawings, and even got a few awards for my art. But I was
         always looking for a way to get closer to the art I saw in video games
-        and anime I discovered digital art in high school, I was immediately
+        and anime\u2014when I discovered digital art in high school, I was immediately
         hooked.
       </p>
       <p class="${"svelte-1emqext"}">Studying computer science was more of an afterthought until college,
