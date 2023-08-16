@@ -1,5 +1,6 @@
 <script>
   import { onMount, tick } from "svelte";
+  import cowPainting from "../../../lib/img/about-cow.jpg";
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -15,90 +16,113 @@
   <title>About | Milkcee Studios</title>
 </svelte:head>
 
-<div class="mc-l-container">
-  <section class="mc-c-about">
-    <div class="mc-c-title">
-      <h1>
-        This site is home to the two things I'm passionate about: <span
-          class="color-art">drawing</span
-        >
-        and <span class="color-tech">programming</span>.
-      </h1>
+<section class="mc-c-about">
+  <div class="mc-c-title">
+    <h1>
+      This site is home to the two things I'm passionate about: <span
+        class="color-art">drawing</span
+      >
+      and <span class="color-tech">programming</span>.
+    </h1>
+  </div>
+  <div class="mc-c-about--content">
+    <img src={cowPainting} alt="Cow Painting" />
+    <div class="mc-c-about--content--text">
+      <p>
+        I grew up in San Diego as a fine artist. I did a lot of acrylic painting
+        and pencil drawings, and even got a few awards for my art. But I was
+        always looking for a way to get closer to the art I saw in video games
+        and anime I discovered digital art in high school, I was immediately
+        hooked.
+      </p>
+      <p>
+        Studying computer science was more of an afterthought until college,
+        where I discovered that I also really liked programming and product
+        design. When I'm not glued to my computer, you can find me reading
+        manga, eating pastries, or in the Uniqlo graphic tee section.
+      </p>
     </div>
-    <p>
-      I grew up in San Diego as a fine artist. I did a lot of acrylic painting
-      and pencil drawings, and even got a few awards for my art. But I was
-      always looking for a way to get closer to the art I saw in video games and
-      anime I discovered digital art in high school, I was immediately hooked.
-    </p>
-    <p>
-      Studying computer science was more of an afterthought until college, where
-      I discovered that I also really liked programming and product design. When
-      I'm not glued to my computer, you can find me reading manga, eating
-      pastries, or in the Uniqlo graphic tee section.
-    </p>
-  </section>
-  <section>
-    <h2>Profile Picture Graveyard &#129702;</h2>
-    <p>
-      An overview of how my art has changed over the years! Some of these are
-      original characters, and some are fictional personas of myself.
-    </p>
-    <div class="mc-c-pfp">
-      {#each pfps as { url, date }}
-        <div class="mc-c-pfp--item">
-          <figure>
-            <img src={url} alt={date} />
-            <figcaption>{date}</figcaption>
-          </figure>
-        </div>
-      {/each}
+  </div>
+</section>
+<section>
+  <h2>Profile Picture Graveyard &#129702;</h2>
+  <p>
+    An overview of how my art has changed over the years! Some of these are
+    original characters, and some are fictional personas of myself.
+  </p>
+  <div class="mc-c-pfp">
+    {#each pfps as { url, date }}
+      <div class="mc-c-pfp--item">
+        <figure>
+          <img src={url} alt={date} />
+          <figcaption>{date}</figcaption>
+        </figure>
+      </div>
+    {/each}
+  </div>
+</section>
+<section class="mc-c-lists">
+  <h2>Fun Lists &#x1f4dc;</h2>
+  <p>Here are some of my favorite things as lists!</p>
+  <div class="mc-c-lists--row">
+    <div class="mc-c-lists--col">
+      <h3>Manga</h3>
+      <ul>
+        <li>Pandora Hearts</li>
+        <li>Blue Period</li>
+        <li>Kingdom</li>
+        <li>Jigokuraku (Hell's Paradise)</li>
+        <li>Hikaru no Go</li>
+      </ul>
     </div>
-  </section>
-  <section class="mc-c-lists">
-    <h2>Fun Lists &#x1f4dc;</h2>
-    <p>Here are some of my favorite things as lists!</p>
-    <div class="mc-c-lists--row">
-      <div class="mc-c-lists--col">
-        <h3>Manga</h3>
-        <ul>
-          <li>Pandora Hearts</li>
-          <li>Blue Period</li>
-          <li>Kingdom</li>
-          <li>Jigokuraku (Hell's Paradise)</li>
-          <li>Hikaru no Go</li>
-        </ul>
-      </div>
-      <div class="mc-c-lists--col">
-        <h3>Anime</h3>
-        <ul>
-          <li>Bleach</li>
-          <li>Fairy Tail</li>
-          <li>Link Click</li>
-          <li>Haikyuu!</li>
-          <li>Birdie Wing</li>
-        </ul>
-      </div>
-      <div class="mc-c-lists--col">
-        <h3>League of Legends</h3>
-        <ul>
-          <li>Lux</li>
-          <li>Seraphine</li>
-          <li>Vel'koz</li>
-          <li>Xerath</li>
-          <li>Ahri</li>
-        </ul>
-      </div>
+    <div class="mc-c-lists--col">
+      <h3>Anime</h3>
+      <ul>
+        <li>Bleach</li>
+        <li>Fairy Tail</li>
+        <li>Link Click</li>
+        <li>Haikyuu!</li>
+        <li>Birdie Wing</li>
+      </ul>
     </div>
-  </section>
-</div>
+    <div class="mc-c-lists--col">
+      <h3>League of Legends</h3>
+      <ul>
+        <li>Lux</li>
+        <li>Seraphine</li>
+        <li>Vel'koz</li>
+        <li>Xerath</li>
+        <li>Ahri</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <style lang="scss">
   section {
     margin-bottom: 8em;
 
     & > p {
-        width: 70%;
+      width: 85%;
+    }
+  }
+
+  .mc-c-about {
+    &--content {
+      width: 85%;
+      display: flex;
+      flex: 1 1 auto;
+      flex-wrap: wrap;
+      gap: 40px;
+
+      &--text {
+        flex: 1 1 250px;
+      }
+      img {
+        height: min(356px, 75%);
+        width: min(475px, 100%);
+        border-radius: 25px;
+      }
     }
   }
 
@@ -165,6 +189,10 @@
     .mc-c-lists,
     .mc-c-about {
       width: 100%;
+
+      &--content {
+        width: 100%;
+      }
     }
   }
 
