@@ -55,11 +55,15 @@
       <h2>Featured Work</h2>
       <ArrowLink href="/work" color="art" name="See all" newTab={false} />
     </div>
-    <div class="mc-l-timeline" bind:this={timeline}>
-      {#each Object.keys(data) as idx}
-        <TimeBlock id={idx} project={data[idx]} {timelineHeight} />
-      {/each}
-    </div>
+    {#if data.error}
+    <p>Oops! there was an error loading featured work &#128532;. Please try again.</p>
+    {:else}
+      <div class="mc-l-timeline" bind:this={timeline}>
+        {#each Object.keys(data.timeline) as key, i}
+          <TimeBlock id={i} project={data.timeline[key]} {timelineHeight} />
+        {/each}
+      </div>
+    {/if}
   </section>
 
   <section>
