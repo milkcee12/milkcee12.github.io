@@ -178,8 +178,10 @@
       }
       &:not(:first-child) img {
         filter: grayscale(100%);
+        opacity: 0.9;
         &:hover {
           filter: none;
+          opacity: 1;
         }
       }
     }
