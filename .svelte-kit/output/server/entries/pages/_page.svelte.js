@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, j as null_to_empty, d as add_attribute, v as validate_component, k as each } from "../../chunks/index.js";
+import { c as create_ssr_component, e as escape, f as null_to_empty, h as add_attribute, v as validate_component, b as each } from "../../chunks/index2.js";
 import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
 const ArrowLink_svelte_svelte_type_style_lang = "";
 const css$2 = {
@@ -18,7 +18,7 @@ const ArrowLink = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   if ($$props.newTab === void 0 && $$bindings.newTab && newTab !== void 0)
     $$bindings.newTab(newTab);
   $$result.css.add(css$2);
-  return `<p class="${"mc-c-arrow-link svelte-1vsvwu9"}"><a class="${escape(null_to_empty(`color-${color}`), true) + " svelte-1vsvwu9"}"${add_attribute("href", href, 0)}${add_attribute("target", newTab ? "_blank" : "", 0)}>${escape(name)}
+  return `<p class="mc-c-arrow-link svelte-1vsvwu9"><a class="${escape(null_to_empty(`color-${color}`), true) + " svelte-1vsvwu9"}"${add_attribute("href", href, 0)}${add_attribute("target", newTab ? "_blank" : "", 0)}>${escape(name)}
     ${validate_component(Icon, "Icon").$$render(
     $$result,
     {
@@ -49,9 +49,9 @@ const TimeBlock = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   $$result.css.add(css$1);
   return `
 
-<div class="${escape(null_to_empty(`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`), true) + " svelte-11b7yqt"}"><div class="${"mc-c-timeblock__col--content svelte-11b7yqt"}"><div class="${"mc-c-timeblock__col--content__bubble svelte-11b7yqt"}"><h3 class="${"mc-c-timeblock__col--content__bubble_title svelte-11b7yqt"}">${escape(project.title)}</h3>
-      <p class="${"mc-c-timeblock__col--content__bubble_date svelte-11b7yqt"}">${escape(!project.end_yr ? `${project.start_yr} - Present` : project.end_yr == project.start_yr ? `${project.end_yr}` : `${project.start_yr} - ${project.end_yr}`)}</p>
-      <p class="${"mc-c-timeblock__col--content__bubble_blurb svelte-11b7yqt"}">${escape(project.blurb)}</p>
+<div class="${escape(null_to_empty(`mc-c-timeblock --${id % 2 === 0 ? "even" : "odd"}`), true) + " svelte-11b7yqt"}"><div class="mc-c-timeblock__col--content svelte-11b7yqt"><div class="mc-c-timeblock__col--content__bubble svelte-11b7yqt"><h3 class="mc-c-timeblock__col--content__bubble_title svelte-11b7yqt">${escape(project.title)}</h3>
+      <p class="mc-c-timeblock__col--content__bubble_date svelte-11b7yqt">${escape(!project.end_yr ? `${project.start_yr} - Present` : project.end_yr == project.start_yr ? `${project.end_yr}` : `${project.start_yr} - ${project.end_yr}`)}</p>
+      <p class="mc-c-timeblock__col--content__bubble_blurb svelte-11b7yqt">${escape(project.blurb)}</p>
       ${project.see_more ? `${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
@@ -63,16 +63,16 @@ const TimeBlock = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     {},
     {}
   )}` : ``}</div></div>
-  <div class="${"mc-c-timeblock__vl svelte-11b7yqt"}"><div class="${"mc-c-timeblock__vl--empty svelte-11b7yqt"}"${add_attribute("this", vLine, 0)}></div>
-    <div class="${"mc-c-timeblock__vl--fill svelte-11b7yqt"}"${add_attribute("this", vFill, 0)}></div></div>
-  <div class="${"mc-c-timeblock__col--tags svelte-11b7yqt"}"><div class="${"tags svelte-11b7yqt"}"><ul class="${"svelte-11b7yqt"}">${each(project.tags, (tag) => {
+  <div class="mc-c-timeblock__vl svelte-11b7yqt"><div class="mc-c-timeblock__vl--empty svelte-11b7yqt"${add_attribute("this", vLine, 0)}></div>
+    <div class="mc-c-timeblock__vl--fill svelte-11b7yqt"${add_attribute("this", vFill, 0)}></div></div>
+  <div class="mc-c-timeblock__col--tags svelte-11b7yqt"><div class="tags svelte-11b7yqt"><ul class="svelte-11b7yqt">${each(project.tags, (tag) => {
     return `<li class="${escape(null_to_empty(`tag-${tag.tags.type.name}`), true) + " svelte-11b7yqt"}">${escape(tag.tags.name)}</li>`;
   })}</ul></div></div>
 </div>`;
 });
-const heroFigure = "/_app/immutable/assets/hero-figure-754e2dd3.webp";
-const heroSig = "/_app/immutable/assets/hero-signature-147470d3.webp";
-const aboutProfile = "/_app/immutable/assets/about-profile-1-ffd31c60.jpg";
+const heroFigure = "/_app/immutable/assets/hero-figure.754e2dd3.webp";
+const heroSig = "/_app/immutable/assets/hero-signature.147470d3.webp";
+const aboutProfile = "/_app/immutable/assets/about-profile-1.ffd31c60.jpg";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".color-tech.svelte-6pgivz.svelte-6pgivz{color:#FF3062}.color-art.svelte-6pgivz.svelte-6pgivz{color:#12E599}.color-light.svelte-6pgivz.svelte-6pgivz{color:#FFFFFF}h2.svelte-6pgivz.svelte-6pgivz{font-size:2.7rem}p.svelte-6pgivz.svelte-6pgivz{font-size:1.15rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-6pgivz.svelte-6pgivz{font-size:1.05rem !important}h2.svelte-6pgivz.svelte-6pgivz{font-size:2rem !important}}.svelte-6pgivz.svelte-6pgivz::-webkit-scrollbar,.svelte-6pgivz.svelte-6pgivz::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-6pgivz.svelte-6pgivz::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-hero.svelte-6pgivz.svelte-6pgivz{width:100%;height:100vh;overflow-x:hidden;display:flex}.mc-c-hero__block--right.svelte-6pgivz.svelte-6pgivz,.mc-c-hero__block--left.svelte-6pgivz.svelte-6pgivz{flex:1}.mc-c-hero__block--right.svelte-6pgivz.svelte-6pgivz{background-color:#12E599}.mc-c-hero__img--figure.svelte-6pgivz.svelte-6pgivz,.mc-c-hero__img--sig.svelte-6pgivz.svelte-6pgivz{position:absolute;pointer-events:none}.mc-c-hero__img--sig.svelte-6pgivz.svelte-6pgivz{height:110vh;top:-10vh;left:calc(50% - 59vh)}@media(max-width: 768px) and (orientation: portrait){.mc-c-hero__img--sig.svelte-6pgivz.svelte-6pgivz{height:80vh;left:calc(50% - 45vh)}}@media(max-width: 992px) and (max-height: 415px) and (orientation: landscape){.mc-c-hero__img--sig.svelte-6pgivz.svelte-6pgivz{height:100vh;left:calc(50% - 55vh)}}.mc-c-hero__img--figure.svelte-6pgivz.svelte-6pgivz{height:102vh;top:2em;left:calc(50% - 30vh)}@media(max-width: 992px) and (max-height: 415px) and (orientation: landscape){.mc-c-hero__img--figure.svelte-6pgivz.svelte-6pgivz{left:calc(50% - 30vh)}}.mc-c-hero__explore.svelte-6pgivz.svelte-6pgivz{position:absolute;display:flex;align-items:center;margin-top:calc(100vh - 130px);transform:rotate(90deg)}.mc-c-hero__explore.svelte-6pgivz p.svelte-6pgivz{flex-grow:0;padding-right:1em}.mc-c-hero__explore__line.svelte-6pgivz.svelte-6pgivz{width:4em;flex-grow:1;height:3px;background-color:#FF3062}.mc-c-title.svelte-6pgivz.svelte-6pgivz{display:flex;align-items:center}.mc-c-title.svelte-6pgivz h2.svelte-6pgivz{flex-grow:0;padding-right:1em;color:#FFFFFF}.mc-l-container.svelte-6pgivz.svelte-6pgivz{margin-top:8em}@media(max-width: 992px){.mc-l-container.svelte-6pgivz.svelte-6pgivz{margin:3em 2em 0}}.mc-l-container.svelte-6pgivz section.svelte-6pgivz{margin-bottom:8em}.mc-l-timeline.svelte-6pgivz.svelte-6pgivz{width:80%;margin-top:5em;margin-left:auto;margin-right:auto}@media(max-width: 1600px){.mc-l-timeline.svelte-6pgivz.svelte-6pgivz{width:80%}}@media(max-width: 1200px){.mc-l-timeline.svelte-6pgivz.svelte-6pgivz{width:90%}}@media(max-width: 992px){.mc-l-timeline.svelte-6pgivz.svelte-6pgivz{width:100%;margin-top:1em}}.mc-l-about.svelte-6pgivz.svelte-6pgivz{display:flex;column-gap:10em}@media(max-width: 1200px){.mc-l-about.svelte-6pgivz.svelte-6pgivz{column-gap:7em}}@media(max-width: 992px){.mc-l-about.svelte-6pgivz.svelte-6pgivz{column-gap:5em}}@media(max-width: 768px){.mc-l-about.svelte-6pgivz.svelte-6pgivz{flex-wrap:wrap;row-gap:3em}}.mc-c-about__blurb.svelte-6pgivz.svelte-6pgivz{flex:3;color:#C3C3C3}@media(max-width: 768px){.mc-c-about__blurb.svelte-6pgivz.svelte-6pgivz{flex:1 0 100%}}.mc-c-about__blurb__social-links.svelte-6pgivz.svelte-6pgivz{display:flex}.mc-c-about__profile.svelte-6pgivz.svelte-6pgivz{flex:2;text-align:center}@media(max-width: 768px){.mc-c-about__profile.svelte-6pgivz.svelte-6pgivz{flex:1 0 100%}}.mc-c-about__profile__img.svelte-6pgivz.svelte-6pgivz{width:80%;border-radius:25px}@media(max-width: 1200px){.mc-c-about__profile__img.svelte-6pgivz.svelte-6pgivz{width:90%}}@media(max-width: 992px){.mc-c-about__profile__img.svelte-6pgivz.svelte-6pgivz{width:100%}}@media(max-width: 768px){.mc-c-about__profile__img.svelte-6pgivz.svelte-6pgivz{width:60%}}@media(max-width: 576px){.mc-c-about__profile__img.svelte-6pgivz.svelte-6pgivz{width:80%}}",
@@ -88,16 +88,16 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<section class="${"mc-c-hero svelte-6pgivz"}"><div class="${"mc-c-hero__block--left svelte-6pgivz"}"></div>
-  <div class="${"mc-c-hero__block--right svelte-6pgivz"}"></div>
-  <img class="${"mc-c-hero__img--sig svelte-6pgivz"}"${add_attribute("src", heroSig, 0)} alt="${"Hero section signature"}">
-  <img class="${"mc-c-hero__img--figure svelte-6pgivz"}"${add_attribute("src", heroFigure, 0)} alt="${"Hero section figure"}">
-  <div class="${"mc-c-hero__explore svelte-6pgivz"}"><p class="${"svelte-6pgivz"}">Explore</p>
-    <div class="${"mc-c-hero__explore__line svelte-6pgivz"}"></div></div></section>
+<section class="mc-c-hero svelte-6pgivz"><div class="mc-c-hero__block--left svelte-6pgivz"></div>
+  <div class="mc-c-hero__block--right svelte-6pgivz"></div>
+  <img class="mc-c-hero__img--sig svelte-6pgivz"${add_attribute("src", heroSig, 0)} alt="Hero section signature">
+  <img class="mc-c-hero__img--figure svelte-6pgivz"${add_attribute("src", heroFigure, 0)} alt="Hero section figure">
+  <div class="mc-c-hero__explore svelte-6pgivz"><p class="svelte-6pgivz">Explore</p>
+    <div class="mc-c-hero__explore__line svelte-6pgivz"></div></div></section>
 
 ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 
-<div class="${"mc-l-container svelte-6pgivz"}"><section class="${"svelte-6pgivz"}"><div class="${"mc-c-title svelte-6pgivz"}"><h2 class="${"svelte-6pgivz"}">Featured Work</h2>
+<div class="mc-l-container svelte-6pgivz"><section class="svelte-6pgivz"><div class="mc-c-title svelte-6pgivz"><h2 class="svelte-6pgivz">Featured Work</h2>
       ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
@@ -109,7 +109,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-    <div class="${"mc-l-timeline svelte-6pgivz"}"${add_attribute("this", timeline, 0)}>${each(Object.keys(data), (idx) => {
+    <div class="mc-l-timeline svelte-6pgivz"${add_attribute("this", timeline, 0)}>${each(Object.keys(data), (idx) => {
     return `${validate_component(TimeBlock, "TimeBlock").$$render(
       $$result,
       {
@@ -122,7 +122,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     )}`;
   })}</div></section>
 
-  <section class="${"svelte-6pgivz"}"><div class="${"mc-l-about svelte-6pgivz"}"><div class="${"mc-c-about__blurb svelte-6pgivz"}"><div class="${"mc-c-title svelte-6pgivz"}"><h2 class="${"svelte-6pgivz"}">Hello World \u{1F44B}</h2>
+  <section class="svelte-6pgivz"><div class="mc-l-about svelte-6pgivz"><div class="mc-c-about__blurb svelte-6pgivz"><div class="mc-c-title svelte-6pgivz"><h2 class="svelte-6pgivz">Hello World 👋</h2>
           ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
@@ -134,18 +134,18 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-        <div class="${"mc-c-about__blurb__desc svelte-6pgivz"}"><p class="${"svelte-6pgivz"}">Hi there! I&#39;m Michaela or Milkcee, depending on where you found me
+        <div class="mc-c-about__blurb__desc svelte-6pgivz"><p class="svelte-6pgivz">Hi there! I&#39;m Michaela or Milkcee, depending on where you found me
             from. I&#39;m a software engineer and illustrator. I read a lot of manga
             and I like to talk about drawing my own comics, but I&#39;ve only made a
             handful of them.
           </p>
-          <p class="${"svelte-6pgivz"}">I&#39;m a junior studying <span class="${"color-tech svelte-6pgivz"}"><b class="${"svelte-6pgivz"}">Computer Science</b></span>
+          <p class="svelte-6pgivz">I&#39;m a junior studying <span class="color-tech svelte-6pgivz"><b class="svelte-6pgivz">Computer Science</b></span>
             at
-            <span class="${"color-light svelte-6pgivz"}"><b class="${"svelte-6pgivz"}">University of Southern California</b></span>
-            with a minor in <span class="${"color-art svelte-6pgivz"}"><b class="${"svelte-6pgivz"}">3-D Animation</b></span>.
+            <span class="color-light svelte-6pgivz"><b class="svelte-6pgivz">University of Southern California</b></span>
+            with a minor in <span class="color-art svelte-6pgivz"><b class="svelte-6pgivz">3-D Animation</b></span>.
             For some reason, I also own a lot of cow-themed merch.
           </p></div>
-        <div class="${"mc-c-about__blurb__social-links svelte-6pgivz"}">${validate_component(ArrowLink, "ArrowLink").$$render(
+        <div class="mc-c-about__blurb__social-links svelte-6pgivz">${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {
       href: "https://github.com/milkcee12",
@@ -182,7 +182,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {}
   )}</div></div>
       
-      <div class="${"mc-c-about__profile svelte-6pgivz"}"><img class="${"mc-c-about__profile__img svelte-6pgivz"}"${add_attribute("src", aboutProfile, 0)} alt="${"About section face profile"}"></div></div></section></div>
+      <div class="mc-c-about__profile svelte-6pgivz"><img class="mc-c-about__profile__img svelte-6pgivz"${add_attribute("src", aboutProfile, 0)} alt="About section face profile"></div></div></section></div>
 
 ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });

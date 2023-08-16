@@ -1,6 +1,6 @@
-import { c as create_ssr_component, d as add_attribute, o as onDestroy, f as spread, h as escape_object, i as createEventDispatcher, v as validate_component, e as escape } from "./index.js";
+import { c as create_ssr_component, h as add_attribute, o as onDestroy, j as spread, k as escape_object, l as createEventDispatcher, v as validate_component, e as escape } from "./index2.js";
 import { P as PUBLIC_GITHUB_URL } from "./public.js";
-const resume = "/_app/immutable/assets/MichaelaChang_Resume-29cc4c2d.pdf";
+const resume = "/_app/immutable/assets/MichaelaChang_Resume.29cc4c2d.pdf";
 const Navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "@media(max-width: 992px){}.svelte-x3026z.svelte-x3026z::-webkit-scrollbar,.svelte-x3026z.svelte-x3026z::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-x3026z.svelte-x3026z::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-navbar.svelte-x3026z.svelte-x3026z{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}@media(max-width: 992px){.mc-c-navbar.svelte-x3026z.svelte-x3026z{padding:3.5em 2em}}.mc-c-navbar__links.svelte-x3026z a.svelte-x3026z{padding:0 1em;font-weight:normal;color:#FFFFFF}@media(max-width: 992px){.mc-c-navbar__links.svelte-x3026z a.svelte-x3026z{padding:0 0.3em}}.mc-c-navbar__brand.svelte-x3026z.svelte-x3026z{font-size:1.5rem;color:#FFFFFF}",
@@ -8,11 +8,11 @@ const css$1 = {
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<nav class="${"mc-c-navbar svelte-x3026z"}"><a href="${"/"}" class="${"mc-c-navbar__brand svelte-x3026z"}"><b class="${"svelte-x3026z"}">MC</b></a>
-  <div class="${"mc-c-navbar__links svelte-x3026z"}"><a href="${"/work"}" class="${"svelte-x3026z"}">Work</a>
-    <a href="${"/art"}" class="${"svelte-x3026z"}">Art</a>
-    <a href="${"/about"}" class="${"svelte-x3026z"}">About</a>
-    <a${add_attribute("href", resume, 0)} target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-x3026z"}">Resume</a></div>
+  return `<nav class="mc-c-navbar svelte-x3026z"><a href="/" class="mc-c-navbar__brand svelte-x3026z"><b class="svelte-x3026z">MC</b></a>
+  <div class="mc-c-navbar__links svelte-x3026z"><a href="/work" class="svelte-x3026z">Work</a>
+    <a href="/playground" class="svelte-x3026z">Playground</a>
+    <a href="/about" class="svelte-x3026z">About</a>
+    <a${add_attribute("href", resume, 0)} target="_blank" rel="noreferrer" class="svelte-x3026z">Resume</a></div>
 </nav>`;
 });
 const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -31,6 +31,7 @@ const stringToIcon = (value, validate, allowSimpleName, provider = "") => {
     const name2 = colonSeparated.pop();
     const prefix = colonSeparated.pop();
     const result = {
+      // Allow provider without '@': "provider:prefix:name"
       provider: colonSeparated.length > 0 ? colonSeparated[0] : provider,
       prefix,
       name: name2
@@ -311,7 +312,9 @@ const defaultIconSizeCustomisations = Object.freeze({
   height: null
 });
 const defaultIconCustomisations = Object.freeze({
+  // Dimensions
   ...defaultIconSizeCustomisations,
+  // Transformations
   ...defaultIconTransformations
 });
 const unitsSplit = /(-?[0-9.]*[0-9]+[0-9.]*)/g;
@@ -352,6 +355,7 @@ function calculateSize(size, ratio, precision) {
     isNumber = !isNumber;
   }
 }
+const isUnsetKeyword = (value) => value === "unset" || value === "undefined" || value === "none";
 function iconToSVG(icon, customisations) {
   const fullIcon = {
     ...defaultIconProps,
@@ -443,15 +447,19 @@ function iconToSVG(icon, customisations) {
     width = customisationsWidth === "auto" ? boxWidth : customisationsWidth;
     height = customisationsHeight === null ? calculateSize(width, boxHeight / boxWidth) : customisationsHeight === "auto" ? boxHeight : customisationsHeight;
   }
-  const result = {
-    attributes: {
-      width: width.toString(),
-      height: height.toString(),
-      viewBox: box.left.toString() + " " + box.top.toString() + " " + boxWidth.toString() + " " + boxHeight.toString()
-    },
+  const attributes = {};
+  const setAttr = (prop, value) => {
+    if (!isUnsetKeyword(value)) {
+      attributes[prop] = value.toString();
+    }
+  };
+  setAttr("width", width);
+  setAttr("height", height);
+  attributes.viewBox = box.left.toString() + " " + box.top.toString() + " " + boxWidth.toString() + " " + boxHeight.toString();
+  return {
+    attributes,
     body
   };
-  return result;
 }
 const regex = /\sid="(\S+)"/g;
 const randomPrefix = "IconifyId" + Date.now().toString(16) + (Math.random() * 16777216 | 0).toString(16);
@@ -465,14 +473,18 @@ function replaceIDs(body, prefix = randomPrefix) {
   if (!ids.length) {
     return body;
   }
+  const suffix = "suffix" + (Math.random() * 16777216 | Date.now()).toString(16);
   ids.forEach((id) => {
     const newID = typeof prefix === "function" ? prefix(id) : prefix + (counter++).toString();
     const escapedID = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     body = body.replace(
+      // Allowed characters before id: [#;"]
+      // Allowed characters after id: [)"], .[a-z]
       new RegExp('([#;"])(' + escapedID + ')([")]|\\.[a-z])', "g"),
-      "$1" + newID + "$3"
+      "$1" + newID + suffix + "$3"
     );
   });
+  body = body.replace(new RegExp(suffix, "g"), "");
   return body;
 }
 const storage = /* @__PURE__ */ Object.create(null);
@@ -493,13 +505,21 @@ function createAPIConfig(source) {
     }
   }
   const result = {
+    // API hosts
     resources,
+    // Root path
     path: source.path || "/",
+    // URL length limit
     maxURL: source.maxURL || 500,
+    // Timeout before next host is used.
     rotate: source.rotate || 750,
+    // Timeout before failing query.
     timeout: source.timeout || 5e3,
+    // Randomise default API end point.
     random: source.random === true,
+    // Start index
     index: source.index || 0,
+    // Receive data after time out (used if time out kicks in first, then API module sends data anyway).
     dataAfterTimeout: source.dataAfterTimeout !== false
   };
   return result;
@@ -1133,7 +1153,8 @@ function iterateBrowserStorage(key, callback) {
     }
     try {
       const data = JSON.parse(item);
-      if (typeof data === "object" && typeof data.cached === "number" && data.cached > minTime && typeof data.provider === "string" && typeof data.data === "object" && typeof data.data.prefix === "string" && callback(data, index)) {
+      if (typeof data === "object" && typeof data.cached === "number" && data.cached > minTime && typeof data.provider === "string" && typeof data.data === "object" && typeof data.data.prefix === "string" && // Valid item: run callback
+      callback(data, index)) {
         return true;
       }
     } catch (err) {
@@ -1177,7 +1198,10 @@ function initBrowserStorage() {
 }
 function updateLastModified(storage2, lastModified) {
   const lastValue = storage2.lastModifiedCached;
-  if (lastValue && lastValue >= lastModified) {
+  if (
+    // Matches or newer
+    lastValue && lastValue >= lastModified
+  ) {
     return lastValue === lastModified;
   }
   storage2.lastModifiedCached = lastModified;
@@ -1422,8 +1446,11 @@ function iconToHTML(body, attributes) {
 function encodeSVGforURL(svg) {
   return svg.replace(/"/g, "'").replace(/%/g, "%25").replace(/#/g, "%23").replace(/</g, "%3C").replace(/>/g, "%3E").replace(/\s+/g, " ");
 }
+function svgToData(svg) {
+  return "data:image/svg+xml," + encodeSVGforURL(svg);
+}
 function svgToURL(svg) {
-  return 'url("data:image/svg+xml,' + encodeSVGforURL(svg) + '")';
+  return 'url("' + svgToData(svg) + '")';
 }
 const defaultExtendedIconCustomisations = {
   ...defaultIconCustomisations,
@@ -1467,6 +1494,9 @@ function render(icon, props) {
   const customisations = mergeCustomisations(defaultExtendedIconCustomisations, props);
   const mode = props.mode || "svg";
   const componentProps = mode === "svg" ? { ...svgDefaults } : {};
+  if (icon.body.indexOf("xlink:") === -1) {
+    delete componentProps["xmlns:xlink"];
+  }
   let style = typeof props.style === "string" ? props.style : "";
   for (let key in props) {
     const value = props[key];
@@ -1544,12 +1574,17 @@ function render(icon, props) {
   });
   const url = svgToURL(html);
   const styles = {
-    "--svg": url,
-    "width": fixSize(renderAttribs.width),
-    "height": fixSize(renderAttribs.height),
-    ...commonProps,
-    ...useMask ? monotoneProps : coloredProps
+    "--svg": url
   };
+  const size = (prop) => {
+    const value = renderAttribs[prop];
+    if (value) {
+      styles[prop] = fixSize(value);
+    }
+  };
+  size("width");
+  size("height");
+  Object.assign(styles, commonProps, useMask ? monotoneProps : coloredProps);
   let customStyle = "";
   for (const key in styles) {
     customStyle += key + ": " + styles[key] + ";";
@@ -1571,7 +1606,12 @@ if (typeof document !== "undefined" && typeof window !== "undefined") {
     if (typeof preload === "object" && preload !== null) {
       (preload instanceof Array ? preload : [preload]).forEach((item) => {
         try {
-          if (typeof item !== "object" || item === null || item instanceof Array || typeof item.icons !== "object" || typeof item.prefix !== "string" || !addCollection(item)) {
+          if (
+            // Check if item is an object and not null/array
+            typeof item !== "object" || item === null || item instanceof Array || // Check for 'icons' and 'prefix'
+            typeof item.icons !== "object" || typeof item.prefix !== "string" || // Add icon set
+            !addCollection(item)
+          ) {
             console.error(err);
           }
         } catch (e) {
@@ -1653,8 +1693,11 @@ function generateIcon(icon, props) {
 }
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const state = {
+    // Last icon name
     name: "",
+    // Loading status
     loading: null,
+    // Destroyed status
     destroyed: false
   };
   let mounted = false;
@@ -1670,10 +1713,6 @@ const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   }
   onDestroy(() => {
     state.destroyed = true;
-    if (state.loading) {
-      state.loading.abort();
-      state.loading = null;
-    }
   });
   {
     {
@@ -1706,8 +1745,8 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     date = null;
   });
   $$result.css.add(css);
-  return `<footer class="${"mc-c-footer svelte-thffth"}"><p class="${"mc-c-footer__item--copyright svelte-thffth"}">\xA9 2022 All right reserved.</p>
-  <div class="${"mc-c-footer__item--socials svelte-thffth"}"><a href="${"https://www.instagram.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-thffth"}">${validate_component(Icon, "Icon").$$render(
+  return `<footer class="mc-c-footer svelte-thffth"><p class="mc-c-footer__item--copyright svelte-thffth">© 2022 All right reserved.</p>
+  <div class="mc-c-footer__item--socials svelte-thffth"><a href="https://www.instagram.com/milkcee12/" target="_blank" rel="noreferrer" class="svelte-thffth">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:instagram",
@@ -1717,7 +1756,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-    <a href="${"https://github.com/milkcee12/"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-thffth"}">${validate_component(Icon, "Icon").$$render(
+    <a href="https://github.com/milkcee12/" target="_blank" rel="noreferrer" class="svelte-thffth">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:github",
@@ -1727,7 +1766,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a>
-    <a href="${"https://twitter.com/milkcee12"}" target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-thffth"}">${validate_component(Icon, "Icon").$$render(
+    <a href="https://twitter.com/milkcee12" target="_blank" rel="noreferrer" class="svelte-thffth">${validate_component(Icon, "Icon").$$render(
     $$result,
     {
       icon: "fa6-brands:twitter",
@@ -1737,7 +1776,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )}</a></div>
-  <p class="${"mc-c-footer__item--updated svelte-thffth"}">Last updated: <br class="${"svelte-thffth"}"> ${escape(date)}</p>
+  <p class="mc-c-footer__item--updated svelte-thffth">Last updated: <br class="svelte-thffth"> ${escape(date)}</p>
 </footer>`;
 });
 export {

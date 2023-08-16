@@ -13,7 +13,7 @@ export { matchers } from './client-matchers.js';
 			export const dictionary = {
 	"/": [3],
 	"/(app)/about": [4,[2]],
-	"/(app)/art": [5,[2]],
+	"/(app)/playground": [5,[2]],
 	"/(app)/work": [6,[2]]
 };
 

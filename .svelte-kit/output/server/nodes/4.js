@@ -1,8 +1,10 @@
-import * as shared from '../entries/pages/(app)/about/_page.js';
+import * as universal from '../entries/pages/(app)/about/_page.js';
 
 export const index = 4;
-export const component = async () => (await import('../entries/pages/(app)/about/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/(app)/about/_page.svelte-b77ba8ad.js';
-export { shared };
-export const imports = ["_app/immutable/components/pages/(app)/about/_page.svelte-b77ba8ad.js","_app/immutable/chunks/index-1133d749.js","_app/immutable/modules/pages/(app)/about/_page.js-cf3c619c.js","_app/immutable/chunks/preload-helper-b21cceae.js","_app/immutable/chunks/_page-7e8b0ac3.js"];
-export const stylesheets = ["_app/immutable/assets/_page-c07f1fa4.css"];
+let component_cache;
+export const component = async () => component_cache ??= (await import('../entries/pages/(app)/about/_page.svelte.js')).default;
+export { universal };
+export const universal_id = "src/routes/(app)/about/+page.js";
+export const imports = ["_app/immutable/nodes/4.753dcdd3.js","_app/immutable/chunks/preload-helper.a4192956.js","_app/immutable/chunks/index.8c87a89b.js"];
+export const stylesheets = ["_app/immutable/assets/4.a31fe27f.css"];
+export const fonts = [];

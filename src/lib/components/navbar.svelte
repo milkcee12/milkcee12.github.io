@@ -6,7 +6,7 @@
   <a href="/" class="mc-c-navbar__brand"><b>MC</b></a>
   <div class="mc-c-navbar__links">
     <a href="/work">Work</a>
-    <a href="/art">Art</a>
+    <a href="/playground">Playground</a>
     <a href="/about">About</a>
     <a href={resume} target="_blank" rel="noreferrer">Resume</a>
   </div>
