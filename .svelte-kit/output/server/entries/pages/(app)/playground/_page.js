@@ -8,6 +8,7 @@ async function load() {
     /* @__PURE__ */ Object.assign({ "../../../lib/img/playground/fanart/001.jpg": () => import("../../../../chunks/001.js"), "../../../lib/img/playground/fanart/002.jpg": () => import("../../../../chunks/002.js"), "../../../lib/img/playground/fanart/003.jpg": () => import("../../../../chunks/003.js"), "../../../lib/img/playground/fanart/004.jpg": () => import("../../../../chunks/004.js"), "../../../lib/img/playground/fanart/005.jpg": () => import("../../../../chunks/005.js") }),
     /* @__PURE__ */ Object.assign({ "../../../lib/img/playground/featured/006.jpg": () => import("../../../../chunks/006.js"), "../../../lib/img/playground/featured/007.jpg": () => import("../../../../chunks/007.js"), "../../../lib/img/playground/featured/008.jpg": () => import("../../../../chunks/008.js"), "../../../lib/img/playground/featured/009.jpg": () => import("../../../../chunks/009.js"), "../../../lib/img/playground/featured/010.jpg": () => import("../../../../chunks/010.js"), "../../../lib/img/playground/featured/011.jpg": () => import("../../../../chunks/011.js") })
   ];
+  let { data: playground, error } = await supabase.from("playground").select("*").order("id", { ascending: true });
   for (let i = 0; i < modules.length; i++) {
     const iterableModule = Object.entries(modules[i]);
     const section = await Promise.all(
@@ -19,8 +20,11 @@ async function load() {
             url: imageUrl
           };
         });
-        let { data: playground, error } = await supabase.from("playground").select("*").eq("id", fileData.id);
-        if (error || playground === void 0 || playground.length == 0) {
+        let imageData = null;
+        if (fileData.id <= playground.length) {
+          imageData = playground[fileData.id - 1];
+        }
+        if (error || imageData == null) {
           return {
             url: fileData.url,
             error
@@ -28,10 +32,10 @@ async function load() {
         }
         return {
           url: fileData.url,
-          title: playground[0].title,
-          desc: playground[0].desc,
-          link: playground[0].external_link,
-          year: playground[0].year,
+          title: imageData.title,
+          desc: imageData.desc,
+          link: imageData.external_link,
+          year: imageData.year,
           error
         };
       })

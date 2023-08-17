@@ -14,6 +14,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1xfty9t_START -->${$$result.title = `<title>Playground | Milkcee Studios</title>`, ""}<!-- HEAD_svelte-1xfty9t_END -->`, ""}
 
 <h1 class="svelte-dg4hqe">Playground</h1>
+<p class="svelte-dg4hqe">A page dedicated to all the smaller, one-off projects I&#39;ve done throughout the
+  years. Click on the the images to learn more about them!
+</p>
 <section class="svelte-dg4hqe"><h2 class="svelte-dg4hqe">Originals 🎈</h2>
   <p class="svelte-dg4hqe">Visions from the worlds inside my head.</p>
   <div class="mc-c-gallery svelte-dg4hqe">${each(data.sections.featured, (image) => {
