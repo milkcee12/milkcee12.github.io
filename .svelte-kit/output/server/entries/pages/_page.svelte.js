@@ -1,7 +1,6 @@
 import { c as create_ssr_component, e as escape, f as null_to_empty, h as add_attribute, v as validate_component, b as each } from "../../chunks/index2.js";
 import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
-const ArrowLink_svelte_svelte_type_style_lang = "";
-const css$2 = {
+/* empty css                                                    */const css$2 = {
   code: ".color-tech.svelte-1vsvwu9.svelte-1vsvwu9{color:#FF3062}.color-art.svelte-1vsvwu9.svelte-1vsvwu9{color:#12E599}.color-muted.svelte-1vsvwu9.svelte-1vsvwu9{color:#C3C3C3}.color-light.svelte-1vsvwu9.svelte-1vsvwu9{color:#FFFFFF}.color-dark.svelte-1vsvwu9.svelte-1vsvwu9{color:#090A0D}p.svelte-1vsvwu9.svelte-1vsvwu9,p.svelte-1vsvwu9 a.svelte-1vsvwu9{font-size:1.15rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-1vsvwu9.svelte-1vsvwu9,p.svelte-1vsvwu9 a.svelte-1vsvwu9{font-size:1.05rem !important}}.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar,.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-arrow-link.svelte-1vsvwu9 a.svelte-1vsvwu9{display:flex;align-items:center}",
   map: null
 };
@@ -109,18 +108,18 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {},
     {}
   )}</div>
-    <div class="mc-l-timeline svelte-6pgivz"${add_attribute("this", timeline, 0)}>${each(Object.keys(data), (idx) => {
+    ${data.error ? `<p class="svelte-6pgivz">Oops! there was an error loading featured work 😔. Please try again.</p>` : `<div class="mc-l-timeline svelte-6pgivz"${add_attribute("this", timeline, 0)}>${each(Object.keys(data.timeline), (key, i) => {
     return `${validate_component(TimeBlock, "TimeBlock").$$render(
       $$result,
       {
-        id: idx,
-        project: data[idx],
+        id: i,
+        project: data.timeline[key],
         timelineHeight
       },
       {},
       {}
     )}`;
-  })}</div></section>
+  })}</div>`}</section>
 
   <section class="svelte-6pgivz"><div class="mc-l-about svelte-6pgivz"><div class="mc-c-about__blurb svelte-6pgivz"><div class="mc-c-title svelte-6pgivz"><h2 class="svelte-6pgivz">Hello World 👋</h2>
           ${validate_component(ArrowLink, "ArrowLink").$$render(
