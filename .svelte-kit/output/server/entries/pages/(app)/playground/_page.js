@@ -5,7 +5,9 @@ async function load() {
   const fanartModule = /* @__PURE__ */ Object.assign({
     "../../../lib/img/playground/fanart/1.jpg": () => import("../../../../chunks/1.js"),
     "../../../lib/img/playground/fanart/2.jpg": () => import("../../../../chunks/2.js"),
-    "../../../lib/img/playground/fanart/3.jpg": () => import("../../../../chunks/3.js")
+    "../../../lib/img/playground/fanart/3.jpg": () => import("../../../../chunks/3.js"),
+    "../../../lib/img/playground/fanart/4.jpg": () => import("../../../../chunks/4.js"),
+    "../../../lib/img/playground/fanart/5.jpg": () => import("../../../../chunks/5.js")
   });
   const iterableFanartModule = Object.entries(fanartModule);
   const fanart = await Promise.all(
@@ -18,7 +20,7 @@ async function load() {
         };
       });
       let { data: playground, error } = await supabase.from("playground").select("*").eq("id", fileData.id);
-      if (error) {
+      if (error || playground === void 0 || playground.length == 0) {
         return {
           url: fileData.url,
           error

@@ -29,8 +29,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         manga, eating pastries, or in the Uniqlo graphic tee section.
       </p></div></div></section>
 <section class="svelte-1xzhc99"><h2 class="svelte-1xzhc99">Profile Picture Graveyard 🪦</h2>
-  <p class="svelte-1xzhc99">An overview of how my art has changed over the years! Some of these are
-    original characters, and some are fictional personas of myself.
+  <p class="svelte-1xzhc99">Hover over the pictures! :)
   </p>
   <div class="mc-c-pfp svelte-1xzhc99">${each(pfps, ({ url, date }) => {
     return `<div class="mc-c-pfp--item svelte-1xzhc99"><figure class="svelte-1xzhc99"><img${add_attribute("src", url, 0)}${add_attribute("alt", date, 0)} class="svelte-1xzhc99">
