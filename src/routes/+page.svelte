@@ -53,7 +53,7 @@
   <section>
     <div class="mc-c-title">
       <h2>Featured Work</h2>
-      <ArrowLink href="/work" color="art" name="See all" newTab={false} />
+      <ArrowLink href="/work" color="art" name="See all work" newTab={false} />
     </div>
     {#if data.error}
     <p>Oops! there was an error loading featured work &#128532;. Please try again.</p>

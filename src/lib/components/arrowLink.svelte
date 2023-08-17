@@ -1,13 +1,14 @@
 <script>
   import Icon from "@iconify/svelte";
-  export let href,
+  export let href = "#",
     name,
     color,
     arrowColor = false,
-    newTab;
+    newTab = false,
+    alignRight = false;
 </script>
 
-<p class="mc-c-arrow-link">
+<p class={`mc-c-arrow-link ${alignRight ? "align-right" : ""}`}>
   <a class={`color-${color}`} {href} target={newTab ? "_blank" : ""}
     >{name}
     <Icon
@@ -21,9 +22,16 @@
 
 <style lang="scss">
   .mc-c-arrow-link {
+    display: flex;
+    
     a {
+      width: fit-content;
       display: flex;
       align-items: center;
+    }
+
+    &.align-right {
+      justify-content: flex-end;
     }
   }
 </style>
