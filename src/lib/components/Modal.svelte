@@ -66,7 +66,7 @@
 
     &--container {
       height: 90vh;
-      width: 90vw;
+      max-width: 90vw;
     }
 
     &--close {
@@ -84,13 +84,19 @@
       flex-wrap: wrap;
       justify-content: center;
       background-color: $color-dark;
+      border-radius: 15px;
+      overflow: hidden;
       border: $color-gray 1px solid;
     }
 
     &--text {
-      padding: 30px;
-      flex: 2 0 20%;
+      padding: 20px 40px;
+      flex: 5 0 20%;
       pointer-events: all;
+      background-color: $color-darklight;
+      margin: 20px;
+      border-radius: 15px;
+      box-sizing: border-box;
       &--title {
         h3 {
           margin-bottom: 0;
@@ -106,7 +112,7 @@
       align-items: center;
       justify-content: center;
       max-height: 100%;
-      width: 75%;
+      max-width: 75%;
       flex: 7 1 70%;
       background-color: black;
     }
@@ -119,13 +125,13 @@
 
   @media (max-width: 992px) {
     .mc-c-modal {
-      &--content {
-      }
       &--text {
         flex: 1;
         flex-basis: 100%;
       }
       &--image {
+        flex-basis: 100%;
+        max-width: 100%;
         max-height: 70%;
         flex: 1;
       }
