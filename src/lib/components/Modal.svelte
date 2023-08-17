@@ -1,7 +1,7 @@
 <script>
-  import { onMount } from "svelte";
   import { closeModal } from "svelte-modals";
   import ArrowLink from "./ArrowLink.svelte";
+  import { fade } from "svelte/transition";
 
   // Provided by <Modals />
   export let isOpen;
@@ -14,7 +14,7 @@
 </script>
 
 {#if isOpen}
-  <div role="dialog" class="mc-c-modal">
+  <div role="dialog" class="mc-c-modal" transition:fade|global>
     <div class="mc-c-modal--container">
       <div class="mc-c-modal--close">
         <button on:click={closeModal}>X</button>

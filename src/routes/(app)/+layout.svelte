@@ -1,11 +1,12 @@
 <script>
   import Navbar from "../../lib/components/Navbar.svelte";
   import Footer from "../../lib/components/Footer.svelte";
-  import { Modals, closeModal} from "svelte-modals";
+  import { Modals, closeModal } from "svelte-modals";
+  import { fade } from "svelte/transition";
 </script>
 
 <Modals>
-  <div slot="backdrop" class="backdrop" on:click={closeModal} />
+  <div slot="backdrop" class="backdrop" on:click={closeModal} transition:fade />
 </Modals>
 
 <Navbar />
