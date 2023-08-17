@@ -66,19 +66,19 @@ ${slots.default ? slots.default({}) : `
 });
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "@media(max-width: 992px){}.svelte-16i9z1o::-webkit-scrollbar,.svelte-16i9z1o::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-16i9z1o::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.backdrop.svelte-16i9z1o{z-index:99;position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0, 0, 0, 0.7)}",
+  code: "@media(max-width: 992px){}.svelte-6wkyt2::-webkit-scrollbar{width:8px;height:8px}.svelte-6wkyt2::-webkit-scrollbar-track{background-clip:content-box;border:2px solid transparent}.svelte-6wkyt2::-webkit-scrollbar-thumb{background-color:#575757}.svelte-6wkyt2::-webkit-scrollbar-thumb:hover{background-color:#4e4e4e}.svelte-6wkyt2::-webkit-scrollbar-corner,.svelte-6wkyt2::-webkit-scrollbar-track{background-color:none}.backdrop.svelte-6wkyt2{z-index:99;position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0, 0, 0, 0.7)}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${validate_component(Modals, "Modals").$$render($$result, {}, {}, {
     backdrop: () => {
-      return `<div slot="backdrop" class="backdrop svelte-16i9z1o"></div>`;
+      return `<div slot="backdrop" class="backdrop svelte-6wkyt2"></div>`;
     }
   })}
 
 ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
-<div class="mc-l-container svelte-16i9z1o">${slots.default ? slots.default({}) : ``}</div>
+<div class="mc-l-container svelte-6wkyt2">${slots.default ? slots.default({}) : ``}</div>
 ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {
