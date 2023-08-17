@@ -6,6 +6,7 @@ const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 const keys = ["fanart", "featured"];
 const sections = [];
 
+// Last ID: 11
 /** @type {import('./$types').PageLoad} */
 export async function load() {
     const modules = [
@@ -13,6 +14,13 @@ export async function load() {
         import.meta.glob('../../../lib/img/playground/featured/*',),
     ]
 
+    // Get all playground illustratoins from database
+    let { data: playground, error } = await supabase
+        .from('playground')
+        .select('*')
+        .order('id', { ascending: true });
+
+    // Map database information to files
     for (let i = 0; i < modules.length; i++) {
         const iterableModule = Object.entries(modules[i]);
 
@@ -27,13 +35,13 @@ export async function load() {
                     };
                 });
 
-                // Get data related to illustration from database
-                let { data: playground, error } = await supabase
-                    .from('playground')
-                    .select('*')
-                    .eq('id', fileData.id);
+                // Map image file to database data
+                let imageData = null;
+                if (fileData.id <= playground.length) {
+                    imageData = playground[fileData.id - 1];
+                }
 
-                if (error || playground === undefined || playground.length == 0) {
+                if (error || imageData == null) {
                     return {
                         url: fileData.url,
                         error: error
@@ -41,10 +49,10 @@ export async function load() {
                 }
                 return {
                     url: fileData.url,
-                    title: playground[0].title,
-                    desc: playground[0].desc,
-                    link: playground[0].external_link,
-                    year: playground[0].year,
+                    title: imageData.title,
+                    desc: imageData.desc,
+                    link: imageData.external_link,
+                    year: imageData.year,
                     error: error,
                 };
             })

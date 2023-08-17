@@ -11,6 +11,10 @@
 </svelte:head>
 
 <h1>Playground</h1>
+<p>
+  A page dedicated to all the smaller, one-off projects I've done throughout the
+  years. Click on the the images to learn more about them!
+</p>
 <section>
   <h2>Originals &#127880;</h2>
   <p>Visions from the worlds inside my head.</p>
