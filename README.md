@@ -14,6 +14,7 @@ Hello! This README is an informal document of records of tasks that need to be d
 - [ ] Add preloader
 - [ ] Add library to preload page on link hover to reduce image loading times
 - [ ] Add animations/polish
-- [ ] On hover over timeline bubbles, show preview image of project
+- [ ] Link hover effects
+- [ ] On hover over timeline nodes, show preview image of project
 - [ ] Fancy cursor
 - [ ] Add arrow controls in modal galleries in playground
