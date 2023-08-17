@@ -47,8 +47,7 @@
 <section>
   <h2>Profile Picture Graveyard &#129702;</h2>
   <p>
-    An overview of how my art has changed over the years! Some of these are
-    original characters, and some are fictional personas of myself.
+    Hover over the pictures! :)
   </p>
   <div class="mc-c-pfp">
     {#each pfps as { url, date }}

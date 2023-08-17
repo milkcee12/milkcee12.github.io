@@ -16,3 +16,4 @@ Hello! This README is an informal document of records of tasks that need to be d
 - [ ] Add animations/polish
 - [ ] On hover over timeline bubbles, show preview image of project
 - [ ] Fancy cursor
+- [ ] Add arrow controls in modal galleries in playground

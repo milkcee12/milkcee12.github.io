@@ -12,6 +12,7 @@ export async function load() {
 
     const fanart = await Promise.all(
         iterableFanartModule.map(async ([path, resolver]) => {
+            // Resolve image src from file system
             const fileData = await resolver().then(({ default: imageUrl }) => {
                 let id = parseInt(path.split('/').pop().slice(0,-3));
                 return {
@@ -20,12 +21,13 @@ export async function load() {
                 };
             });
 
+            // Get data related to illustration from database
             let { data: playground, error } = await supabase
                 .from('playground')
                 .select('*')
                 .eq('id', fileData.id);
             
-            if (error) {
+            if (error || playground === undefined || playground.length == 0) {
                 return { 
                     url: fileData.url, 
                     error: error

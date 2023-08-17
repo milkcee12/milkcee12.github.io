@@ -17,15 +17,20 @@
   <div class="mc-c-gallery">
     {#each data.fanart as image}
       <div class="mc-c-gallery--container">
-        {#if !image.error}
+        {#if image.error || image.title == null}
+          <p>Untitled</p>
+          <img
+            src={image.url}
+            alt="fanart"
+            on:click={openModal(Modal, { imageData: image })}
+          />
+        {:else}
           <p>{image.title}</p>
           <img
             src={image.url}
             alt={image.title}
             on:click={openModal(Modal, { imageData: image })}
           />
-        {:else}
-          <img src={image.url} alt="fanart" />
         {/if}
       </div>
     {/each}
@@ -49,6 +54,8 @@
       flex-grow: 1;
       height: 40vh;
       text-align: center;
+      box-sizing: border-box;
+      border-radius: 10px;
 
       @media (max-aspect-ratio: 1/1) {
         height: 30vh;

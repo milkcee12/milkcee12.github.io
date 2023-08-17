@@ -14,7 +14,6 @@
   <div role="dialog" class="mc-c-modal" transition:fade|global>
     <div class="mc-c-modal--container">
       <div class="mc-c-modal--close">
-        <!-- <button on:click={closeModal}>X</button> -->
         <Icon
           icon="mingcute:close-line"
           width="25"
@@ -24,27 +23,40 @@
         />
       </div>
       <div class="mc-c-modal--content">
-        <div class="mc-c-modal--image">
-          <img src={imageData.url} alt={imageData.title} />
-        </div>
-        <div class="mc-c-modal--text">
-          <div class="mc-c-modal--text--title">
-            <h3>{imageData.title}</h3>
-            <p>{imageData.year}</p>
+        {#if imageData.title == null}
+          <div class="mc-c-modal--image">
+            <img src={imageData.url} alt="playground-art" />
           </div>
-          <p>{imageData.desc}</p>
-          {#if imageData.link}
-            <div class="md-c-modal--text--link">
-              <ArrowLink
-                href={imageData.link}
-                color="art"
-                name="See more"
-                newTab={true}
-                alignRight={true}
-              />
+          <div class="mc-c-modal--text">
+            <div class="mc-c-modal--text--title">
+              <h3>Untitled</h3>
+              <p>Year</p>
             </div>
-          {/if}
-        </div>
+            <p>-</p>
+          </div>
+        {:else}
+          <div class="mc-c-modal--image">
+            <img src={imageData.url} alt={imageData.title} />
+          </div>
+          <div class="mc-c-modal--text">
+            <div class="mc-c-modal--text--title">
+              <h3>{imageData.title}</h3>
+              <p>{imageData.year}</p>
+            </div>
+            <p>{imageData.desc}</p>
+            {#if imageData.link}
+              <div class="md-c-modal--text--link">
+                <ArrowLink
+                  href={imageData.link}
+                  color="art"
+                  name="See more"
+                  newTab={true}
+                  alignRight={true}
+                />
+              </div>
+            {/if}
+          </div>
+        {/if}
       </div>
     </div>
   </div>
