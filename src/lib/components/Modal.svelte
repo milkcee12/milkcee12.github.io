@@ -84,7 +84,7 @@
       height: 100%;
       flex-wrap: wrap;
       justify-content: center;
-      background-color: $color-dark;
+      background-color: $color-dark-gray;
       border-radius: 15px;
       overflow: hidden;
       border: $color-gray 1px solid;
@@ -94,7 +94,7 @@
     &--text {
       padding: 20px 40px;
       flex: 5 0 20%;
-      background-color: $color-darklight;
+      background-color: $color-dark-accent;
       margin: 20px;
       border-radius: 15px;
       box-sizing: border-box;
