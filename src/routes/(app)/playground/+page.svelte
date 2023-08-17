@@ -12,10 +12,35 @@
 
 <h1>Playground</h1>
 <section>
-  <h2>Fanart</h2>
+  <h2>Originals &#127880;</h2>
+  <p>Visions from the worlds inside my head.</p>
+  <div class="mc-c-gallery">
+    {#each data.sections.featured as image}
+      <div class="mc-c-gallery--container">
+        {#if image.error || image.title == null}
+          <p>Untitled</p>
+          <img
+            src={image.url}
+            alt="featured"
+            on:click={openModal(Modal, { imageData: image })}
+          />
+        {:else}
+          <p>{image.title}</p>
+          <img
+            src={image.url}
+            alt={image.title}
+            on:click={openModal(Modal, { imageData: image })}
+          />
+        {/if}
+      </div>
+    {/each}
+  </div>
+</section>
+<section>
+  <h2>Fanart &#128249;</h2>
   <p>Paying homage to some of my favorite works in pop culture.</p>
   <div class="mc-c-gallery">
-    {#each data.fanart as image}
+    {#each data.sections.fanart as image}
       <div class="mc-c-gallery--container">
         {#if image.error || image.title == null}
           <p>Untitled</p>
