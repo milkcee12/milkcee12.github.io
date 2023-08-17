@@ -14,9 +14,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1xfty9t_START -->${$$result.title = `<title>Playground | Milkcee Studios</title>`, ""}<!-- HEAD_svelte-1xfty9t_END -->`, ""}
 
 <h1 class="svelte-dg4hqe">Playground</h1>
-<section class="svelte-dg4hqe"><h2 class="svelte-dg4hqe">Fanart</h2>
+<section class="svelte-dg4hqe"><h2 class="svelte-dg4hqe">Originals 🎈</h2>
+  <p class="svelte-dg4hqe">Visions from the worlds inside my head.</p>
+  <div class="mc-c-gallery svelte-dg4hqe">${each(data.sections.featured, (image) => {
+    return `<div class="mc-c-gallery--container svelte-dg4hqe">${image.error || image.title == null ? `<p class="svelte-dg4hqe">Untitled</p>
+          <img${add_attribute("src", image.url, 0)} alt="featured" class="svelte-dg4hqe">` : `<p class="svelte-dg4hqe">${escape(image.title)}</p>
+          <img${add_attribute("src", image.url, 0)}${add_attribute("alt", image.title, 0)} class="svelte-dg4hqe">`}
+      </div>`;
+  })}</div></section>
+<section class="svelte-dg4hqe"><h2 class="svelte-dg4hqe">Fanart 📹</h2>
   <p class="svelte-dg4hqe">Paying homage to some of my favorite works in pop culture.</p>
-  <div class="mc-c-gallery svelte-dg4hqe">${each(data.fanart, (image) => {
+  <div class="mc-c-gallery svelte-dg4hqe">${each(data.sections.fanart, (image) => {
     return `<div class="mc-c-gallery--container svelte-dg4hqe">${image.error || image.title == null ? `<p class="svelte-dg4hqe">Untitled</p>
           <img${add_attribute("src", image.url, 0)} alt="fanart" class="svelte-dg4hqe">` : `<p class="svelte-dg4hqe">${escape(image.title)}</p>
           <img${add_attribute("src", image.url, 0)}${add_attribute("alt", image.title, 0)} class="svelte-dg4hqe">`}
