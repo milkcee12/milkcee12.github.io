@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","favicon.ico","favicon.png"]),
 	mimeTypes: {".ico":"image/vnd.microsoft.icon",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.9f6ae980.js","app":"_app/immutable/entry/app.b1ee9ae8.js","imports":["_app/immutable/entry/start.9f6ae980.js","_app/immutable/chunks/index.3582ccdd.js","_app/immutable/chunks/singletons.d6c3a9ff.js","_app/immutable/chunks/index.dc6bd2f2.js","_app/immutable/entry/app.b1ee9ae8.js","_app/immutable/chunks/preload-helper.a4192956.js","_app/immutable/chunks/index.3582ccdd.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.7761a846.js","app":"_app/immutable/entry/app.7feee28a.js","imports":["_app/immutable/entry/start.7761a846.js","_app/immutable/chunks/index.3582ccdd.js","_app/immutable/chunks/singletons.bfcd7fc6.js","_app/immutable/chunks/index.dc6bd2f2.js","_app/immutable/entry/app.7feee28a.js","_app/immutable/chunks/preload-helper.a4192956.js","_app/immutable/chunks/index.3582ccdd.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js'))
