@@ -119,8 +119,8 @@
         flex: 1 1 250px;
       }
       img {
-        height: min(356px, 75%);
-        width: min(475px, 100%);
+        max-height: 40vh;
+        max-width: 100%;
         border-radius: 25px;
       }
     }
