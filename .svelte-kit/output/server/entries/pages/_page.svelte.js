@@ -1,11 +1,11 @@
 import { c as create_ssr_component, e as escape, f as null_to_empty, h as add_attribute, v as validate_component, b as each } from "../../chunks/index2.js";
 import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
 /* empty css                                                    */const css$2 = {
-  code: ".color-tech.svelte-1vsvwu9.svelte-1vsvwu9{color:#FF3062}.color-art.svelte-1vsvwu9.svelte-1vsvwu9{color:#12E599}.color-muted.svelte-1vsvwu9.svelte-1vsvwu9{color:#C3C3C3}.color-light.svelte-1vsvwu9.svelte-1vsvwu9{color:#FFFFFF}.color-dark.svelte-1vsvwu9.svelte-1vsvwu9{color:#090A0D}p.svelte-1vsvwu9.svelte-1vsvwu9,p.svelte-1vsvwu9 a.svelte-1vsvwu9{font-size:1.15rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-1vsvwu9.svelte-1vsvwu9,p.svelte-1vsvwu9 a.svelte-1vsvwu9{font-size:1.05rem !important}}.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar,.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-1vsvwu9.svelte-1vsvwu9::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-arrow-link.svelte-1vsvwu9 a.svelte-1vsvwu9{display:flex;align-items:center}",
+  code: ".color-tech.svelte-15598d9.svelte-15598d9{color:#FF3062}.color-art.svelte-15598d9.svelte-15598d9{color:#12E599}.color-muted.svelte-15598d9.svelte-15598d9{color:#C3C3C3}.color-light.svelte-15598d9.svelte-15598d9{color:#FFFFFF}.color-dark.svelte-15598d9.svelte-15598d9{color:#090A0D}p.svelte-15598d9.svelte-15598d9,p.svelte-15598d9 a.svelte-15598d9{font-size:1.15rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-15598d9.svelte-15598d9,p.svelte-15598d9 a.svelte-15598d9{font-size:1.05rem !important}}.svelte-15598d9.svelte-15598d9::-webkit-scrollbar,.svelte-15598d9.svelte-15598d9::-webkit-scrollbar-thumb{width:15px;border-radius:13px;background-clip:padding-box;border:6px solid transparent}.svelte-15598d9.svelte-15598d9::-webkit-scrollbar-thumb{box-shadow:inset 0 0 0 10px}.mc-c-arrow-link.svelte-15598d9.svelte-15598d9{display:flex}.mc-c-arrow-link.svelte-15598d9 a.svelte-15598d9{width:fit-content;display:flex;align-items:center}.mc-c-arrow-link.align-right.svelte-15598d9.svelte-15598d9{justify-content:flex-end}",
   map: null
 };
 const ArrowLink = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { href, name, color, arrowColor = false, newTab } = $$props;
+  let { href = "#", name, color, arrowColor = false, newTab = false, alignRight = false } = $$props;
   if ($$props.href === void 0 && $$bindings.href && href !== void 0)
     $$bindings.href(href);
   if ($$props.name === void 0 && $$bindings.name && name !== void 0)
@@ -16,8 +16,10 @@ const ArrowLink = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.arrowColor(arrowColor);
   if ($$props.newTab === void 0 && $$bindings.newTab && newTab !== void 0)
     $$bindings.newTab(newTab);
+  if ($$props.alignRight === void 0 && $$bindings.alignRight && alignRight !== void 0)
+    $$bindings.alignRight(alignRight);
   $$result.css.add(css$2);
-  return `<p class="mc-c-arrow-link svelte-1vsvwu9"><a class="${escape(null_to_empty(`color-${color}`), true) + " svelte-1vsvwu9"}"${add_attribute("href", href, 0)}${add_attribute("target", newTab ? "_blank" : "", 0)}>${escape(name)}
+  return `<p class="${escape(null_to_empty(`mc-c-arrow-link ${alignRight ? "align-right" : ""}`), true) + " svelte-15598d9"}"><a class="${escape(null_to_empty(`color-${color}`), true) + " svelte-15598d9"}"${add_attribute("href", href, 0)}${add_attribute("target", newTab ? "_blank" : "", 0)}>${escape(name)}
     ${validate_component(Icon, "Icon").$$render(
     $$result,
     {
@@ -102,7 +104,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
     {
       href: "/work",
       color: "art",
-      name: "See all",
+      name: "See all work",
       newTab: false
     },
     {},
