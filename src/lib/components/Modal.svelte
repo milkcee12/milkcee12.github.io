@@ -125,6 +125,9 @@
 
   @media (max-width: 992px) {
     .mc-c-modal {
+      &--container {
+        height: 85vh;
+      }
       &--text {
         flex: 1;
         flex-basis: 100%;
