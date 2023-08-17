@@ -80,14 +80,34 @@ figcaption {
 }
 
 // Scrollbar styling
-*::-webkit-scrollbar,
-*::-webkit-scrollbar-thumb {
-    width: 15px;
-    border-radius: 13px;
-    background-clip: padding-box;
-    border: 6px solid transparent;
+body {
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: $color-gray none;
 }
 
-*::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 0 10px;
+$scrollbar-thumb-width: 8px;
+
+// Chrome & Opera
+::-webkit-scrollbar {
+    width: $scrollbar-thumb-width;
+    height: $scrollbar-thumb-width;
+
+    &-track {
+        background-clip: content-box;
+        border: calc($scrollbar-thumb-width/4) solid transparent;
+    }
+
+    &-thumb {
+        background-color: $color-gray;
+
+        &:hover {
+            background-color: mix($color-gray, #000, 90%);
+        }
+    }
+
+    &-corner,
+    &-track {
+        background-color: none;
+    }
 }

@@ -78,6 +78,7 @@
       }
     }
     &--content {
+      pointer-events: all;
       display: flex;
       width: 100%;
       height: 100%;
@@ -87,12 +88,12 @@
       border-radius: 15px;
       overflow: hidden;
       border: $color-gray 1px solid;
+      overflow-y: scroll;
     }
 
     &--text {
       padding: 20px 40px;
       flex: 5 0 20%;
-      pointer-events: all;
       background-color: $color-darklight;
       margin: 20px;
       border-radius: 15px;
