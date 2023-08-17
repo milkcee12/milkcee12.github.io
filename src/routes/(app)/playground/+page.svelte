@@ -117,7 +117,7 @@
 
       img {
         border-radius: 10px;
-        max-height: 100%;
+        height: 100%;
         width: 100%;
         min-width: 50%;
         object-fit: cover;
