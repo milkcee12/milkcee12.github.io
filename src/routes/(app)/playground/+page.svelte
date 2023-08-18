@@ -10,7 +10,6 @@
   <title>Playground | Milkcee Studios</title>
 </svelte:head>
 
-<h1>Playground</h1>
 <p>
   A page dedicated to all the smaller, one-off projects I've done throughout the
   years. Click on the the images to learn more about them!

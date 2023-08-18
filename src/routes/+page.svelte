@@ -52,7 +52,7 @@
 <div class="mc-l-container">
   <section>
     <div class="mc-c-title">
-      <h2>Featured Work</h2>
+      <h2>Featured Work &#129466;</h2>
       <ArrowLink href="/work" color="art" name="See all work" newTab={false} />
     </div>
     {#if data.error}
