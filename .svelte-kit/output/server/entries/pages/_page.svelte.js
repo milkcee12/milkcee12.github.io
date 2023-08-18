@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, f as null_to_empty, h as add_attribute, v as validate_component, b as each } from "../../chunks/index2.js";
+import { c as create_ssr_component, e as escape, f as null_to_empty, g as add_attribute, v as validate_component, b as each } from "../../chunks/index2.js";
 import { I as Icon, N as Navbar, F as Footer } from "../../chunks/Footer.js";
 /* empty css                                                    */const css$2 = {
   code: ".color-tech.svelte-1bfkvqw.svelte-1bfkvqw{color:#FF3062}.color-art.svelte-1bfkvqw.svelte-1bfkvqw{color:#12E599}.color-muted.svelte-1bfkvqw.svelte-1bfkvqw{color:#C3C3C3}.color-light.svelte-1bfkvqw.svelte-1bfkvqw{color:#FFFFFF}.color-dark.svelte-1bfkvqw.svelte-1bfkvqw{color:#090A0D}p.svelte-1bfkvqw.svelte-1bfkvqw,p.svelte-1bfkvqw a.svelte-1bfkvqw{font-size:1.1rem;color:#C3C3C3}@media(max-width: 992px){p.svelte-1bfkvqw.svelte-1bfkvqw,p.svelte-1bfkvqw a.svelte-1bfkvqw{font-size:1.05rem !important}}.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar{width:8px;height:8px}.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar-track{background-clip:content-box;border:2px solid transparent}.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar-thumb{background-color:#575757}.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar-thumb:hover{background-color:#4e4e4e}.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar-corner,.svelte-1bfkvqw.svelte-1bfkvqw::-webkit-scrollbar-track{background-color:none}.mc-c-arrow-link.svelte-1bfkvqw.svelte-1bfkvqw{display:flex}.mc-c-arrow-link.svelte-1bfkvqw a.svelte-1bfkvqw{width:fit-content;display:flex;align-items:center}.mc-c-arrow-link.align-right.svelte-1bfkvqw.svelte-1bfkvqw{justify-content:flex-end}",
@@ -98,7 +98,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 
-<div class="mc-l-container svelte-4g75oi"><section class="svelte-4g75oi"><div class="mc-c-title svelte-4g75oi"><h2 class="svelte-4g75oi">Featured Work</h2>
+<div class="mc-l-container svelte-4g75oi"><section class="svelte-4g75oi"><div class="mc-c-title svelte-4g75oi"><h2 class="svelte-4g75oi">Featured Work 🦺</h2>
       ${validate_component(ArrowLink, "ArrowLink").$$render(
     $$result,
     {

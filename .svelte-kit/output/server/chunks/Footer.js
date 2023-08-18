@@ -1,19 +1,25 @@
-import { c as create_ssr_component, h as add_attribute, o as onDestroy, j as spread, k as escape_object, l as createEventDispatcher, v as validate_component, e as escape } from "./index2.js";
+import { c as create_ssr_component, a as subscribe, e as escape, f as null_to_empty, g as add_attribute, o as onDestroy, h as spread, j as escape_object, k as createEventDispatcher, v as validate_component } from "./index2.js";
+import { p as page } from "./stores.js";
 import { P as PUBLIC_GITHUB_URL } from "./public.js";
 import { c as checkIconState, g as generateIcon } from "./functions.js";
 const resume = "/_app/immutable/assets/MichaelaChang_Resume.29cc4c2d.pdf";
 const Navbar_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "@media(max-width: 992px){}.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar{width:8px;height:8px}.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar-track{background-clip:content-box;border:2px solid transparent}.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar-thumb{background-color:#575757}.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar-thumb:hover{background-color:#4e4e4e}.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar-corner,.svelte-1r4yoli.svelte-1r4yoli::-webkit-scrollbar-track{background-color:none}.mc-c-navbar.svelte-1r4yoli.svelte-1r4yoli{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}@media(max-width: 992px){.mc-c-navbar.svelte-1r4yoli.svelte-1r4yoli{padding:3.5em 2em}}.mc-c-navbar__links.svelte-1r4yoli a.svelte-1r4yoli{padding:0 1em;font-weight:normal;color:#FFFFFF}@media(max-width: 992px){.mc-c-navbar__links.svelte-1r4yoli a.svelte-1r4yoli{padding:0 0.3em}}.mc-c-navbar__brand.svelte-1r4yoli.svelte-1r4yoli{font-size:1.5rem;color:#FFFFFF}",
+  code: "@media(max-width: 992px){}.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar{width:8px;height:8px}.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar-track{background-clip:content-box;border:2px solid transparent}.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar-thumb{background-color:#575757}.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar-thumb:hover{background-color:#4e4e4e}.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar-corner,.svelte-dyfiqd.svelte-dyfiqd::-webkit-scrollbar-track{background-color:none}.mc-c-navbar.svelte-dyfiqd.svelte-dyfiqd{display:flex;justify-content:space-between;border-bottom:1.5px solid #FFFFFF;padding:3.5em 3em}@media(max-width: 992px){.mc-c-navbar.svelte-dyfiqd.svelte-dyfiqd{padding:3.5em 2em}}.mc-c-navbar__links.svelte-dyfiqd a.svelte-dyfiqd{padding:7px 1em;font-weight:normal;color:#C3C3C3;box-sizing:border-box;border-radius:16px;transition:all 0.25s}.mc-c-navbar__links.svelte-dyfiqd a.active.svelte-dyfiqd{color:#FFFFFF;background-color:#2b2e36}.mc-c-navbar__links.svelte-dyfiqd a.svelte-dyfiqd:hover{color:#FFFFFF;background-color:#2b2e36}@media(max-width: 992px){.mc-c-navbar__links.svelte-dyfiqd a.svelte-dyfiqd{padding:7px 0.3em}.mc-c-navbar__links.svelte-dyfiqd a.active.svelte-dyfiqd{background-color:transparent;font-weight:bold}}.mc-c-navbar__brand.svelte-dyfiqd.svelte-dyfiqd{font-size:1.5rem;color:#FFFFFF}",
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  let path;
   $$result.css.add(css$1);
-  return `<nav class="mc-c-navbar svelte-1r4yoli"><a href="/" class="mc-c-navbar__brand svelte-1r4yoli"><b class="svelte-1r4yoli">MC</b></a>
-  <div class="mc-c-navbar__links svelte-1r4yoli"><a href="/work" class="svelte-1r4yoli">Work</a>
-    <a href="/playground" class="svelte-1r4yoli">Playground</a>
-    <a href="/about" class="svelte-1r4yoli">About</a>
-    <a${add_attribute("href", resume, 0)} target="_blank" rel="noreferrer" class="svelte-1r4yoli">Resume</a></div>
+  path = $page.url.pathname;
+  $$unsubscribe_page();
+  return `<nav class="mc-c-navbar svelte-dyfiqd"><a href="/" class="mc-c-navbar__brand svelte-dyfiqd"><b class="svelte-dyfiqd">MC</b></a>
+  <div class="mc-c-navbar__links svelte-dyfiqd"><a href="/work" class="${escape(null_to_empty(path == "/work" ? "active" : ""), true) + " svelte-dyfiqd"}">Work</a>
+    <a href="/playground" class="${escape(null_to_empty(path == "/playground" ? "active" : ""), true) + " svelte-dyfiqd"}">Playground</a>
+    <a href="/about" class="${escape(null_to_empty(path == "/about" ? "active" : ""), true) + " svelte-dyfiqd"}">About</a>
+    <a${add_attribute("href", resume, 0)} target="_blank" rel="noreferrer" class="svelte-dyfiqd">Resume</a></div>
 </nav>`;
 });
 const Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {

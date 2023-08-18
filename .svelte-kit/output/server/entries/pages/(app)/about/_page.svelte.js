@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as add_attribute, b as each, e as escape } from "../../../../chunks/index2.js";
+import { c as create_ssr_component, g as add_attribute, b as each, e as escape } from "../../../../chunks/index2.js";
 const cowPainting = "/_app/immutable/assets/about-cow.3600035d.jpg";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
