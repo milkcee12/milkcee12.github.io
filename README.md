@@ -12,6 +12,7 @@ Hello! This README is an informal document of records of tasks that need to be d
 
 - [ ] Locomotive scroll
 - [ ] Add preloader
+- [ ] Hamburger nav menu on mobile
 - [ ] Add library to preload page on link hover to reduce image loading times
 - [ ] Add animations/polish
 - [ ] Link hover effects
