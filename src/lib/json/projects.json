@@ -20,10 +20,36 @@
             "desc": "What you're looking at right now! Started as a winter break project and built up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.",
             "tags": {
                 "tech": ["Front-End", "Back-End"],
-                "art": ["UI/UX"]
+                "art": ["UI/UX", "Illustration"]
             },
             "link": "#",
             "link_text": "View the creation process"
+        },
+        {
+            "id": 3,
+            "title": "Trojan Dining",
+            "start_date": "2021",
+            "end_date": "",
+            "desc": "Student-first redesign of the USC Residential Dining Menu website. Implemented using React.js.",
+            "tags": {
+                "tech": ["Front-End"],
+                "art": ["UI/UX"]
+            },
+            "link": "#",
+            "link_text": "View case study"
+        },
+        {
+            "id": 4,
+            "title": "Milkbook",
+            "start_date": "2021",
+            "end_date": "",
+            "desc": "A sporadically-updated webcomic of personal experiences and wandering thoughts.",
+            "tags": {
+                "tech": ["Front-End"],
+                "art": ["UI/UX"]
+            },
+            "link": "https://www.webtoons.com/en/canvas/milkbox/list?title_no=693909",
+            "link_text": "Read the comic"
         }
     ]
 }
