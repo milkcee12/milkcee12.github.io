@@ -1,21 +1,38 @@
-# milkcee12.github.io
+# create-svelte
 
-Hello! This README is an informal document of records of tasks that need to be done and have been completed, as well as major project milestones.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## To-Do List
+## Creating a project
 
-- [ ] Add OAuth to Github for more API calls
-- [ ] Finish designing app in Figma
-- [ ] Add accessibility and SEO labels (aria-label to section, etc)
+If you're seeing this, you've probably already done this step. Congrats!
 
-### Polish
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-- [ ] Locomotive scroll
-- [ ] Add preloader
-- [ ] Hamburger nav menu on mobile
-- [ ] Add library to preload page on link hover to reduce image loading times
-- [ ] Add animations/polish
-- [ ] Link hover effects
-- [ ] On hover over timeline nodes, show preview image of project
-- [ ] Fancy cursor
-- [ ] Add arrow controls in modal galleries in playground
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
