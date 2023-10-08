@@ -14,12 +14,6 @@
 <div class="container">
   <Timeline />
 
-  <!-- DELETE LATER -->
-  <section>temp</section>
-  <section>temp</section>
-  <section>temp</section>
-  <!-- END DELETE -->
-
   <section id="about">
     <h2>Hello World</h2>
     <p>Hi this is me!</p>
