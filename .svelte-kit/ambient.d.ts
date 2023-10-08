@@ -45,10 +45,7 @@ declare module '$env/static/private' {
 	export const DISPLAY: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_27684: string;
 	export const EXEPATH: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -68,6 +65,7 @@ declare module '$env/static/private' {
 	export const MSYSTEM_CHOST: string;
 	export const MSYSTEM_PREFIX: string;
 	export const NODE: string;
+	export const NODE_ENV: string;
 	export const npm_command: string;
 	export const npm_config_cache: string;
 	export const npm_config_engine_strict: string;
@@ -85,15 +83,8 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const npm_lifecycle_script: string;
 	export const npm_node_execpath: string;
-	export const npm_package_dev: string;
-	export const npm_package_dev_optional: string;
-	export const npm_package_engines_node: string;
-	export const npm_package_integrity: string;
 	export const npm_package_json: string;
 	export const npm_package_name: string;
-	export const npm_package_optional: string;
-	export const npm_package_peer: string;
-	export const npm_package_resolved: string;
 	export const npm_package_version: string;
 	export const NUMBER_OF_PROCESSORS: string;
 	export const OneDrive: string;
@@ -119,7 +110,6 @@ declare module '$env/static/private' {
 	export const PUBLIC: string;
 	export const PWD: string;
 	export const RlsSvcPort: string;
-	export const SESSIONNAME: string;
 	export const SHELL: string;
 	export const SHLVL: string;
 	export const SSH_AGENT_PID: string;
@@ -142,6 +132,9 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const WINDIR: string;
+	export const WSLENV: string;
+	export const WT_PROFILE_ID: string;
+	export const WT_SESSION: string;
 	export const _: string;
 }
 
@@ -155,7 +148,8 @@ declare module '$env/static/private' {
  * ```
  */
 declare module '$env/static/public' {
-	
+	export const PUBLIC_GITHUB_URL: string;
+	export const PUBLIC_GITHUB_TOKEN: string;
 }
 
 /**
@@ -191,10 +185,7 @@ declare module '$env/dynamic/private' {
 		DISPLAY: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_27684: string;
 		EXEPATH: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -214,6 +205,7 @@ declare module '$env/dynamic/private' {
 		MSYSTEM_CHOST: string;
 		MSYSTEM_PREFIX: string;
 		NODE: string;
+		NODE_ENV: string;
 		npm_command: string;
 		npm_config_cache: string;
 		npm_config_engine_strict: string;
@@ -231,15 +223,8 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		npm_lifecycle_script: string;
 		npm_node_execpath: string;
-		npm_package_dev: string;
-		npm_package_dev_optional: string;
-		npm_package_engines_node: string;
-		npm_package_integrity: string;
 		npm_package_json: string;
 		npm_package_name: string;
-		npm_package_optional: string;
-		npm_package_peer: string;
-		npm_package_resolved: string;
 		npm_package_version: string;
 		NUMBER_OF_PROCESSORS: string;
 		OneDrive: string;
@@ -265,7 +250,6 @@ declare module '$env/dynamic/private' {
 		PUBLIC: string;
 		PWD: string;
 		RlsSvcPort: string;
-		SESSIONNAME: string;
 		SHELL: string;
 		SHLVL: string;
 		SSH_AGENT_PID: string;
@@ -288,6 +272,9 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		WINDIR: string;
+		WSLENV: string;
+		WT_PROFILE_ID: string;
+		WT_SESSION: string;
 		_: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
@@ -306,6 +293,8 @@ declare module '$env/dynamic/private' {
  */
 declare module '$env/dynamic/public' {
 	export const env: {
+		PUBLIC_GITHUB_URL: string;
+		PUBLIC_GITHUB_TOKEN: string;
 		[key: `PUBLIC_${string}`]: string | undefined;
 	}
 }

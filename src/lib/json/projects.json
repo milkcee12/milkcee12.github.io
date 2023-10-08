@@ -1,0 +1,29 @@
+{
+    "next_id": 5,
+    "projects": [
+        {
+            "id": 1,
+            "title": "Google STEP Internship",
+            "start_date": "May 2023",
+            "end_date": "Aug 2023",
+            "desc": "An unforgettable summer in New York City eating food, making memories, and building new features in Google Ads. My tech stack was Angular, Java, Dart, HTML, and CSS.",
+            "tags": {
+                "tech": ["Front-End", "Back-End"],
+                "art": ["UI/UX"]
+            }
+        },
+        {
+            "id": 2,
+            "title": "Milkcee Studios",
+            "start_date": "Dec 2022",
+            "end_date": "",
+            "desc": "What you're looking at right now! Started as a winter break project and built up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.",
+            "tags": {
+                "tech": ["Front-End", "Back-End"],
+                "art": ["UI/UX"]
+            },
+            "link": "#",
+            "link_text": "View the creation process"
+        }
+    ]
+}
