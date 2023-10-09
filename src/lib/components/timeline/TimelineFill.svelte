@@ -49,6 +49,7 @@
 
 <style lang="scss">
   .fill {
+    height: 20px;
     margin: 0 auto;
     position: absolute;
     background-color: $green;

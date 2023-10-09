@@ -26,6 +26,7 @@
   </div>
 
   <div class="node {isFirstChild ? 'first' : ''}">
+    <!-- Adds timeline fill component -->
     {#if isFirstChild}
       <slot />
     {/if}
