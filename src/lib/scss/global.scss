@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700;900&display=swap');
 
 body {
-    position: relative;
     font-family: "Albert Sans", sans-serif;
     background-color: $off-black;
     color: $white;
@@ -23,4 +22,12 @@ section {
 
 a {
     text-decoration: none;
+}
+
+h2 {
+    font-size: xxx-large;
+}
+
+h3 {
+    font-size: x-large;
 }

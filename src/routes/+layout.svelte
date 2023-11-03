@@ -3,5 +3,14 @@
     import Footer from "$lib/components/common/Footer.svelte";
   </script>
 
-<slot />
-<Footer />
+<div class="mobile-wrapper">
+  <slot />
+  <Footer />
+</div>
+
+<style lang="scss">
+  .mobile-wrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
+</style>

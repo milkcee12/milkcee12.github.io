@@ -46,7 +46,7 @@
   <div class="bubble">
     <h3>{project.title}</h3>
     <p>
-      {project.start_date} — {isCurrentProject ? project.end_date : "Present"}
+      <i>{project.start_date} — {isCurrentProject ? project.end_date : "Present"}</i>
     </p>
     <p>{project.desc}</p>
     {#if hasLink}
@@ -157,6 +157,7 @@
         border-left: 6px solid $light-gray;
         padding-left: 1.2em;
         padding-bottom: 0.5em;
+        color: $light-gray;
       }
       .tech-tags li {
         border-color: $color-tech;

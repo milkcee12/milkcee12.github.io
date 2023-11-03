@@ -26,7 +26,7 @@
 
 <section id="timeline">
   <h2>Featured Work &#129466;</h2>
-  <div bind:this={timelineGraph}>
+  <div class="timeline-graph" bind:this={timelineGraph}>
     {#each data.projects as project}
       <TimeNode {project} {numProjects}>
         <!-- TimelineFill only created for first node -->
@@ -35,3 +35,13 @@
     {/each}
   </div>
 </section>
+
+<style lang="scss">
+  .timeline-graph {
+    width: 80%;
+    margin: auto;
+    @include respond-to("large") {
+      width: 100%;
+    }
+  }
+</style>

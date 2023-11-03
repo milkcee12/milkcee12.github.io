@@ -17,7 +17,7 @@
     <div class="left" />
     <div class="right" in:slide={{ axis: "y", duration: 1000, easing: cubicInOut }} />
     <img class="signature" src={signature} alt="Hero section signature" in:fly={{ delay:400, duration: 800, easing: cubicInOut }} />
-    <img class="figure" src={figure} alt="Hero section figure" in:fly={{ delay: 100, duration: 800, easing: cubicInOut }} />
+    <img class="figure" src={figure} alt="Hero section figure" in:fly={{ delay: 100, duration: 500, easing: cubicInOut }} />
   {/if}
 </section>
 
@@ -47,16 +47,12 @@
       top: -10vh;
       left: calc(50% - 59vh);
       @include respond-to("medium") {
-        @media (orientation: portrait) {
           height: 80vh;
           left: calc(50% - 45vh);
-        }
       }
       @include respond-to("large") {
-        @media (orientation: landscape) {
           height: 100vh;
           left: calc(50% - 55vh);
-        }
       }
     }
 
@@ -64,11 +60,10 @@
       position: absolute;
       height: 102vh;
       top: 2em;
+      z-index: 10;
       left: calc(50% - 30vh);
       @include respond-to("large") {
-        @media (orientation: landscape) {
           left: calc(50% - 30vh);
-        }
       }
     }
   }
