@@ -1,8 +1,9 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import { slide, fade } from "svelte/transition";
 
   let path: string;
-  let open: Boolean;
+  let open: boolean;
 
   // Used for active class
   $: path = $page.url.pathname;
@@ -12,10 +13,10 @@
   <a href="/" class="brand"><b>MC</b></a>
   <div class="default-nav">
     <div class="links">
-      <a href="/work">Work</a>
-      <a href="/playground">Playground</a>
-      <a href="/about">About</a>
-      <a href="/archive">Archive</a>
+      <a class:active={path === "/work"} href="/work">Work</a>
+      <a class:active={path === "/playground"} href="/playground">Playground</a>
+      <a class:active={path === "/about"} href="/about">About</a>
+      <a class:active={path === "/archive"} href="/archive">Archive</a>
       <a href="#" target="_blank" rel="noreferrer">Resume</a>
     </div>
   </div>
@@ -39,35 +40,46 @@
 </nav>
 
 {#if open}
-  <div class="hamburger-menu">
-    <div class="navbar">
-      <a href="/" class="brand"><b>MC</b></a>
-      <button class="hamburger-btn" on:click={() => (open = !open)}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1.2em"
-          viewBox="0 0 384 512"
-          ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style><path
-            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
-          /></svg
-        >
-      </button>
+  <span transition:fade>
+    <div class="hamburger-menu" transition:slide={{ axis: "y" }}>
+      <div class="navbar">
+        <a href="/" class="brand"><b>MC</b></a>
+        <button class="hamburger-btn" on:click={() => (open = !open)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1.2em"
+            viewBox="0 0 384 512"
+            ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <style>
+              svg {
+                fill: #ffffff;
+              }
+            </style><path
+              d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+            /></svg
+          >
+        </button>
+      </div>
+      <div class="links">
+        <ul>
+          <li class:active={path === "/work"}><a href="/work">Work</a></li>
+          <li class:active={path === "/playground"}>
+            <a href="/playground">Playground</a>
+          </li>
+          <li class:active={path === "/about"}><a href="/about">About</a></li>
+          <li class:active={path === "/archive"}>
+            <a href="/archive">Archive</a>
+          </li>
+          <li><a href="#" target="_blank" rel="noreferrer">Resume</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="links">
-      <ul>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/playground">Playground</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/archive">Archive</a></li>
-        <li><a href="#" target="_blank" rel="noreferrer">Resume</a></li>
-      </ul>
-    </div>
-  </div>
+  </span>
 {/if}
 
 <style lang="scss">
@@ -78,19 +90,23 @@
   .links a {
     font-weight: normal;
     color: $light-gray;
+    border-radius: 16px;
+    padding: 7px 1em;
+    box-sizing: border-box;
+    transition: all 0.25s;
+    &:hover {
+      color: $white;
+    }
+
+    &.active {
+      background-color: $dark-gray;
+    }
   }
   .navbar {
     display: flex;
     justify-content: space-between;
     border-bottom: 1.5px solid $white;
     padding: 2em 3em;
-
-    .links a {
-      padding: 7px 1em;
-      box-sizing: border-box;
-      border-radius: 16px;
-      transition: all 0.25s;
-    }
 
     .brand {
       align-self: center;
@@ -110,15 +126,14 @@
       .mobile-nav {
         display: initial;
       }
-
-      .hamburger-btn {
-        fill: $white;
-        background: none;
-        border: none;
-      }
     }
   }
 
+  .hamburger-btn {
+    fill: $white;
+    background: none;
+    border: none;
+  }
   .hamburger-menu {
     display: block;
     z-index: 1000;
@@ -132,9 +147,18 @@
       display: flex;
       flex-direction: column;
 
+      ul {
+        padding: 0;
+        text-align: center;
+      }
+
       li {
         list-style: none;
         padding: 1em 0;
+
+        &.active {
+          background-color: $dark-gray;
+        }
       }
     }
   }

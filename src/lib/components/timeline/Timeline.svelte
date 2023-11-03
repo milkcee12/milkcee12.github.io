@@ -29,8 +29,8 @@
   <div bind:this={timelineGraph}>
     {#each data.projects as project}
       <TimeNode {project} {numProjects}>
-        <!-- Timeline fill only created for first node -->
-        <TimelineFill {timelineHeight} /> 
+        <!-- TimelineFill only created for first node -->
+        <TimelineFill {timelineHeight} />
       </TimeNode>
     {/each}
   </div>

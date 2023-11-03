@@ -2,11 +2,11 @@
   export let project: any;
   export let numProjects: number;
 
-  let isCurrentProject: Boolean = project.end_date;
-  let hasLink: Boolean = project.hasOwnProperty("link");
-  let isReverse: Boolean = project.id % 2 == 0;
-  let isFirstChild: Boolean = project.id == 1;
-  let isLastChild: Boolean = project.id == numProjects;
+  let isCurrentProject: boolean = project.end_date;
+  let hasLink: boolean = project.hasOwnProperty("link");
+  let isReverse: boolean = project.id % 2 == 0;
+  let isFirstChild: boolean = project.id == 1;
+  let isLastChild: boolean = project.id == numProjects;
 </script>
 
 <div class="time-node {isReverse ? 'reverse' : ''}">
@@ -125,12 +125,13 @@
         left: 50%;
         transform: translateX(-50%);
         top: calc(100% - 5.6em);
+        z-index: 100;
       }
 
       // Circle node shape
       &::before {
         content: "";
-        z-index: 101;
+        z-index: 102;
         display: block;
         position: relative;
         width: 15px;
