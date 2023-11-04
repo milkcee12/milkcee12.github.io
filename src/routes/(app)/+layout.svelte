@@ -1,6 +1,9 @@
 <script>
-    import Navbar from "$lib/components/common/Navbar.svelte";
-  </script>
+  import Navbar from "$lib/components/common/Navbar.svelte";
+</script>
 
 <Navbar />
-<slot />
+
+<div class="container">
+  <slot />
+</div>

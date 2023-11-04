@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ColorLink from "../common/ColorLink.svelte";
+
   export let project: any;
   export let numProjects: number;
 
@@ -44,13 +46,13 @@
   </div>
 
   <div class="bubble">
-    <h3>{project.title}</h3>
+    <h3 class="title">{project.title}</h3>
     <p>
       <i>{project.start_date} — {isCurrentProject ? project.end_date : "Present"}</i>
     </p>
     <p>{project.desc}</p>
     {#if hasLink}
-      <p><a href={project.link} target="_blank">{project.link_text}</a></p>
+      <p><ColorLink href={project.link} target="_blank" colorArt={true}>{project.link_text}</ColorLink></p>
     {/if}
   </div>
 </div>
@@ -89,8 +91,13 @@
     .bubble {
       border: 3px solid $white;
       border-radius: 0.8em;
-      padding: 1em 2em;
+      padding: 2em 2.5em;
       margin-bottom: 5em;
+
+      .title {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+      }
 
       p {
         color: $light-gray;

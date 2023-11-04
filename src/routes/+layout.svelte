@@ -12,5 +12,8 @@
   .mobile-wrapper {
     position: relative;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 </style>

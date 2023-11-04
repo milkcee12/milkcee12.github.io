@@ -22,8 +22,8 @@
                 "tech": ["Front-End", "Back-End"],
                 "art": ["UI/UX", "Illustration"]
             },
-            "link": "#",
-            "link_text": "View the creation process"
+            "link": "https://milkcee12.github.io/",
+            "link_text": "Don't click this!"
         },
         {
             "id": 3,
@@ -34,9 +34,7 @@
             "tags": {
                 "tech": ["Front-End"],
                 "art": ["UI/UX"]
-            },
-            "link": "#",
-            "link_text": "View case study"
+            }
         },
         {
             "id": 4,
