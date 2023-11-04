@@ -4,6 +4,7 @@
   import TimeNode from "./TimeNode.svelte";
   import TimelineFill from "./TimelineFill.svelte";
   import { onMount } from "svelte";
+  import ColorLink from "../common/ColorLink.svelte";
 
   let timelineGraph: HTMLElement, timelineHeight: number;
 
@@ -25,7 +26,10 @@
 <svelte:window on:resize={calcTimelineHeight} />
 
 <section id="timeline">
-  <h2>Featured Work &#129466;</h2>
+  <div class="heading">
+    <h2>Featured Work &#129466;</h2>
+    <ColorLink href="/work" colorArt={true}>See all work</ColorLink>
+  </div>
   <div class="timeline-graph" bind:this={timelineGraph}>
     {#each data.projects as project}
       <TimeNode {project} {numProjects}>

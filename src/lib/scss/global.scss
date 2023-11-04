@@ -31,3 +31,24 @@ h2 {
 h3 {
     font-size: x-large;
 }
+
+.color-art {
+    color: $color-art;
+}
+
+.color-tech {
+    color: $color-tech;
+}
+
+.heading {
+    margin-block-start: 2em;
+    margin-bottom: 6em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 3em;
+    row-gap: 1em;
+    h2 {
+        margin: 0;
+    }
+}

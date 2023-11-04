@@ -43,7 +43,6 @@
 
 <style lang="scss">
   footer {
-    padding: 5em 0;
     color: $light-gray;
     display: flex;
     justify-content: space-between;
@@ -51,8 +50,15 @@
     border-top: 1.5px solid $light-gray;
     padding: 3.5em 4em;
 
+    @include respond-to("small") {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5em 4em;
+    }
+
     .item {
       flex: 1;
+      padding: 0.5em 2em;
     }
 
     .socials {
@@ -69,6 +75,9 @@
 
     .last-updated {
       text-align: right;
+      @include respond-to("small") {
+        text-align: center;
+      }
     }
   }
 </style>

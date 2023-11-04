@@ -2,7 +2,7 @@
   import Fa from "svelte-fa";
   import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
   export let href: string;
-  export let target: string;
+  export let target: string = "";
   export let colorArt: boolean;
 </script>
 
