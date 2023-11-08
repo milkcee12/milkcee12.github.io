@@ -1,32 +1,35 @@
 <script lang="ts">
   import { lerp } from "$lib/util";
-  import { onMount } from "svelte";
 
   export let timelineHeight: number;
-  
+  $: if (timelineHeight) updateTimelineHeight();
+
   let timelineStart: number;
   let computedTimelineHeight: number;
   let fill: HTMLElement;
   let arrow: SVGSVGElement;
 
-  // Equivalent to 4.3em when default font size is 16px.  
+  // Equivalent to 4.3em when default font size is 16px.
   const TIMELINE_OFFSET = 4.3 * 16;
 
   function updateTimelineFill() {
-    let scrollDiff = Math.max(0, window.scrollY - timelineStart + (window.innerHeight * 0.25));
+    let scrollDiff = Math.max(
+      0,
+      window.scrollY - timelineStart + window.innerHeight * 0.25
+    );
     let newHeight: number = lerp(
       0,
       computedTimelineHeight,
       Math.min(1.0, scrollDiff / computedTimelineHeight)
     );
     fill.style.height = `${newHeight}px`;
+
     if (newHeight > 0) {
       arrow.style.display = "block";
       arrow.style.top = `calc(
       ${getComputedStyle(fill).getPropertyValue("height")} 
       - 1.3em)`;
-    }
-    else {
+    } else {
       arrow.style.display = "none";
     }
   }
@@ -47,16 +50,9 @@
       }
     };
   }
-
-  onMount(() => {
-    updateTimelineHeight();
-  });
 </script>
 
-<svelte:window
-  on:scroll={throttle(updateTimelineFill, 10)}
-  on:resize={updateTimelineHeight} 
-  on:loadstart={updateTimelineHeight}/>
+<svelte:window on:scroll={throttle(updateTimelineFill, 10)} />
 
 <div class="timeline-fill">
   <div class="fill" bind:this={fill} />
