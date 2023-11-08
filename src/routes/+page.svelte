@@ -20,7 +20,7 @@
   <section id="about">
     <div class="content">
       <div class="blurb">
-        <Heading headingText="Hello World" emoji="&#128075;" hasLink={true}>
+        <Heading headingText="Hello World!" emoji="&#128075;" hasLink={true}>
           <ColorLink href="/about" colorArt={true}>More about me</ColorLink></Heading>
         <p>
           Hi there! I'm Michaela or Milkcee, depending on where you found me

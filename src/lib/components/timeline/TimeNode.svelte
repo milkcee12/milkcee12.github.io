@@ -15,7 +15,7 @@
   function updateNodeVisited() {
     let scrollPos: number = window.scrollY;
     let nodePos: number = node.getBoundingClientRect().top + scrollPos;
-    let visitedThreshold = scrollPos + (window.innerHeight * 0.25) - (16 * 2.6);
+    let visitedThreshold = scrollPos + window.innerHeight * 0.25 - 16 * 2.6;
 
     isNodeVisited = nodePos < visitedThreshold;
   }
@@ -26,7 +26,7 @@
   on:scroll={updateNodeVisited}
   on:resize={updateNodeVisited} />
 
-<div class="time-node {isReverse ? 'reverse' : ''}">
+<div class="time-node" class:reverse={isReverse}>
   <div class="tags">
     <ul>
       <div class="tech-tags">
@@ -42,7 +42,11 @@
     </ul>
   </div>
 
-  <div class="node" class:first={isFirstChild} class:visited={isNodeVisited} bind:this={node}>
+  <div
+    class="node"
+    class:first={isFirstChild}
+    class:visited={isNodeVisited}
+    bind:this={node}>
     <!-- Adds timeline fill component -->
     {#if isFirstChild}
       <slot />
@@ -59,20 +63,23 @@
   </div>
 
   <div class="bubble">
-    <h3 class="title">{project.title}</h3>
-    <p>
-      <i
-        >{project.start_date} — {isCurrentProject
-          ? project.end_date
-          : "Present"}</i>
-    </p>
-    <p>{project.desc}</p>
-    {#if hasLink}
+    <div class="bubble-tail" />
+    <div class="bubble-content">
+      <h3 class="title">{project.title}</h3>
       <p>
-        <ColorLink href={project.link} target="_blank" colorArt={true}
-          >{project.link_text}</ColorLink>
+        <i
+          >{project.start_date} — {isCurrentProject
+            ? project.end_date
+            : "Present"}</i>
       </p>
-    {/if}
+      <p>{project.desc}</p>
+      {#if hasLink}
+        <p>
+          <ColorLink href={project.link} target="_blank" colorArt={true}
+            >{project.link_text}</ColorLink>
+        </p>
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -85,7 +92,31 @@
       grid-template-columns: 0.5fr 2fr;
     }
 
+    .bubble {
+      display: grid;
+    }
+    .bubble-tail {
+      position: absolute;
+      content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+      margin-top: 2.5em;
+      justify-self: flex-start;
+      transform: translateX(-1.6em);
+    }
+
     &.reverse {
+      .bubble-tail {
+        content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        margin-top: 2.5em;
+        justify-self: flex-end;
+        transform: translateX(1.6em);
+
+        // All tails point left on mobile devices
+        @include respond-to("small") {
+          justify-self: flex-start;
+          content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="35" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"%3E%3Cg transform="rotate(-90 128 128)"%3E%3Cpath fill="white" d="M236.8 212a23.9 23.9 0 0 1-20.8 12H40a23.9 23.9 0 0 1-20.7-36l87.9-152a24 24 0 0 1 41.6 0l87.9 152a23.7 23.7 0 0 1 .1 24Z"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+          transform: translateX(-1.6em);
+        }
+      }
       .bubble {
         order: 0;
       }
@@ -106,8 +137,7 @@
         }
       }
     }
-
-    .bubble {
+    .bubble-content {
       border: 3px solid $white;
       border-radius: 0.8em;
       padding: 2em 2.5em;
