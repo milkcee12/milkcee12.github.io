@@ -28,18 +28,20 @@
 
 <div class="time-node" class:reverse={isReverse}>
   <div class="tags">
-    <ul>
-      <div class="tech-tags">
+    <div class="tech-tags">
+      <ul>
         {#each project.tags.tech as tag}
           <li>{tag}</li>
         {/each}
-      </div>
-      <div class="art-tags">
+      </ul>
+    </div>
+    <div class="art-tags">
+      <ul>
         {#each project.tags.art as tag}
           <li>{tag}</li>
         {/each}
-      </div>
-    </ul>
+      </ul>
+    </div>
   </div>
 
   <div
@@ -221,6 +223,8 @@
 
       ul {
         padding: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
       }
 
       li {

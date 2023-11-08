@@ -70,6 +70,7 @@
       a {
         color: $white;
         padding: 0 0.5em;
+        transition: all 0.25s;
         &:hover {
           color: $light-gray;
         }

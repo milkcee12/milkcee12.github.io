@@ -20,29 +20,57 @@
 
     .arrow {
       display: inline-block;
+      transition: all 0.25s ease-out;
     }
 
-    &:hover {
-      .arrow {
-        animation: infinitePointing 1.5s ease-in-out infinite;
-      }
+    @mixin underline {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      top: 1.25em;
+      height: 1.5px;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
     }
-
     &.color-art a {
       color: $color-art;
+
+      &::after {
+        @include underline;
+        background-color: $color-art;
+      }
     }
     &.color-tech a {
       color: $color-tech;
+
+      &::after {
+        @include underline;
+        background-color: $color-tech;
+      }
+    }
+
+    a {
+      transition: all 0.25s ease-out;
+      display: inline-block;
+      position: relative;
     }
 
     .spacer {
       margin-right: 0.5em;
     }
-  }
 
-  @keyframes infinitePointing {
-    50% {
-      transform: translateX(2px);
+    &:hover {
+      .arrow {
+        color: $white;
+        transform: translateX(2px);
+      }
+
+      a::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
   }
 </style>

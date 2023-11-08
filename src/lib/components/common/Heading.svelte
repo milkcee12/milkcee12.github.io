@@ -39,12 +39,12 @@
       transform: scale(1.1);
       transform: rotate(-5deg) translateY(3px);
     }
-    50% {     
+    50% {
       transform: scale(1);
-        transform: translateY(-3px);
+      transform: translateY(-3px) rotate(5deg);
     }
     100% {
-        transform: rotate(-5deg) translateY(3px);
+      transform: rotate(-5deg) translateY(3px);
     }
   }
 </style>
