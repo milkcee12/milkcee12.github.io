@@ -4,6 +4,7 @@
   import Navbar from "$lib/components/common/Navbar.svelte";
   import ColorLink from "$lib/components/common/ColorLink.svelte";
   import homeAboutProfile from "$lib/images/home_about-profile.webp";
+  import Heading from "$lib/components/common/Heading.svelte";
 </script>
 
 <svelte:head>
@@ -19,10 +20,8 @@
   <section id="about">
     <div class="content">
       <div class="blurb">
-        <div class="heading">
-          <h2>Hello World &#128075;</h2>
-          <ColorLink href="/about" colorArt={true}>More about me</ColorLink>
-        </div>
+        <Heading headingText="Hello World" emoji="&#128075;" hasLink={true}>
+          <ColorLink href="/about" colorArt={true}>More about me</ColorLink></Heading>
         <p>
           Hi there! I'm Michaela or Milkcee, depending on where you found me
           from. I'm a software engineer by day and painter by night. I read a
@@ -68,6 +67,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8em;
+      margin-top:2em;
 
       @include respond-to("large") {
         gap: 5em;

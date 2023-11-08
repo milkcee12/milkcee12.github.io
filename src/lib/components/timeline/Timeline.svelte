@@ -5,6 +5,7 @@
   import TimelineFill from "./TimelineFill.svelte";
   import { onMount } from "svelte";
   import ColorLink from "../common/ColorLink.svelte";
+  import Heading from "../common/Heading.svelte";
 
   let timelineGraph: HTMLElement;
   let timelineHeight: number;
@@ -29,9 +30,10 @@
   on:loadstart={calcTimelineData} />
 
 <section id="timeline">
-  <div class="heading">
-    <h2>Featured Work &#129466;</h2>
-    <ColorLink href="/work" colorArt={true}>See all work</ColorLink>
+  <div class="heading-spacer">
+    <Heading headingText="Featured Work" emoji="&#129466;" hasLink={true}>
+      <ColorLink href="/work" colorArt={true}>See all work</ColorLink>
+    </Heading>
   </div>
   <div class="timeline-graph" bind:this={timelineGraph}>
     {#each data.projects as project}
@@ -44,8 +46,8 @@
 </section>
 
 <style lang="scss">
-  .heading {
-    margin-bottom: 6em;
+  .heading-spacer {
+    margin-bottom: 4em;
   }
   .timeline-graph {
     width: 80%;

@@ -7,14 +7,26 @@
 </script>
 
 <div class="color-link {colorArt ? 'color-art' : 'color-tech'}">
-  <a href="{href}" target="{target}"
-    ><slot /><span class="spacer"></span><Fa icon="{rightArrow}" /></a>
+  <a {href} {target}
+    ><slot /><span class="spacer" /><span class="arrow">
+      <Fa icon={rightArrow} />
+    </span></a>
 </div>
 
 <style lang="scss">
   .color-link {
     font-weight: bold;
     width: fit-content;
+
+    .arrow {
+      display: inline-block;
+    }
+
+    &:hover {
+      .arrow {
+        animation: infinitePointing 1.5s ease-in-out infinite;
+      }
+    }
 
     &.color-art a {
       color: $color-art;
@@ -25,6 +37,12 @@
 
     .spacer {
       margin-right: 0.5em;
+    }
+  }
+
+  @keyframes infinitePointing {
+    50% {
+      transform: translateX(2px);
     }
   }
 </style>
