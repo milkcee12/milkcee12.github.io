@@ -9,7 +9,22 @@
   let isReverse: boolean = project.id % 2 == 0;
   let isFirstChild: boolean = project.id == 1;
   let isLastChild: boolean = project.id == numProjects;
+
+  let node: HTMLElement;
+  let isNodeVisited: boolean = false;
+  function updateNodeVisited() {
+    let scrollPos: number = window.scrollY;
+    let nodePos: number = node.getBoundingClientRect().top + scrollPos;
+    let visitedThreshold = scrollPos + (window.innerHeight * 0.25) - (16 * 2.6);
+
+    isNodeVisited = nodePos < visitedThreshold;
+  }
 </script>
+
+<svelte:window
+  on:load={updateNodeVisited}
+  on:scroll={updateNodeVisited}
+  on:resize={updateNodeVisited} />
 
 <div class="time-node {isReverse ? 'reverse' : ''}">
   <div class="tags">
@@ -27,7 +42,7 @@
     </ul>
   </div>
 
-  <div class="node {isFirstChild ? 'first' : ''}">
+  <div class="node" class:first={isFirstChild} class:visited={isNodeVisited} bind:this={node}>
     <!-- Adds timeline fill component -->
     {#if isFirstChild}
       <slot />
@@ -39,20 +54,24 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-        /></svg
-      >
+          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
     {/if}
   </div>
 
   <div class="bubble">
     <h3 class="title">{project.title}</h3>
     <p>
-      <i>{project.start_date} — {isCurrentProject ? project.end_date : "Present"}</i>
+      <i
+        >{project.start_date} — {isCurrentProject
+          ? project.end_date
+          : "Present"}</i>
     </p>
     <p>{project.desc}</p>
     {#if hasLink}
-      <p><ColorLink href={project.link} target="_blank" colorArt={true}>{project.link_text}</ColorLink></p>
+      <p>
+        <ColorLink href={project.link} target="_blank" colorArt={true}
+          >{project.link_text}</ColorLink>
+      </p>
     {/if}
   </div>
 </div>
@@ -118,9 +137,39 @@
       // First timeline node has shorter vertical line
       &.first {
         margin-top: 3em;
-        &::before {
-          margin-top: 0;
-        }
+      }
+
+      // Circle node shape
+      @mixin circle-node {
+        content: "";
+        z-index: 102;
+        display: block;
+        position: relative;
+        width: 15px;
+        height: 15px;
+        margin-top: 3em;
+        border: 3px solid $color-art;
+        border-radius: 50%;
+        right: 0.5em;
+      }
+
+      &::before {
+        @include circle-node;
+        background-color: $white;
+      }
+      &.visited::before {
+        @include circle-node;
+        background-color: $color-art;
+      }
+      &.first::before {
+        @include circle-node;
+        background-color: $white;
+        margin-top: 0;
+      }
+      &.first.visited::before {
+        @include circle-node;
+        background-color: $color-art;
+        margin-top: 0;
       }
 
       // Last timeline node has arrow
@@ -133,21 +182,6 @@
         transform: translateX(-50%);
         top: calc(100% - 5.6em);
         z-index: 100;
-      }
-
-      // Circle node shape
-      &::before {
-        content: "";
-        z-index: 102;
-        display: block;
-        position: relative;
-        width: 15px;
-        height: 15px;
-        margin-top: 3em;
-        background-color: $white;
-        border: 3px solid $color-art;
-        border-radius: 50%;
-        right: 0.5em;
       }
     }
 

@@ -1,7 +1,7 @@
-export const load = ({ url }) => {
-	const { pathname } = url;
+export const load = ({ url }: { url: any }) => {
+  const { pathname }: { pathname: any } = url;
 
-	return {
-		pathname
-	};
+  return {
+    pathname,
+  };
 };

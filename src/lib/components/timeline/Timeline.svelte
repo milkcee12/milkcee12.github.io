@@ -6,11 +6,11 @@
   import { onMount } from "svelte";
   import ColorLink from "../common/ColorLink.svelte";
 
-  let timelineGraph: HTMLElement, timelineHeight: number;
-
+  let timelineGraph: HTMLElement;
+  let timelineHeight: number;
   let numProjects: number = Object.keys(data.projects).length;
 
-  function calcTimelineHeight() {
+  function calcTimelineData() {
     timelineHeight = timelineGraph
       ? pxStringToFloat(
           getComputedStyle(timelineGraph).getPropertyValue("height")
@@ -19,11 +19,11 @@
   }
 
   onMount(() => {
-    calcTimelineHeight();
+    calcTimelineData();
   });
 </script>
 
-<svelte:window on:resize={calcTimelineHeight} />
+<svelte:window on:resize={calcTimelineData} on:loadstart={calcTimelineData} />
 
 <section id="timeline">
   <div class="heading">
@@ -41,6 +41,9 @@
 </section>
 
 <style lang="scss">
+  .heading {
+    margin-bottom: 6em;
+  }
   .timeline-graph {
     width: 80%;
     margin: auto;

@@ -28,15 +28,18 @@
 <footer>
   <p class="item">© 2023 All rights reserved.</p>
   <div class="socials item">
-    <a href="https://www.instagram.com/milkcee12/"
+    <a href="https://www.instagram.com/milkcee12/" target="_blank"
       ><Fa icon={instagram} size="1.5x" /></a
     >
-    <a href="https://www.linkedin.com/in/michaela-chang/"
+    <a href="https://www.linkedin.com/in/michaela-chang/" target="_blank"
       ><Fa icon={linkedin} size="1.5x" /></a
     >
-    <a href="https://twitter.com/milkcee12"><Fa icon={twitter} size="1.5x" /></a
+    <a href="https://twitter.com/milkcee12" target="_blank"
+      ><Fa icon={twitter} size="1.5x" /></a
     >
-    <a href="https://github.com/milkcee12/"><Fa icon={github} size="1.5x" /></a>
+    <a href="https://github.com/milkcee12/" target="_blank"
+      ><Fa icon={github} size="1.5x" /></a
+    >
   </div>
   <p class="last-updated item">Last updated:<br />{lastUpdatedDate}</p>
 </footer>
@@ -51,9 +54,9 @@
     padding: 3.5em 4em;
 
     @include respond-to("small") {
-        flex-direction: column;
-        text-align: center;
-        padding: 2.5em 4em;
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5em 4em;
     }
 
     .item {

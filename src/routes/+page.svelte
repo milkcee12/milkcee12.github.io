@@ -16,10 +16,73 @@
   <Timeline />
 
   <section id="about">
-    <div class="heading">
-      <h2>Hello World &#128075;</h2>
-      <ColorLink href="/about" colorArt={true}>More about me</ColorLink>
+    <div class="content">
+      <div class="blurb">
+        <div class="heading">
+          <h2>Hello World &#128075;</h2>
+          <ColorLink href="/about" colorArt={true}>More about me</ColorLink>
+        </div>
+        <p>
+          Hi there! I'm Michaela or Milkcee, depending on where you found me
+          from. I'm a software engineer by day and painter by night. I read a
+          lot of manga and I talk about drawing my own comics but I've only made
+          a handful of them.<br /><br />
+          I'm a junior studying
+          <span class="color-tech"><b>Computer Science</b></span>
+          at
+          <span class="color-white"
+            ><b>University of Southern California</b></span>
+          with a minor in <span class="color-art"><b>3-D Animation</b></span>.
+          For some reason, I also own a lot of cow-themed stuff.
+        </p>
+        <div class="socials">
+          <ColorLink
+            href="https://github.com/milkcee12/"
+            target="_blank"
+            colorArt={false}>Github</ColorLink>
+          <ColorLink
+            href="https://www.instagram.com/milkcee12/"
+            target="_blank"
+            colorArt={true}>Instagram</ColorLink>
+          <ColorLink
+            href="https://twitter.com/milkcee12"
+            target="_blank"
+            colorArt={true}>Twitter</ColorLink>
+        </div>
+      </div>
+      <div class="profile">
+        <img />
+      </div>
     </div>
-    <p>Hi this is me!</p>
   </section>
 </div>
+
+<style lang="scss">
+  p {
+    color: $light-gray;
+  }
+
+  #about {
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+
+      .blurb {
+        flex: 3;
+        display: flex;
+        flex-flow: column;
+
+        .socials {
+          margin-top: 1.5em;
+          display: flex;
+          gap: 1.75em;
+        }
+      }
+
+      .profile {
+        flex: 2;
+      }
+    }
+  }
+</style>

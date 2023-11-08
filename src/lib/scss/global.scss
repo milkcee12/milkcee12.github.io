@@ -40,14 +40,23 @@ h3 {
     color: $color-tech;
 }
 
+.color-white {
+    color: $white;
+}
+
+.color-light-gray {
+    color: $light-gray;
+}
+
 .heading {
     margin-block-start: 2em;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 3em;
     row-gap: 1em;
+    
     h2 {
         margin: 0;
     }

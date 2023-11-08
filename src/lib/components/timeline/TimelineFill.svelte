@@ -1,21 +1,40 @@
 <script lang="ts">
-  import { clamp } from "$lib/util";
+  import { lerp } from "$lib/util";
+  import { onMount } from "svelte";
 
   export let timelineHeight: number;
+  
+  let timelineStart: number;
+  let computedTimelineHeight: number;
   let fill: HTMLElement;
   let arrow: SVGSVGElement;
 
+  // Equivalent to 4.3em when default font size is 16px.  
+  const TIMELINE_OFFSET = 4.3 * 16;
+
   function updateTimelineFill() {
-    let scrollPos: number = window.scrollY;
-    // Should not start filling timeline until past the hero section and navbar
-    // window.innerHeight is approximately the size of the mentioned elements
-    let newHeight: number = clamp(
-      scrollPos - window.innerHeight,
-      80,
-      timelineHeight
+    let scrollDiff = Math.max(0, window.scrollY - timelineStart + (window.innerHeight * 0.25));
+    let newHeight: number = lerp(
+      0,
+      computedTimelineHeight,
+      Math.min(1.0, scrollDiff / computedTimelineHeight)
     );
-    fill.style.height = `calc(${newHeight}px - 4.3em)`;
-    arrow.style.top = `calc(${getComputedStyle(fill).getPropertyValue("height")} - 1.3em)`;
+    fill.style.height = `${newHeight}px`;
+    if (newHeight > 0) {
+      arrow.style.display = "block";
+      arrow.style.top = `calc(
+      ${getComputedStyle(fill).getPropertyValue("height")} 
+      - 1.3em)`;
+    }
+    else {
+      arrow.style.display = "none";
+    }
+  }
+
+  function updateTimelineHeight() {
+    timelineStart = fill.getBoundingClientRect().top + window.scrollY;
+    computedTimelineHeight = timelineHeight - TIMELINE_OFFSET;
+    updateTimelineFill();
   }
 
   // Adapted from https://www.sitepoint.com/throttle-scroll-events/
@@ -28,12 +47,16 @@
       }
     };
   }
+
+  onMount(() => {
+    updateTimelineHeight();
+  });
 </script>
 
 <svelte:window
   on:scroll={throttle(updateTimelineFill, 10)}
-  on:resize={throttle(updateTimelineFill, 10)}
-/>
+  on:resize={updateTimelineHeight} 
+  on:loadstart={updateTimelineHeight}/>
 
 <div class="timeline-fill">
   <div class="fill" bind:this={fill} />
@@ -44,9 +67,7 @@
     style="width: 32px;"
     bind:this={arrow}
     ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-    /></svg
-  >
+      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
 </div>
 
 <style lang="scss">
@@ -54,7 +75,7 @@
     z-index: 100;
   }
   .fill {
-    height: 20px;
+    height: 0;
     margin: 0 auto;
     position: absolute;
     background-color: $green;
@@ -65,8 +86,9 @@
     z-index: 101;
     fill: $green;
     width: 32px;
-    position: relative; 
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
   }
 </style>
