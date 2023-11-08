@@ -23,7 +23,10 @@
   });
 </script>
 
-<svelte:window on:resize={calcTimelineData} on:loadstart={calcTimelineData} />
+<svelte:window
+  on:resize={calcTimelineData}
+  on:load={calcTimelineData}
+  on:loadstart={calcTimelineData} />
 
 <section id="timeline">
   <div class="heading">
