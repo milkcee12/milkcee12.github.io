@@ -3,6 +3,7 @@
   import HeroSection from "$lib/components/HeroSection.svelte";
   import Navbar from "$lib/components/common/Navbar.svelte";
   import ColorLink from "$lib/components/common/ColorLink.svelte";
+  import homeAboutProfile from "$lib/images/home_about-profile.webp";
 </script>
 
 <svelte:head>
@@ -51,7 +52,7 @@
         </div>
       </div>
       <div class="profile">
-        <img />
+        <img src={homeAboutProfile} alt="Profile drawing" />
       </div>
     </div>
   </section>
@@ -66,7 +67,19 @@
     .content {
       display: flex;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 8em;
+
+      @include respond-to("large") {
+        gap: 5em;
+      }
+
+      @include respond-to("medium") {
+        flex-direction: column;
+        gap: 3em;
+      }
+
+      @include respond-to("small") {
+      }
 
       .blurb {
         flex: 3;
@@ -77,11 +90,25 @@
           margin-top: 1.5em;
           display: flex;
           gap: 1.75em;
+          flex-wrap: wrap;
         }
       }
 
       .profile {
         flex: 2;
+        text-align: center;
+        img {
+          width: 100%;
+          border-radius: 1.25em;
+
+          @include respond-to("medium") {
+            width: 60%;
+          }
+
+          @include respond-to("small") {
+            width: 80%;
+          }
+        }
       }
     }
   }
