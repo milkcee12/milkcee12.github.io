@@ -20,15 +20,12 @@
   <section id="about">
     <div class="content">
       <div class="blurb">
-        <Heading headingText="Hello World!" emoji="&#128075;" hasLink={true}>
+        <Heading headingText="Hello World!" emoji="👋" hasLink={true}>
           <ColorLink href="/about" colorArt={true}>More about me</ColorLink
           ></Heading>
         <p>
-          Hi there! I'm Michaela or Milkcee, depending on where you found me
-          from. I'm a software engineer by day and painter by night. I read a
-          lot of manga and I talk about drawing my own comics but I've only made
-          a handful of them.<br /><br />
-          I'm a junior studying
+          I'm Michaela or Milkcee, depending on where you found me
+          from. I'm a junior studying
           <span class="color-tech"><b>Computer Science</b></span>
           at
           <span class="color-white"

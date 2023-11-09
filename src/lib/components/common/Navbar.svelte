@@ -49,6 +49,7 @@
             viewBox="0 0 384 512"
             ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <style>
               svg {
                 fill: #ffffff;
@@ -75,6 +76,9 @@
 {/if}
 
 <style lang="scss">
+  a {
+    text-decoration: none;
+  }
   nav.navbar {
     padding: 3.5em 3em;
   }

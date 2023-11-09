@@ -56,6 +56,7 @@
       transition: all 0.25s ease-out;
       display: inline-block;
       position: relative;
+    text-decoration: none;
     }
 
     .spacer {

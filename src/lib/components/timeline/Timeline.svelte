@@ -32,7 +32,7 @@
 
 <section id="timeline">
   <div class="heading-spacer">
-    <Heading headingText="Featured Work" emoji="&#129466;" hasLink={true}>
+    <Heading headingText="Featured Work" emoji="🦺" hasLink={true}>
       <ColorLink href="/work" colorArt={true}>See all work</ColorLink>
     </Heading>
   </div>

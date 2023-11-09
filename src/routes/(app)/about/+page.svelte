@@ -44,37 +44,40 @@
 
 <section id="about">
   <h1>
-    This site is home to the two things I'm passionate about: <span
-      class="color-art">drawing</span>
+    This site is home to the two crafts I love: <span class="color-art"
+      >drawing</span>
     and <span class="color-tech">programming</span>.
   </h1>
   <div class="content">
     <img src={aboutImage} alt="Painting of a cow with glasses" />
-
-    <!-- TODO: Revise text here bc it's cringe :( -->
     <div class="text">
       <p>
-        I grew up in San Diego as a fine artist. I did a lot of acrylic painting
-        and pencil drawings, and even got a few awards for my art. But I was
-        always looking for a way to get closer to the art I saw in video games
-        and anime—when I discovered digital art in high school, I was
-        immediately hooked.
-      </p>
-      <p>
-        Studying computer science was more of an afterthought until college,
-        where I discovered that I also really liked programming and product
-        design. When I'm not glued to my computer, you can find me reading
-        manga, eating pastries, or in the Uniqlo graphic tee section.
+        I knew on my first pencil strokes that I loved art. I grew up in San
+        Diego dreaming of going to art school, but I ended up in computer
+        science out of filial piety. Unlike art, my love for programming was
+        nurtured—when I began to relish small victories and work late nights of
+        my own accord, I realized that programming had also become a pursuit I
+        hold dear.
+        <br /><br />
+        When I'm not glued to my computer painting
+        <a
+          class="color-art"
+          href="https://www.instagram.com/milkcee12/"
+          target="_blank">imaginary worlds</a>
+        or building
+        <a
+          class="color-tech"
+          href="https://github.com/milkcee12/"
+          target="_blank">software</a
+        >, you can find me reading manga, eating pastries, or in the Uniqlo
+        graphic tee section 😋
       </p>
     </div>
   </div>
 </section>
 
 <section id="profile-graveyard">
-  <Heading
-    headingText="Profile Picture Graveyard"
-    emoji="&#129702;"
-    hasLink={false} />
+  <Heading headingText="Profile Picture Graveyard" emoji="🪦" hasLink={false} />
   <p>Hover over the pictures! :)</p>
   <div class="profile-gallery">
     {#if profilePictures}
@@ -86,15 +89,17 @@
           </figure>
         </div>
       {/each}
+    {:else}
+      <p>Error loading profile pictures 😔</p>
     {/if}
   </div>
 </section>
 
 <section id="lists">
-  <Heading headingText="Fun Lists" emoji="&#x1f4dc;" hasLink={false} />
+  <Heading headingText="Fun Lists" emoji="📜" hasLink={false} />
   <p>
-    Wow you really looked through the website. As a prize (lol?) here are some
-    of my favorite things as lists.
+    Wow you really looked through the website, here's a prize! 🏆 Some of my
+    favorite things as lists.
   </p>
   <div class="list-flex">
     <div class="list-col">
@@ -131,6 +136,12 @@
 </section>
 
 <style lang="scss">
+  h1 {
+    width: 90%;
+    @include respond-to(medium) {
+      width: 100%;
+    }
+  }
   #about {
     .content {
       width: 85%;
@@ -141,6 +152,9 @@
 
       .text {
         flex: 1 1 250px;
+        a {
+          text-underline-offset: 0.15em;
+        }
       }
 
       img {
@@ -199,7 +213,7 @@
       flex-wrap: wrap;
       gap: 1.5em;
 
-      @include respond-to('small') {
+      @include respond-to("small") {
         flex-direction: column;
       }
 
