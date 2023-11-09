@@ -6,7 +6,7 @@
   export let colorArt: boolean;
 </script>
 
-<div class="color-link {colorArt ? 'color-art' : 'color-tech'}">
+<div class="color-link" class:color-art={colorArt} class:color-tech={!colorArt}>
   <a {href} {target}
     ><slot /><span class="spacer" /><span class="arrow">
       <Fa icon={rightArrow} />
@@ -33,6 +33,7 @@
       left: 0;
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
+      background-color: $white;
     }
     &.color-art a {
       color: $color-art;

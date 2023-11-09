@@ -27,6 +27,7 @@
   on:resize={updateNodeVisited} />
 
 <div class="time-node" class:reverse={isReverse}>
+  <!-- Tags -->
   <div class="tags">
     <div class="tech-tags">
       <ul>
@@ -44,6 +45,7 @@
     </div>
   </div>
 
+  <!-- Centerline -->
   <div
     class="node"
     class:first={isFirstChild}
@@ -64,6 +66,7 @@
     {/if}
   </div>
 
+  <!-- Info bubble -->
   <div class="bubble">
     <div class="bubble-tail" />
     <div class="bubble-content">
@@ -77,7 +80,10 @@
       <p>{project.desc}</p>
       {#if hasLink}
         <p>
-          <ColorLink href={project.link} target="_blank" colorArt={true}
+          <ColorLink
+            href={project.link}
+            target="_blank"
+            colorArt={project.tags.art.length > project.tags.tech.length}
             >{project.link_text}</ColorLink>
         </p>
       {/if}

@@ -17,20 +17,17 @@
     <div class="left" />
     <div
       class="right"
-      in:slide={{ axis: "y", duration: 1000, easing: cubicInOut }}
-    />
+      in:slide={{ axis: "y", duration: 1000, easing: cubicInOut }} />
     <img
       class="signature"
       src={signature}
       alt="Hero section signature"
-      in:fly={{ delay: 400, duration: 800, easing: cubicInOut }}
-    />
+      in:fly={{ delay: 400, duration: 800, easing: cubicInOut }} />
     <img
       class="figure"
       src={figure}
       alt="Hero section figure"
-      in:fly={{ delay: 100, duration: 500, easing: cubicInOut }}
-    />
+      in:fly={{ delay: 100, duration: 500, easing: cubicInOut }} />
   {/if}
 </section>
 

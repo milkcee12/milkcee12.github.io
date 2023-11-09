@@ -11,6 +11,7 @@
   let timelineHeight: number;
   let numProjects: number = Object.keys(data.projects).length;
 
+  $: calcTimelineData();
   function calcTimelineData() {
     timelineHeight = timelineGraph
       ? pxStringToFloat(

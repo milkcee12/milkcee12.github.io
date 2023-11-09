@@ -21,7 +21,8 @@
     <div class="content">
       <div class="blurb">
         <Heading headingText="Hello World!" emoji="&#128075;" hasLink={true}>
-          <ColorLink href="/about" colorArt={true}>More about me</ColorLink></Heading>
+          <ColorLink href="/about" colorArt={true}>More about me</ColorLink
+          ></Heading>
         <p>
           Hi there! I'm Michaela or Milkcee, depending on where you found me
           from. I'm a software engineer by day and painter by night. I read a
@@ -58,16 +59,12 @@
 </div>
 
 <style lang="scss">
-  p {
-    color: $light-gray;
-  }
-
   #about {
     .content {
       display: flex;
       flex-wrap: wrap;
       gap: 8em;
-      margin-top:2em;
+      margin-top: 2em;
 
       @include respond-to("large") {
         gap: 5em;

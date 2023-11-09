@@ -18,16 +18,26 @@ body {
 
 section {
     margin-bottom: 8em;
+
     &:last-child {
         margin-bottom: 0;
     }
 }
 
+p,
+li,
+a,
+li,
+figcaption {
+    color: $light-gray;
+}
+
+
 a {
     text-decoration: none;
 }
 
-h2 {
+h1, h2 {
     font-size: xxx-large;
 }
 

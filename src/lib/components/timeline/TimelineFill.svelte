@@ -37,10 +37,10 @@
   }
 
   function updateTimelineHeight() {
-      timelineStart = fill.getBoundingClientRect().top + window.scrollY;
-      timelineHeightSafe = timelineHeight ?? 0;
-      computedTimelineHeight = timelineHeightSafe - TIMELINE_OFFSET;
-      updateTimelineFill();
+    timelineStart = fill.getBoundingClientRect().top + window.scrollY;
+    timelineHeightSafe = timelineHeight ?? 0;
+    computedTimelineHeight = timelineHeightSafe - TIMELINE_OFFSET;
+    updateTimelineFill();
   }
 
   // Adapted from https://www.sitepoint.com/throttle-scroll-events/
@@ -57,17 +57,17 @@
 
 <svelte:window on:scroll={throttle(updateTimelineFill, 10)} />
 
-  <div class="timeline-fill">
-    <div class="fill" bind:this={fill} />
-    <svg
-      class="down-arrow"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      style="width: 32px;"
-      bind:this={arrow}
-      ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
-  </div>
+<div class="timeline-fill">
+  <div class="fill" bind:this={fill} />
+  <svg
+    class="down-arrow"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    style="width: 32px;"
+    bind:this={arrow}
+    ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
+</div>
 
 <style lang="scss">
   .timeline-fill {
