@@ -88,7 +88,7 @@
       box-sizing: border-box;
 
       h3 {
-        margin-top: 0;
+        margin-top: 1.5em;
       }
     }
 
@@ -115,8 +115,14 @@
         flex-direction: column;
       }
 
+      .text {
+        h3 {
+          margin-top: 0.25em;
+        }
+      }
+
       .image {
-      border-radius: 1em 1em 0 0;
+        border-radius: 1em 1em 0 0;
         max-width: 100%;
         max-height: 70%;
       }
