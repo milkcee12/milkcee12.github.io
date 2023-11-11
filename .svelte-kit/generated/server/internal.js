@@ -20,7 +20,7 @@ export const options = {
 		app: ({ head, body, assets, nonce, env }) => "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"" + assets + "/favicon.ico\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width\" />\n\t\t" + head + "\n\t</head>\n\t<body data-sveltekit-preload-data=\"hover\">\n\t\t<div style=\"display: contents\">" + body + "</div>\n\t</body>\n</html>\n",
 		error: ({ status, message }) => "<!DOCTYPE html>\n<html>\n    <body>\n        <h1>404 Page Not Found</h1>\n    </body>\n</html>"
 	},
-	version_hash: "161r4lu"
+	version_hash: "1ceibgc"
 };
 
 export function get_hooks() {
