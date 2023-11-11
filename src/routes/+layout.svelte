@@ -37,7 +37,7 @@
 <Modals>
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div slot="backdrop" class="backdrop" on:click={closeModal} />
+  <div slot="backdrop" class="backdrop" on:click={closeModal} transition:fade|global />
 </Modals>
 
 <style lang="scss">
@@ -57,6 +57,6 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.85);
   }
 </style>

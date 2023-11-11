@@ -55,9 +55,11 @@
         {@const imageData = Object.assign(image, jsonDataTyped[id])}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="item" on:click={() => openModal(Modal, {imageData: imageData})}>
+        <div
+          class="item"
+          on:click={() => openModal(Modal, { imageData: imageData })}>
           <div class="hover-overlay" />
-          <p>{title}</p>
+          <p>{title}<br /><small><i>{imageData.date}</i></small></p>
           <LazyImage src={image.url} alt={title} />
         </div>
       {/each}
@@ -78,9 +80,11 @@
         {@const imageData = Object.assign(image, jsonDataTyped[id])}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div class="item" on:click={() => openModal(Modal, {imageData: imageData})}>
+        <div
+          class="item"
+          on:click={() => openModal(Modal, { imageData: imageData })}>
           <div class="hover-overlay" />
-          <p>{title}</p>
+          <p>{title}<br /><small><i>{imageData.date}</i></small></p>
           <LazyImage src={image.url} alt={title} />
         </div>
       {/each}
