@@ -1,5 +1,5 @@
 {
-    "next_id": 12,
+    "next_id": 14,
     "images": [
         {
             "id": 1,
@@ -81,6 +81,18 @@
             "id": 12,
             "title": "Preparation",
             "desc": "A world exploration where Rain is priestess of the moon.",
+            "date": "2022"
+        },
+        {
+            "id": 13,
+            "title": "Bonfire",
+            "desc": "Painted two of my good friends from one of the prettiest sunsets I've ever seen.",
+            "date": "2023"
+        },
+        {
+            "id": 14,
+            "title": "Heights",
+            "desc": "An experiment where Rain is from fantasy world that combines western and eastern visuals.",
             "date": "2022"
         }
     ]

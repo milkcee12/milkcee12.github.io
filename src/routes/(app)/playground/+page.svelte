@@ -123,7 +123,7 @@
         openModal(Modal, {
           imageData: {
             url: cowsRoomStill1,
-            title: "Cow's room still",
+            title: "Cow's Room still",
             date: "2022",
             desc: "Modeled, textured, and rendered in Maya.",
           },
