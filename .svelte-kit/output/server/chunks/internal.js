@@ -1,5 +1,5 @@
 import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./ssr.js";
-let base = "/milkcee12.github.io";
+let base = "";
 let assets = base;
 const initial = { base, assets };
 function reset() {
@@ -136,7 +136,7 @@ const options = {
     app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.ico" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n",
     error: ({ status, message }) => "<!DOCTYPE html>\n<html>\n    <body>\n        <h1>404 Page Not Found</h1>\n    </body>\n</html>"
   },
-  version_hash: "1h9evkt"
+  version_hash: "18n4g72"
 };
 function get_hooks() {
   return {};
