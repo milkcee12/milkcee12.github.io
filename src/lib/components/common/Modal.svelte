@@ -76,6 +76,7 @@
       background-color: $dark-gray;
       border-radius: 1em;
       border: $gray 1px solid;
+      box-sizing: border-box;
     }
 
     .text {
@@ -98,8 +99,9 @@
       max-height: 100%;
       max-width: 75%;
       flex: 7 1 70%;
-      background-color: black;
+      background-color: $off-black;
       position: relative;
+      border-radius: 1em 0 0 1em;
 
       img {
         position: absolute;
@@ -114,6 +116,7 @@
       }
 
       .image {
+      border-radius: 1em 1em 0 0;
         max-width: 100%;
         max-height: 70%;
       }
