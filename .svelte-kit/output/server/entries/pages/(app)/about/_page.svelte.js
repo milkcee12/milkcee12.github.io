@@ -14,12 +14,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return profilePictures.reverse();
   }
   $$result.css.add(css);
-  return `${$$result.head += `<!-- HEAD_svelte-16leftl_START -->${$$result.title = `<title>About | Milkcee Studios</title>`, ""}<!-- HEAD_svelte-16leftl_END -->`, ""} <section id="about" class="svelte-yga0su" data-svelte-h="svelte-6zbsw"><h1 class="svelte-yga0su">This site is home to the two crafts I love: <span class="color-art">drawing</span>
-    and <span class="color-tech">programming</span>.</h1> <div class="content svelte-yga0su"><img${add_attribute("src", aboutImage, 0)} alt="Painting of a cow with glasses" class="svelte-yga0su"> <div class="text svelte-yga0su"><p>I knew on my first pencil strokes that I loved art. I grew up in San
-        Diego dreaming of going to art school, but I ended up in computer
-        science out of filial piety. Unlike art, programming was a long game—it
-        wasn&#39;t until I began to relish small victories and work late nights of
-        my own accord, I realized that I also fell in love with programming.
+  return `${$$result.head += `<!-- HEAD_svelte-16leftl_START -->${$$result.title = `<title>About | Milkcee Studios</title>`, ""}<!-- HEAD_svelte-16leftl_END -->`, ""} <section id="about" class="svelte-yga0su" data-svelte-h="svelte-cq5n8e"><h1 class="svelte-yga0su">This site is home to the two crafts I love: <span class="color-art">drawing</span>
+    and <span class="color-tech">programming</span>.</h1> <div class="content svelte-yga0su"><img${add_attribute("src", aboutImage, 0)} alt="Painting of a cow with glasses" class="svelte-yga0su"> <div class="text svelte-yga0su"><p>I&#39;ve loved art since I could first hold a pencil. Growing up in San
+        Diego, I dreamed of going to art school. But out of respect for my
+        parents, I chose computer science instead. Unlike art, programming was a
+        slow burn—I didn&#39;t fall in love with it right away. But as I started to
+        savor small wins and work late nights on my own, I realized that I was
+        hooked.
         <br><br>
         When I&#39;m not glued to my computer
         <a class="color-art" href="https://www.instagram.com/milkcee12/" target="_blank">painting imaginary worlds</a>
