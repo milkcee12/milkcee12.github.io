@@ -32,6 +32,10 @@ figcaption {
     color: $light-gray;
 }
 
+a {
+    text-underline-offset: 0.17em;
+}
+
 h1, h2 {
     font-size: xxx-large;
 }

@@ -4,8 +4,8 @@
   import TimeNode from "./TimeNode.svelte";
   import TimelineFill from "./TimelineFill.svelte";
   import { onMount } from "svelte";
-  import ColorLink from "../common/ColorLink.svelte";
-  import Heading from "../common/Heading.svelte";
+  import ColorLink from "$lib/components/common/ColorLink.svelte";
+  import Heading from "$lib/components/common/Heading.svelte";
 
   let timelineGraph: HTMLElement;
   let timelineHeight: number;
@@ -27,8 +27,7 @@
 
 <svelte:window
   on:resize={calcTimelineData}
-  on:load={calcTimelineData}
-  on:loadstart={calcTimelineData} />
+  on:load={calcTimelineData} />
 
 <section id="timeline">
   <div class="heading-spacer">

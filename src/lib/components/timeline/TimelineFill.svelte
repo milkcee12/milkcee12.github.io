@@ -3,13 +3,12 @@
 
   export let timelineHeight: number;
 
-  let timelineHeightSafe: number;
   let timelineStart: number;
   let computedTimelineHeight: number;
   let fill: HTMLElement;
   let arrow: SVGSVGElement;
 
-  $: if (fill) updateTimelineHeight();
+  $: if (fill && timelineHeight) updateTimelineHeight();
 
   // Equivalent to 4.3em when default font size is 16px.
   const TIMELINE_OFFSET = 4.3 * 16;
@@ -38,8 +37,7 @@
 
   function updateTimelineHeight() {
     timelineStart = fill.getBoundingClientRect().top + window.scrollY;
-    timelineHeightSafe = timelineHeight ?? 0;
-    computedTimelineHeight = timelineHeightSafe - TIMELINE_OFFSET;
+    computedTimelineHeight = timelineHeight - TIMELINE_OFFSET;
     updateTimelineFill();
   }
 
@@ -55,7 +53,8 @@
   }
 </script>
 
-<svelte:window on:scroll={throttle(updateTimelineFill, 10)} />
+<svelte:window
+  on:scroll={throttle(updateTimelineFill, 10)} />
 
 <div class="timeline-fill">
   <div class="fill" bind:this={fill} />

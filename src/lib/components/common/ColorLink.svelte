@@ -8,8 +8,10 @@
 
 <div class="color-link" class:color-art={colorArt} class:color-tech={!colorArt}>
   <a {href} {target}
-    ><slot /><span class="spacer" /><span class="arrow">
-      <Fa icon={rightArrow} />
+    ><span class="underline">
+      <slot /><span class="spacer" /><span class="arrow">
+        <Fa icon={rightArrow} />
+      </span>
     </span></a>
 </div>
 
@@ -24,31 +26,34 @@
     }
 
     @mixin underline {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      top: 1.25em;
-      height: 1.5px;
-      left: 0;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-      background-color: $white;
+      width: calc(100%);
+      background-repeat: no-repeat;
+      background-size: 0% 100%;
+      transition: background-size 0.5s;
     }
-    &.color-art a {
-      color: $color-art;
-
-      &::after {
+    &.color-art {
+      a {
+        color: $color-art;
+      }
+      .underline {
         @include underline;
-        background-color: $color-art;
+        background-image: linear-gradient(
+          transparent calc(100% - 1.5px),
+          $color-art 1.5px
+        );
       }
     }
-    &.color-tech a {
-      color: $color-tech;
+    &.color-tech {
+      a {
+        color: $color-tech;
+      }
 
-      &::after {
+      .underline {
         @include underline;
-        background-color: $color-tech;
+        background-image: linear-gradient(
+          transparent calc(100% - 1.5px),
+          $color-tech 1.5px
+        );
       }
     }
 
@@ -56,7 +61,8 @@
       transition: all 0.25s ease-out;
       display: inline-block;
       position: relative;
-    text-decoration: none;
+      text-decoration: none;
+      line-height: 1.3em;
     }
 
     .spacer {
@@ -69,9 +75,12 @@
         transform: translateX(2px);
       }
 
-      a::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+      // a::after {
+      //   transform: scaleX(1);
+      //   transform-origin: bottom left;
+      // }
+      .underline {
+        background-size: 100% 100%;
       }
     }
   }

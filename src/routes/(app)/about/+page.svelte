@@ -1,41 +1,14 @@
 <script lang="ts">
   import Heading from "$lib/components/common/Heading.svelte";
-  import { onMount } from "svelte";
+  import ImageLoader from "$lib/components/common/ImageLoader.svelte";
   import aboutImage from "$lib/images/about/glasses-cow.jpg";
+  import { loadImagesFromModule } from "$lib/util";
 
-  let profilePictures: any;
-  $: profilePictures;
-
-  export async function importProfilePictures() {
-    const module = import.meta.glob(
-      "../../../lib/images/about/profile-pictures/*"
-    );
-    const iterableModule = Object.entries(module);
-    const options: any = { year: "numeric", month: "long" };
-
-    profilePictures = await Promise.all(
-      iterableModule.map(async ([path, resolver]) => {
-        const profilePictureData: any = await resolver().then(
-          ({ default: imageUrl }: any) => {
-            let date = new Date(path.substring(0, path.length - 3));
-            let dateVerbose = date.toLocaleDateString("en-US", options);
-            return {
-              url: imageUrl,
-              date: dateVerbose,
-            };
-          }
-        );
-        return profilePictureData;
-      })
-    );
-
-    profilePictures.reverse();
-    // console.log(profilePictures);
+  async function loadProfilePictures() {
+    const module = import.meta.glob("$lib/images/about/profile-pictures/*");
+    let profilePictures = await loadImagesFromModule(module);
+    return profilePictures.reverse();
   }
-
-  onMount(() => {
-    importProfilePictures();
-  });
 </script>
 
 <svelte:head>
@@ -54,21 +27,20 @@
       <p>
         I knew on my first pencil strokes that I loved art. I grew up in San
         Diego dreaming of going to art school, but I ended up in computer
-        science out of filial piety. Unlike art, my love for programming was
-        nurtured—when I began to relish small victories and work late nights of
-        my own accord, I realized that programming had also become a pursuit I
-        hold dear.
+        science out of filial piety. Unlike art, programming was a long game—it
+        wasn't until I began to relish small victories and work late nights of
+        my own accord, I realized that I also fell in love with programming.
         <br /><br />
-        When I'm not glued to my computer painting
+        When I'm not glued to my computer
         <a
           class="color-art"
           href="https://www.instagram.com/milkcee12/"
-          target="_blank">imaginary worlds</a>
-        or building
+          target="_blank">painting imaginary worlds</a>
+        or
         <a
           class="color-tech"
           href="https://github.com/milkcee12/"
-          target="_blank">software</a
+          target="_blank">building software</a
         >, you can find me reading manga, eating pastries, or in the Uniqlo
         graphic tee section 😋
       </p>
@@ -78,20 +50,20 @@
 
 <section id="profile-graveyard">
   <Heading headingText="Profile Picture Graveyard" emoji="🪦" hasLink={false} />
-  <p>Hover over the pictures! :)</p>
+  <p>🕴️ Hover over the pictures (or tap if you're on mobile)!</p>
   <div class="profile-gallery">
-    {#if profilePictures}
-      {#each profilePictures as { url, date }}
+    {#await loadProfilePictures()}
+      <ImageLoader />
+    {:then profilePictures}
+      {#each profilePictures as { url, filename }}
         <div class="profile-item">
           <figure>
-            <img src={url} alt={date} />
-            <figcaption>{date}</figcaption>
+            <div class="img-wrapper"><img src={url} alt={filename} /></div>
+            <figcaption>{filename}</figcaption>
           </figure>
         </div>
       {/each}
-    {:else}
-      <p>Error loading profile pictures 😔</p>
-    {/if}
+    {/await}
   </div>
 </section>
 
@@ -137,6 +109,7 @@
 
 <style lang="scss">
   h1 {
+    margin-top: 0;
     width: 90%;
     @include respond-to(medium) {
       width: 100%;
@@ -152,15 +125,12 @@
 
       .text {
         flex: 1 1 250px;
-        a {
-          text-underline-offset: 0.15em;
-        }
       }
 
       img {
         max-height: 40vh;
         max-width: 100%;
-        border-radius: 25px;
+        border-radius: 1.25em;
       }
     }
   }
@@ -169,7 +139,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      gap: 1.5em 1em;
+      gap: 1.5em 1.5em;
       margin-top: 3em;
 
       .profile-item {
@@ -179,19 +149,24 @@
         }
         figcaption {
           text-align: center;
-          margin-top: 0.25em;
+          margin-top: 0.75em;
         }
 
-        img {
-          transform-origin: center left;
-          width: 275px;
-          height: 275px;
-          transform-origin: center center;
-          transform: scale(0.96);
-          border-radius: 25px;
-          transition: 0.25s all;
-          &:hover {
-            transform: scale(1);
+        .img-wrapper {
+          display: block;
+          width: 260px;
+          height: 260px;
+          overflow: hidden;
+          border-radius: 1em;
+
+          img {
+            width: 100%;
+            border-radius: 1em;
+            transform-origin: center center;
+            transition: 0.5s all;
+            &:hover {
+              transform: scale(1.05);
+            }
           }
         }
         &:not(:first-child) img {
