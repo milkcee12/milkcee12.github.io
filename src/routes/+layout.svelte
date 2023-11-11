@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "$lib/scss/global.scss";
+  import "$lib/scss/_globals.scss";
   import Footer from "$lib/components/common/Footer.svelte";
   import { Modals, closeModal } from "svelte-modals";
   import { fade } from "svelte/transition";

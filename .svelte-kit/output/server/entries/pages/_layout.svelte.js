@@ -2,7 +2,7 @@ import { c as create_ssr_component, v as validate_component, e as escape, a as s
 import { F as Fa } from "../../chunks/fa.js";
 import { faInstagram, faLinkedinIn, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { w as writable } from "../../chunks/index.js";
-const global = "";
+const _globals = "";
 const PUBLIC_GITHUB_URL = "https://api.github.com/repos/milkcee12/milkcee12.github.io/commits";
 const Footer_svelte_svelte_type_style_lang = "";
 const css$1 = {

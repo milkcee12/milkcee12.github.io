@@ -1,3 +1,4 @@
+const prerender = true;
 const load = ({ url }) => {
   const { pathname } = url;
   return {
@@ -5,5 +6,6 @@ const load = ({ url }) => {
   };
 };
 export {
-  load
+  load,
+  prerender
 };
