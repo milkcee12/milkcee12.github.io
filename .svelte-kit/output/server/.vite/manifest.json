@@ -1,0 +1,411 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "imports": [
+      "_internal.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/server/internal.js"
+  },
+  "Heading.css": {
+    "file": "_app/immutable/assets/Heading.7236c40b.css",
+    "src": "Heading.css"
+  },
+  "Navbar.css": {
+    "file": "_app/immutable/assets/Navbar.8986b8cf.css",
+    "src": "Navbar.css"
+  },
+  "_Heading.js": {
+    "css": [
+      "_app/immutable/assets/Heading.7236c40b.css",
+      "_app/immutable/assets/fa.af927694.css"
+    ],
+    "file": "chunks/Heading.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ImageLoader.js": {
+    "file": "chunks/ImageLoader.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_Navbar.js": {
+    "css": [
+      "_app/immutable/assets/Navbar.8986b8cf.css"
+    ],
+    "file": "chunks/Navbar.js",
+    "imports": [
+      "_ssr.js",
+      "_stores.js"
+    ]
+  },
+  "_fa.js": {
+    "css": [
+      "_app/immutable/assets/fa.af927694.css"
+    ],
+    "file": "chunks/fa.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "fa.css": {
+    "file": "_app/immutable/assets/fa.af927694.css",
+    "src": "fa.css"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_stores.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "imports": [
+      "_internal.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
+  },
+  "src/lib/images/about/glasses-cow.jpg": {
+    "file": "_app/immutable/assets/glasses-cow.3600035d.jpg",
+    "src": "src/lib/images/about/glasses-cow.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2020-03.jpg": {
+    "assets": [
+      "_app/immutable/assets/2020-03.0375b5ba.jpg"
+    ],
+    "file": "chunks/2020-03.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2020-03.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2020-05.jpg": {
+    "assets": [
+      "_app/immutable/assets/2020-05.d6893c91.jpg"
+    ],
+    "file": "chunks/2020-05.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2020-05.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2020-09.jpg": {
+    "assets": [
+      "_app/immutable/assets/2020-09.14f4636c.jpg"
+    ],
+    "file": "chunks/2020-09.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2020-09.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2020-10.jpg": {
+    "assets": [
+      "_app/immutable/assets/2020-10.b49d30a0.jpg"
+    ],
+    "file": "chunks/2020-10.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2020-10.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2021-06.jpg": {
+    "assets": [
+      "_app/immutable/assets/2021-06.6503b903.jpg"
+    ],
+    "file": "chunks/2021-06.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2021-06.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2021-07.png": {
+    "assets": [
+      "_app/immutable/assets/2021-07.ea925b50.png"
+    ],
+    "file": "chunks/2021-07.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2021-07.png"
+  },
+  "src/lib/images/about/profile-pictures/2021-11.jpg": {
+    "assets": [
+      "_app/immutable/assets/2021-11.8f98feef.jpg"
+    ],
+    "file": "chunks/2021-11.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2021-11.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2022-10.jpg": {
+    "assets": [
+      "_app/immutable/assets/2022-10.910cf02e.jpg"
+    ],
+    "file": "chunks/2022-10.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2022-10.jpg"
+  },
+  "src/lib/images/about/profile-pictures/2023-01.jpg": {
+    "assets": [
+      "_app/immutable/assets/2023-01.f17c117f.jpg"
+    ],
+    "file": "chunks/2023-01.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/about/profile-pictures/2023-01.jpg"
+  },
+  "src/lib/images/hero_figure.webp": {
+    "file": "_app/immutable/assets/hero_figure.754e2dd3.webp",
+    "src": "src/lib/images/hero_figure.webp"
+  },
+  "src/lib/images/hero_signature.webp": {
+    "file": "_app/immutable/assets/hero_signature.147470d3.webp",
+    "src": "src/lib/images/hero_signature.webp"
+  },
+  "src/lib/images/home_about-profile.webp": {
+    "file": "_app/immutable/assets/home_about-profile.b43a35a6.webp",
+    "src": "src/lib/images/home_about-profile.webp"
+  },
+  "src/lib/images/playground/fanart/001.jpg": {
+    "assets": [
+      "_app/immutable/assets/001.0f51cc5a.jpg"
+    ],
+    "file": "chunks/001.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/fanart/001.jpg"
+  },
+  "src/lib/images/playground/fanart/002.jpg": {
+    "assets": [
+      "_app/immutable/assets/002.4294c4fc.jpg"
+    ],
+    "file": "chunks/002.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/fanart/002.jpg"
+  },
+  "src/lib/images/playground/fanart/003.jpg": {
+    "assets": [
+      "_app/immutable/assets/003.558709b4.jpg"
+    ],
+    "file": "chunks/003.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/fanart/003.jpg"
+  },
+  "src/lib/images/playground/fanart/004.jpg": {
+    "assets": [
+      "_app/immutable/assets/004.3e2127e8.jpg"
+    ],
+    "file": "chunks/004.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/fanart/004.jpg"
+  },
+  "src/lib/images/playground/fanart/005.jpg": {
+    "assets": [
+      "_app/immutable/assets/005.325876a1.jpg"
+    ],
+    "file": "chunks/005.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/fanart/005.jpg"
+  },
+  "src/lib/images/playground/featured/006.jpg": {
+    "assets": [
+      "_app/immutable/assets/006.9ca7ec1c.jpg"
+    ],
+    "file": "chunks/006.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/006.jpg"
+  },
+  "src/lib/images/playground/featured/007.jpg": {
+    "assets": [
+      "_app/immutable/assets/007.7ae01b92.jpg"
+    ],
+    "file": "chunks/007.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/007.jpg"
+  },
+  "src/lib/images/playground/featured/008.jpg": {
+    "assets": [
+      "_app/immutable/assets/008.2406d0ce.jpg"
+    ],
+    "file": "chunks/008.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/008.jpg"
+  },
+  "src/lib/images/playground/featured/009.jpg": {
+    "assets": [
+      "_app/immutable/assets/009.9acb3915.jpg"
+    ],
+    "file": "chunks/009.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/009.jpg"
+  },
+  "src/lib/images/playground/featured/010.jpg": {
+    "assets": [
+      "_app/immutable/assets/010.028c31cb.jpg"
+    ],
+    "file": "chunks/010.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/010.jpg"
+  },
+  "src/lib/images/playground/featured/011.jpg": {
+    "assets": [
+      "_app/immutable/assets/011.d9c3ba84.jpg"
+    ],
+    "file": "chunks/011.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/011.jpg"
+  },
+  "src/lib/images/playground/featured/012.jpg": {
+    "assets": [
+      "_app/immutable/assets/012.3a0dc2d0.jpg"
+    ],
+    "file": "chunks/012.js",
+    "isDynamicEntry": true,
+    "src": "src/lib/images/playground/featured/012.jpg"
+  },
+  "src/routes/(app)/+layout.svelte": {
+    "file": "entries/pages/(app)/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_Navbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(app)/+layout.svelte"
+  },
+  "src/routes/(app)/about/+page.css": {
+    "file": "_app/immutable/assets/_page.98ac005d.css",
+    "src": "src/routes/(app)/about/+page.css"
+  },
+  "src/routes/(app)/about/+page.svelte": {
+    "assets": [
+      "_app/immutable/assets/glasses-cow.3600035d.jpg"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.98ac005d.css"
+    ],
+    "dynamicImports": [
+      "src/lib/images/about/profile-pictures/2020-03.jpg",
+      "src/lib/images/about/profile-pictures/2020-05.jpg",
+      "src/lib/images/about/profile-pictures/2020-09.jpg",
+      "src/lib/images/about/profile-pictures/2020-10.jpg",
+      "src/lib/images/about/profile-pictures/2021-06.jpg",
+      "src/lib/images/about/profile-pictures/2021-07.png",
+      "src/lib/images/about/profile-pictures/2021-11.jpg",
+      "src/lib/images/about/profile-pictures/2022-10.jpg",
+      "src/lib/images/about/profile-pictures/2023-01.jpg"
+    ],
+    "file": "entries/pages/(app)/about/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_Heading.js",
+      "_ImageLoader.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(app)/about/+page.svelte"
+  },
+  "src/routes/(app)/archive/+page.svelte": {
+    "file": "entries/pages/(app)/archive/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(app)/archive/+page.svelte"
+  },
+  "src/routes/(app)/playground/+page.css": {
+    "file": "_app/immutable/assets/_page.254ff38c.css",
+    "src": "src/routes/(app)/playground/+page.css"
+  },
+  "src/routes/(app)/playground/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.254ff38c.css",
+      "_app/immutable/assets/fa.af927694.css"
+    ],
+    "dynamicImports": [
+      "src/lib/images/playground/featured/006.jpg",
+      "src/lib/images/playground/featured/007.jpg",
+      "src/lib/images/playground/featured/008.jpg",
+      "src/lib/images/playground/featured/009.jpg",
+      "src/lib/images/playground/featured/010.jpg",
+      "src/lib/images/playground/featured/011.jpg",
+      "src/lib/images/playground/featured/012.jpg",
+      "src/lib/images/playground/fanart/001.jpg",
+      "src/lib/images/playground/fanart/002.jpg",
+      "src/lib/images/playground/fanart/003.jpg",
+      "src/lib/images/playground/fanart/004.jpg",
+      "src/lib/images/playground/fanart/005.jpg"
+    ],
+    "file": "entries/pages/(app)/playground/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_Heading.js",
+      "_ImageLoader.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(app)/playground/+page.svelte"
+  },
+  "src/routes/(app)/work/+page.svelte": {
+    "file": "entries/pages/(app)/work/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/(app)/work/+page.svelte"
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout.ac960470.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+layout.svelte": {
+    "css": [
+      "_app/immutable/assets/_layout.ac960470.css"
+    ],
+    "file": "entries/pages/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_fa.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+layout.ts": {
+    "file": "entries/pages/_layout.ts.js",
+    "isEntry": true,
+    "src": "src/routes/+layout.ts"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page.d7cf5b67.css",
+    "src": "src/routes/+page.css"
+  },
+  "src/routes/+page.svelte": {
+    "assets": [
+      "_app/immutable/assets/home_about-profile.b43a35a6.webp"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.d7cf5b67.css"
+    ],
+    "file": "entries/pages/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_fa.js",
+      "_Heading.js",
+      "_Navbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  }
+}
