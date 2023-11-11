@@ -7,6 +7,11 @@
   import ImageLoader from "$lib/components/common/ImageLoader.svelte";
   import jsonData from "$lib/json/playground.json";
 
+  import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
+  import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
+  import cowsRoomVideo from "$lib/images/playground/cows_room.mp4";
+  import ColorLink from "$lib/components/common/ColorLink.svelte";
+
   enum Module {
     FEATURED = 0,
     FANART = 1,
@@ -40,6 +45,20 @@
 <p>
   A page dedicated to all the smaller, one-off projects I've done throughout the
   years. Click on the the images to learn more about them!
+</p>
+<p>
+  <i>
+    View more work at my <a
+      href="https://www.instagram.com/milkcee12/"
+      target="_blank"
+      class="color-art">art account</a>
+    or take a peek behind-the-scenes in my
+    <a
+      href="https://www.instagram.com/soymilkcee12/"
+      target="_blank"
+      class="color-art">sketch account</a
+    >!
+  </i>
 </p>
 
 <section id="featured">
@@ -92,6 +111,34 @@
   </div>
 </section>
 
+<section id="animation-3d">
+  <Heading headingText="3-D Animation" emoji="📚" hasLink={false} />
+  <p>Some work produced from my 3-D Animation minor at USC.</p>
+  <div class="gallery">
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div
+      class="item"
+      on:click={() =>
+        openModal(Modal, {
+          imageData: {
+            url: cowsRoomStill1,
+            title: "Cow's room still",
+            date: "2022",
+            desc: "Modeled, textured, and rendered in Maya.",
+          },
+        })}>
+      <LazyImage src={cowsRoomStill1} alt="Still 1 of cow's room" />
+    </div>
+    <div class="item">
+      <!-- svelte-ignore a11y-media-has-caption -->
+      <video poster={cowsRoomPlaceholder} controls>
+        <source src={cowsRoomVideo} type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</section>
+
 <style lang="scss">
   .gallery {
     display: flex;
@@ -111,6 +158,11 @@
       transition: all 0.25s;
       border-radius: 1em;
       transition: opacity 0.5s;
+
+      video {
+        border-radius: 1em;
+        height: 100%;
+      }
 
       p {
         color: $white;

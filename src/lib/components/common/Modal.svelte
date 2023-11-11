@@ -24,7 +24,7 @@
         <div class="text">
           <h3>{imageData.title ?? "Untitled"}</h3>
           <p><i>{imageData.date ?? "Unknown year"}</i></p>
-          <p>{imageData.desc}</p>
+          <p>{imageData.desc ?? "-"}</p>
           {#if imageData.link}
             <ColorLink href={imageData.link} target="_blank" colorArt={true}
               >{imageData.link_text}</ColorLink>

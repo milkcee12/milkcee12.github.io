@@ -24,14 +24,12 @@
           <ColorLink href="/about" colorArt={true}>More about me</ColorLink
           ></Heading>
         <p>
-          I'm Michaela or Milkcee, depending on where you found me
-          from. I'm a junior studying
+          I'm Michaela or Milkcee, depending on where you found me from. I'm a
+          junior studying
           <span class="color-tech"><b>Computer Science</b></span>
-          at
-          <span class="color-white"
-            ><b>University of Southern California</b></span>
-          with a minor in <span class="color-art"><b>3-D Animation</b></span>.
-          For some reason, I also own a lot of cow-themed stuff.
+          at University of Southern California with a minor in
+          <span class="color-art"><b>3-D Animation</b></span>. For some reason,
+          I also own a lot of cow-themed stuff.
         </p>
         <div class="socials">
           <ColorLink
