@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_GITHUB_URL: ${{ secrets.PUBLIC_GITHUB_URL }}
     
     steps:
       - name: Checkout
@@ -19,6 +17,8 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          PUBLIC_GITHUB_URL: ${{ secrets.PUBLIC_GITHUB_URL }}
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
