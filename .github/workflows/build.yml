@@ -1,4 +1,4 @@
-name: Build NPM
+name: Build and deploy SvelteKit to Github Pages
 
 on:
   push:
