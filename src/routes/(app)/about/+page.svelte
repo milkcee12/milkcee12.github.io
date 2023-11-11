@@ -25,11 +25,12 @@
     <img src={aboutImage} alt="Painting of a cow with glasses" />
     <div class="text">
       <p>
-        I knew on my first pencil strokes that I loved art. I grew up in San
-        Diego dreaming of going to art school, but I ended up in computer
-        science out of filial piety. Unlike art, programming was a long game—it
-        wasn't until I began to relish small victories and work late nights of
-        my own accord, I realized that I also fell in love with programming.
+        I've loved art since I could first hold a pencil. Growing up in San
+        Diego, I dreamed of going to art school. But out of respect for my
+        parents, I chose computer science instead. Unlike art, programming was a
+        slow burn—I didn't fall in love with it right away. But as I started to
+        savor small wins and work late nights on my own, I realized that I was
+        hooked.
         <br /><br />
         When I'm not glued to my computer
         <a
