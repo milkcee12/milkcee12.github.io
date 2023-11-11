@@ -201,7 +201,7 @@ const HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) 
   $$result.css.add(css$1);
   return `<section id="hero" class="svelte-11pz8uo"> ${``}  </section>`;
 });
-const homeAboutProfile = "/_app/immutable/assets/home_about-profile.b43a35a6.webp";
+const homeAboutProfile = "/milkcee12.github.io/_app/immutable/assets/home_about-profile.b43a35a6.webp";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: "#about.svelte-1p9jx43 .content.svelte-1p9jx43{display:flex;flex-wrap:wrap;gap:8em;margin-top:2em}@media(max-width: 1200px){#about.svelte-1p9jx43 .content.svelte-1p9jx43{gap:5em}}@media(max-width: 992px){#about.svelte-1p9jx43 .content.svelte-1p9jx43{flex-direction:column;gap:3em}}#about.svelte-1p9jx43 .content .blurb.svelte-1p9jx43{flex:3;display:flex;flex-flow:column}#about.svelte-1p9jx43 .content .blurb .socials.svelte-1p9jx43{margin-top:1.5em;display:flex;gap:1.75em;flex-wrap:wrap}#about.svelte-1p9jx43 .content .profile.svelte-1p9jx43{flex:2;text-align:center}#about.svelte-1p9jx43 .content .profile img.svelte-1p9jx43{width:100%;border-radius:1.25em}@media(max-width: 992px){#about.svelte-1p9jx43 .content .profile img.svelte-1p9jx43{width:60%}}@media(max-width: 767px){#about.svelte-1p9jx43 .content .profile img.svelte-1p9jx43{width:80%}}",
