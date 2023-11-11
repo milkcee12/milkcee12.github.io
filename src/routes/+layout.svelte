@@ -42,6 +42,7 @@
   }
 
   .backdrop {
+    cursor: pointer;
     z-index: 100;
     position: fixed;
     top: 0;
