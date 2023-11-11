@@ -17,7 +17,7 @@
       <a class:active={path === "/playground"} href="/playground">Playground</a>
       <a class:active={path === "/about"} href="/about">About</a>
       <a class:active={path === "/archive"} href="/archive">Archive</a>
-      <a href="#" target="_blank" rel="noreferrer">Resume</a>
+      <!-- <a href="#" target="_blank" rel="noreferrer">Resume</a> -->
     </div>
   </div>
 
@@ -68,7 +68,7 @@
           <li class:active={path === "/archive"}>
             <a href="/archive">Archive</a>
           </li>
-          <li><a href="#" target="_blank" rel="noreferrer">Resume</a></li>
+          <!-- <li><a href="#" target="_blank" rel="noreferrer">Resume</a></li> -->
         </ul>
       </div>
     </div>

@@ -105,12 +105,29 @@ const css = {
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
+  let scrollYState;
+  const snapshot = {
+    capture: () => window.scrollY,
+    restore: (value) => scrollYState = value
+  };
   afterNavigate(() => {
     disableScrollHandling();
+    setTimeout(
+      () => {
+        scrollTo({
+          top: scrollYState ?? 0,
+          behavior: "instant"
+        });
+      },
+      300
+    );
   });
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
+  if ($$props.snapshot === void 0 && $$bindings.snapshot && snapshot !== void 0)
+    $$bindings.snapshot(snapshot);
   $$result.css.add(css);
+  data.pathname;
   return `<div><div class="mobile-wrapper svelte-177jhjc">${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div></div> ${validate_component(Modals, "Modals").$$render($$result, {}, {}, {
     backdrop: () => {
       return `<div slot="backdrop" class="backdrop svelte-177jhjc"></div>`;
