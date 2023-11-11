@@ -29,6 +29,7 @@
       alt="Hero section figure"
       in:fly={{ delay: 100, duration: 500, easing: cubicInOut }} />
   {/if}
+  <!-- TODO: Add cute explore line on bottom right -->
 </section>
 
 <style lang="scss">

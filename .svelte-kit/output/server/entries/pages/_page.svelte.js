@@ -199,7 +199,7 @@ const css$1 = {
 };
 const HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<section id="hero" class="svelte-11pz8uo"> ${``} </section>`;
+  return `<section id="hero" class="svelte-11pz8uo"> ${``}  </section>`;
 });
 const homeAboutProfile = "/_app/immutable/assets/home_about-profile.b43a35a6.webp";
 const _page_svelte_svelte_type_style_lang = "";
