@@ -1,4 +1,4 @@
-name: Build and deploy SvelteKit to Github Pages
+name: build-deploy-sveltekit-to-pages
 
 on:
   push:
