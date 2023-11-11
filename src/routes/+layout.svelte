@@ -37,7 +37,11 @@
 <Modals>
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div slot="backdrop" class="backdrop" on:click={closeModal} transition:fade|global />
+  <div
+    slot="backdrop"
+    class="backdrop"
+    on:click={closeModal}
+    transition:fade|global={{ duration: 200 }} />
 </Modals>
 
 <style lang="scss">
