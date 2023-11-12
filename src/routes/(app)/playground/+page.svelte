@@ -128,7 +128,9 @@
             desc: "Modeled, textured, and rendered in Maya.",
           },
         })}>
-      <LazyImage src={cowsRoomStill1} alt="Still 1 of cow's room" />
+      <div class="hover-overlay" />
+      <p>Cow's Room still<small><br><i>2022</i></small></p>
+      <LazyImage src={cowsRoomStill1} alt="Cow's Room still" />
     </div>
     <div class="item">
       <!-- svelte-ignore a11y-media-has-caption -->
