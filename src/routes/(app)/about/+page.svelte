@@ -92,6 +92,7 @@
         <li>Fairy Tail</li>
         <li>Link Click</li>
         <li>Frieren: Beyond Journey's End</li>
+        <li>Apothecary Diaries</li>
         <li>Birdie Wing</li>
       </ul>
     </div>
