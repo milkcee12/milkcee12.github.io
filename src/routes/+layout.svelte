@@ -3,11 +3,11 @@
   import Footer from "$lib/components/common/Footer.svelte";
   import { Modals, closeModal } from "svelte-modals";
   import { fade } from "svelte/transition";
+  import { page } from "$app/stores";
   import type { Snapshot } from "./$types";
   import { afterNavigate, disableScrollHandling } from "$app/navigation";
 
-  export let data: any;
-  $: pathname = data.pathname;
+  $: pathname = $page.url.pathname;
 
   // Allows you to preserve scroll position on back button while keeping smooth page transition behavior
   let scrollYState: number;

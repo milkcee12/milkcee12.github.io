@@ -1,6 +1,6 @@
 <script lang="ts">
   import { openModal } from "svelte-modals";
-  import Modal from "$lib/components/common/Modal.svelte";
+  import GalleryModal from "$lib/components/common/GalleryModal.svelte";
   import Heading from "$lib/components/common/Heading.svelte";
   import LazyImage from "$lib/components/common/LazyImage.svelte";
   import { loadImagesFromModule } from "$lib/util";
@@ -10,7 +10,6 @@
   import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
   import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
   import cowsRoomVideo from "$lib/images/playground/cows_room.mp4";
-  import ColorLink from "$lib/components/common/ColorLink.svelte";
 
   enum Module {
     FEATURED = 0,
@@ -76,7 +75,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
           class="item"
-          on:click={() => openModal(Modal, { imageData: imageData })}>
+          on:click={() => openModal(GalleryModal, { imageData: imageData })}>
           <div class="hover-overlay" />
           <p>{title}<br /><small><i>{imageData.date}</i></small></p>
           <LazyImage src={image.url} alt={title} />
@@ -101,7 +100,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
           class="item"
-          on:click={() => openModal(Modal, { imageData: imageData })}>
+          on:click={() => openModal(GalleryModal, { imageData: imageData })}>
           <div class="hover-overlay" />
           <p>{title}<br /><small><i>{imageData.date}</i></small></p>
           <LazyImage src={image.url} alt={title} />
@@ -120,7 +119,7 @@
     <div
       class="item"
       on:click={() =>
-        openModal(Modal, {
+        openModal(GalleryModal, {
           imageData: {
             url: cowsRoomStill1,
             title: "Cow's Room still",
@@ -164,6 +163,7 @@
       video {
         border-radius: 1em;
         height: 100%;
+        max-width: 100%;
       }
 
       p {

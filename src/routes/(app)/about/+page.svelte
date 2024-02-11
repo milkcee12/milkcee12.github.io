@@ -91,7 +91,7 @@
         <li>Bleach</li>
         <li>Fairy Tail</li>
         <li>Link Click</li>
-        <li>Haikyuu!</li>
+        <li>Frieren: Beyond Journey's End</li>
         <li>Birdie Wing</li>
       </ul>
     </div>
