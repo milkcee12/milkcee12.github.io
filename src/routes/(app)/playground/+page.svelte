@@ -5,7 +5,7 @@
   import LazyImage from "$lib/components/common/LazyImage.svelte";
   import { loadImagesFromModule } from "$lib/util";
   import ImageLoader from "$lib/components/common/ImageLoader.svelte";
-  import jsonData from "$lib/json/playground.json";
+  import data from "$lib/yaml/playground.yml";
 
   import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
   import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
@@ -16,7 +16,7 @@
     FANART = 1,
   }
 
-  interface PlaygroundJSON {
+  interface PlaygroundYaml {
     id: number;
     title?: string;
     desc: string;
@@ -24,7 +24,7 @@
     link?: string;
     link_text?: string;
   }
-  let jsonDataTyped: PlaygroundJSON[] = jsonData.images;
+  let dataTyped: PlaygroundYaml[] = data.images;
 
   const modules = [
     import.meta.glob("$lib/images/playground/featured/*"),
@@ -69,8 +69,8 @@
     {:then images}
       {#each images as image}
         {@const id = parseInt(image.filename) - 1}
-        {@const title = jsonDataTyped[id].title ?? "Untitled"}
-        {@const imageData = Object.assign(image, jsonDataTyped[id])}
+        {@const title = dataTyped[id].title ?? "Untitled"}
+        {@const imageData = Object.assign(image, dataTyped[id])}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
@@ -94,8 +94,8 @@
     {:then images}
       {#each images as image}
         {@const id = parseInt(image.filename) - 1}
-        {@const title = jsonDataTyped[id].title ?? "Untitled"}
-        {@const imageData = Object.assign(image, jsonDataTyped[id])}
+        {@const title = dataTyped[id].title ?? "Untitled"}
+        {@const imageData = Object.assign(image, dataTyped[id])}
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div

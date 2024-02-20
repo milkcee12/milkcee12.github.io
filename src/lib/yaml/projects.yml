@@ -1,0 +1,56 @@
+# next_id: 5
+projects:
+  - id: 1
+    title: Google STEP Internship
+    start_date: May 2023
+    end_date: Aug 2023
+    desc:
+      An unforgettable summer in New York City eating food, making memories, and
+      building new features in Google Ads. My tech stack was Angular, Java, Dart, HTML,
+      and CSS.
+    tags:
+      tech:
+        - Front-End
+        - Back-End
+      art:
+        - UI/UX
+  - id: 2
+    title: Milkcee Studios
+    start_date: Dec 2022
+    end_date:
+    desc:
+      What youre looking at right now! Started as a winter break project and built
+      up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.
+    tags:
+      tech:
+        - Front-End
+        - Back-End
+      art:
+        - UI/UX
+        - Illustration
+    link: https://github.com/milkcee12/milkcee12.github.io/tree/main
+    link_text: View the Github repo
+  - id: 3
+    title: Trojan Dining
+    start_date: 2021
+    end_date:
+    desc:
+      Student-first redesign of the USC Residential Dining Menu website. Implemented
+      using React.js.
+    tags:
+      tech:
+        - Front-End
+      art:
+        - UI/UX
+  - id: 4
+    title: Milkbook
+    start_date: 2021
+    end_date:
+    desc: A sporadically-updated webcomic of personal experiences and wandering thoughts.
+    tags:
+      tech: []
+      art:
+        - Illustration
+        - Writing
+    link: https://www.webtoons.com/en/canvas/milkbox/list?title_no=693909
+    link_text: Read the comic

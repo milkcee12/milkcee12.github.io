@@ -11,6 +11,7 @@
 		"deploy": "gh-pages -d build -t true"
 	},
 	"devDependencies": {
+		"@modyfi/vite-plugin-yaml": "^1.1.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.50",
 		"@sveltejs/kit": "^1.20.4",
