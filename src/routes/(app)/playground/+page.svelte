@@ -5,7 +5,7 @@
   import LazyImage from "$lib/components/common/LazyImage.svelte";
   import { loadImagesFromModule } from "$lib/util";
   import ImageLoader from "$lib/components/common/ImageLoader.svelte";
-  import data from "$lib/yaml/playground.yml";
+  import data from "$lib/data/playground.yml";
 
   import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
   import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
