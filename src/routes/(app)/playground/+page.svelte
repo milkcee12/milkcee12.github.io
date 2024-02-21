@@ -1,13 +1,6 @@
 <script lang="ts">
-  import { openModal } from "svelte-modals";
-  import GalleryModal from "$lib/components/common/GalleryModal.svelte";
   import Heading from "$lib/components/common/Heading.svelte";
-  import LazyImage from "$lib/components/common/LazyImage.svelte";
   import { PlaygroundModule } from "$lib/imageModules";
-
-  import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
-  import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
-  import cowsRoomVideo from "$lib/images/playground/cows_room.mp4";
   import ImageGallery from "$lib/components/ImageGallery.svelte";
 </script>
 
