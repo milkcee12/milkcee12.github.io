@@ -3,38 +3,12 @@
   import GalleryModal from "$lib/components/common/GalleryModal.svelte";
   import Heading from "$lib/components/common/Heading.svelte";
   import LazyImage from "$lib/components/common/LazyImage.svelte";
-  import { loadImagesFromModule } from "$lib/util";
-  import ImageLoader from "$lib/components/common/ImageLoader.svelte";
-  import data from "$lib/data/playground.yml";
+  import { PlaygroundModule } from "$lib/imageModules";
 
   import cowsRoomStill1 from "$lib/images/playground/cows_room_still1.jpg";
   import cowsRoomPlaceholder from "$lib/images/playground/cows_room_placeholder.jpg";
   import cowsRoomVideo from "$lib/images/playground/cows_room.mp4";
-
-  enum Module {
-    FEATURED = 0,
-    FANART = 1,
-  }
-
-  interface PlaygroundYaml {
-    id: number;
-    title?: string;
-    desc: string;
-    date: string;
-    link?: string;
-    link_text?: string;
-  }
-  let dataTyped: PlaygroundYaml[] = data.images;
-
-  const modules = [
-    import.meta.glob("$lib/images/playground/featured/*"),
-    import.meta.glob("$lib/images/playground/fanart/*"),
-  ];
-
-  async function getImageMapFromModule(index: Module) {
-    let images = await loadImagesFromModule(modules[index]);
-    return images;
-  }
+  import ImageGallery from "$lib/components/ImageGallery.svelte";
 </script>
 
 <svelte:head>
@@ -63,81 +37,19 @@
 <section id="featured">
   <Heading headingText="Originals" emoji="🎈" hasLink={false} />
   <p>Visions from the worlds inside my head.</p>
-  <div class="gallery">
-    {#await getImageMapFromModule(Module.FEATURED)}
-      <ImageLoader />
-    {:then images}
-      {#each images as image}
-        {@const id = parseInt(image.filename) - 1}
-        {@const title = dataTyped[id].title ?? "Untitled"}
-        {@const imageData = Object.assign(image, dataTyped[id])}
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div
-          class="item"
-          on:click={() => openModal(GalleryModal, { imageData: imageData })}>
-          <div class="hover-overlay" />
-          <p>{title}<br /><small><i>{imageData.date}</i></small></p>
-          <LazyImage src={image.url} alt={title} />
-        </div>
-      {/each}
-    {/await}
-  </div>
+  <ImageGallery module={PlaygroundModule.FEATURED} />
 </section>
 
 <section id="fanart">
   <Heading headingText="Fanart" emoji="📸" hasLink={false} />
   <p>Paying homage to some of my favorite works by other artists.</p>
-  <div class="gallery">
-    {#await getImageMapFromModule(Module.FANART)}
-      <ImageLoader />
-    {:then images}
-      {#each images as image}
-        {@const id = parseInt(image.filename) - 1}
-        {@const title = dataTyped[id].title ?? "Untitled"}
-        {@const imageData = Object.assign(image, dataTyped[id])}
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div
-          class="item"
-          on:click={() => openModal(GalleryModal, { imageData: imageData })}>
-          <div class="hover-overlay" />
-          <p>{title}<br /><small><i>{imageData.date}</i></small></p>
-          <LazyImage src={image.url} alt={title} />
-        </div>
-      {/each}
-    {/await}
-  </div>
+  <ImageGallery module={PlaygroundModule.FANART} />
 </section>
 
 <section id="animation-3d">
   <Heading headingText="3-D Animation" emoji="📚" hasLink={false} />
   <p>Some work produced from my 3-D Animation minor at USC.</p>
-  <div class="gallery">
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div
-      class="item"
-      on:click={() =>
-        openModal(GalleryModal, {
-          imageData: {
-            url: cowsRoomStill1,
-            title: "Cow's Room still",
-            date: "2022",
-            desc: "Modeled, textured, and rendered in Maya.",
-          },
-        })}>
-      <div class="hover-overlay" />
-      <p>Cow's Room still<small><br><i>2022</i></small></p>
-      <LazyImage src={cowsRoomStill1} alt="Cow's Room still" />
-    </div>
-    <div class="item">
-      <!-- svelte-ignore a11y-media-has-caption -->
-      <video poster={cowsRoomPlaceholder} controls>
-        <source src={cowsRoomVideo} type="video/mp4" />
-      </video>
-    </div>
-  </div>
+  <ImageGallery module={PlaygroundModule.ANIMATION_3D} />
 </section>
 
 <style lang="scss">

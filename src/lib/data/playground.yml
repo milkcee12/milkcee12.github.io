@@ -1,4 +1,4 @@
-# next_id: 14
+# next_id: 17
 images:
   - id: 1
     title: Beneath the Fireflies
@@ -93,3 +93,9 @@ images:
       An experiment where Rain is from fantasy world that combines western and eastern
       visuals.
     date: 2022
+  - id: 15
+    title: Cow's Room still
+    date: 2022
+    desc: Modeled, textured, and rendered in Maya.
+  - id: 16
+    video: true
