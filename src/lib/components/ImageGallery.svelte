@@ -5,7 +5,7 @@
   import ImageLoader from "$lib/components/common/ImageLoader.svelte";
   import { loadImagesFromModule } from "$lib/util";
   import { playgroundModules, PlaygroundModule } from "$lib/imageModules";
-  import data from "$lib/data/playground.yml";
+  import data from "$lib/data/yml/playground.yml";
 
   export let module: PlaygroundModule;
   let dataTyped: PlaygroundYaml[] = data.images;
@@ -34,6 +34,7 @@
       {#if !image.filename.includes("-video")}
         {@const id = parseInt(image.filename) - 1}
         {@const title = dataTyped[id].title ?? "Untitled"}
+        {@const date = dataTyped[id].date}
         {@const isVideo = dataTyped[id].video ?? false}
         {@const imageData = Object.assign(image, dataTyped[id])}
 
@@ -42,7 +43,7 @@
             <!-- svelte-ignore a11y-media-has-caption -->
             <video poster={image.url} controls>
               {console.log(images)}
-                <source src={images[i+1].url} type="video/mp4" />
+              <source src={images[i + 1].url} type="video/mp4" />
             </video>
           </div>
         {:else}
@@ -52,7 +53,7 @@
             class="item"
             on:click={() => openModal(GalleryModal, { imageData: imageData })}>
             <div class="hover-overlay" />
-            <p>{title}<br /><small><i>{imageData.date}</i></small></p>
+            <p>{title}<br /><small><i>{date}</i></small></p>
             <LazyImage src={image.url} alt={title} />
           </div>
         {/if}

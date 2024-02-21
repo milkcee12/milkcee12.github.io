@@ -1,0 +1,9 @@
+# next_id: 2
+projects:
+  - id: 1
+    title: Re:STORE
+    desc: Your toy shop is suddenly taken over by murderous teddy bears! Use your potions to restore them back to their normal state and save your store.
+    date: 2021
+    slug: /archive/re-store
+    link: https://jteaaa.itch.io/re-store
+    link_text: Play the game

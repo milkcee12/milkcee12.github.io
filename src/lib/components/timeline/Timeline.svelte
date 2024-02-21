@@ -1,6 +1,6 @@
 <script lang="ts">
   import { pxStringToFloat } from "$lib/util";
-  import data from "$lib/data/projects.yml";
+  import data from "$lib/data/yml/projects.yml";
   import TimeNode from "./TimeNode.svelte";
   import TimelineFill from "./TimelineFill.svelte";
   import { onMount } from "svelte";
