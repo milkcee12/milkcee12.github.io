@@ -8,8 +8,6 @@ tags:
 ---
 
 <script lang="ts">
-  import "$lib/scss/markdown.scss";
-
   import ColorLink from "$lib/components/common/ColorLink.svelte";
 
   import banner from "$lib/images/md-assets/last-broadcast/banner.png";

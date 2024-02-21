@@ -3,29 +3,20 @@
   import Footer from "$lib/components/common/Footer.svelte";
   import { Modals, closeModal } from "svelte-modals";
   import { fade } from "svelte/transition";
-  import { page } from "$app/stores";
-  import type { Snapshot } from "./$types";
-  import { afterNavigate, disableScrollHandling } from "$app/navigation";
+  import { disableScrollHandling, onNavigate } from "$app/navigation";
 
-  $: pathname = $page.url.pathname;
-
-  // Allows you to preserve scroll position on back button while keeping smooth page transition behavior
-  let scrollYState: number;
-  export const snapshot: Snapshot<number> = {
-    capture: () => window.scrollY,
-    restore: (value) => (scrollYState = value),
-  };
+  export let data;
 
   // Allows page transition without snapping scroll back to top
-  afterNavigate(() => {
+  onNavigate(() => {
     disableScrollHandling();
     setTimeout(() => {
-      scrollTo({ top: scrollYState ?? 0, behavior: "instant" });
+      scrollTo({ top: 0, behavior: "instant" });
     }, 300);
   });
 </script>
 
-{#key pathname}
+{#key data.pathname}
   <div in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
     <div class="mobile-wrapper">
       <slot />

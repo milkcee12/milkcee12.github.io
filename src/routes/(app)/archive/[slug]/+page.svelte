@@ -49,6 +49,10 @@
     }
   }
 
+  .breadcrumbs a, .footer a {
+    text-decoration: none;
+  }
+
   .footer {
     margin-top: 6em;
   }

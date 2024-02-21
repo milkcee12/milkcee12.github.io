@@ -1,10 +1,11 @@
 # next_id: 3
 projects:
-  - id: 1
-    title: Re:STORE
-    date: 2021
-    slug: /archive/re-store
   - id: 2
     title: Last Broadcast
     date: 2023
     slug: /archive/last-broadcast
+  - id: 1
+    title: Re:STORE
+    date: 2021
+    slug: /archive/re-store
+
