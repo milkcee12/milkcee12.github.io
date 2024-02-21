@@ -7,13 +7,14 @@ export async function load({ params }) {
     `../../../../lib/data/md/${params.slug}.md`
   ]();
 
-  const { title, date } = project.metadata;
+  const { title, date, tags } = project.metadata;
   const content = project.default;
 
   return {
     slug: params.slug,
     title: title,
     date: date,
+    tags: tags,
     content: content,
   };
 }

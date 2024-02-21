@@ -3,6 +3,8 @@
   import LazyImage from "$lib/components/common/LazyImage.svelte";
   import data from "$lib/data/yml/archive.yml";
 
+// TODO: Add image resolver for archive folder (it will hold project thumbnails) 
+
   let projects: any = data.projects;
 </script>
 

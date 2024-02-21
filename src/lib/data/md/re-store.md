@@ -1,10 +1,18 @@
 ---
 title: Re:STORE
 date: 2021
+link: https://jteaaa.itch.io/re-store
+tags:
+  - Illustration
+  - Prop Art
+  - Concept Art
 ---
 
 <script lang="ts">
   import "$lib/scss/markdown.scss";
+
+  import ColorLink from "$lib/components/common/ColorLink.svelte";
+
   import banner from "$lib/images/md-assets/re-store/banner.png";
   import altBanner from "$lib/images/md-assets/re-store/alt-banner.png";
   import screenshot from "$lib/images/md-assets/re-store/screenshot.png";
@@ -13,17 +21,25 @@ date: 2021
 
 <img alt="Re:STORE banner" src={banner}>
 
-<div class="split">
+<div class="split-layout">
     <img alt="Re:STORE in-game screenshot" src={screenshot}>
     <div>
 
-        ### Introduction 
+        ### Introduction
 
-        RE:Store is an isometric shooter featuring a potion-wielding shopkeeper. When your toy store is taken over by cursed, murderous teddy bears, you must "restore" your store back to its former state with your potions.
+        Your toy shop is suddenly taken over by murderous teddy bears! Use your potions to restore them back to their normal state and save your store.
+
+        <ColorLink
+            href="https://jteaaa.itch.io/re-store"
+            target="_blank"
+            colorArt={false}
+        >Play the game!</ColorLink>
 
         *MEGA Newbies and Vets Game Jam 2021*
-        
+
+
     </div>
+
 </div>
 
 ### Game Assets
@@ -33,4 +49,3 @@ date: 2021
 ### Ending Banner
 
 <img alt="Re:STORE ending banner" src={altBanner}>
-
