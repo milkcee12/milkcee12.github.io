@@ -26,9 +26,11 @@ date: 2021
     </div>
 </div>
 
-### Game assets
+### Game Assets
 
 <img alt="Re:STORE in-game assets" src={assets}>
+
+### Ending Banner
 
 <img alt="Re:STORE ending banner" src={altBanner}>
 
