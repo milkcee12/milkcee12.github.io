@@ -19,7 +19,7 @@ projects:
     start_date: Dec 2022
     end_date:
     desc:
-      What youre looking at right now! Started as a winter break project and built
+      What you're looking at right now! Started as a winter break project and built
       up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.
     tags:
       tech:

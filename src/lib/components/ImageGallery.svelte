@@ -30,7 +30,7 @@
   {#await getImageMapFromModule(module)}
     <ImageLoader />
   {:then images}
-    {#each images as image}
+    {#each images as image, i}
       {#if !image.filename.includes("-video")}
         {@const id = parseInt(image.filename) - 1}
         {@const title = dataTyped[id].title ?? "Untitled"}
@@ -41,7 +41,8 @@
           <div class="item">
             <!-- svelte-ignore a11y-media-has-caption -->
             <video poster={image.url} controls>
-              <source src={image.url.replace(".jpg", "-video.mp4")} type="video/mp4" />
+              {console.log(images)}
+                <source src={images[i+1].url} type="video/mp4" />
             </video>
           </div>
         {:else}
