@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .markdown {
     p {
         font-size: 1.2em;
@@ -13,6 +15,10 @@
         display: inline-grid;
         grid-template-columns: 1fr 1fr;
         gap: 3em;
+
+        @include respond-to('small') {
+            display: inherit;
+        }
     }
 
     h3 {
