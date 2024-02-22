@@ -11,7 +11,8 @@
 <style lang="scss">
     .tags {
         display: flex;
-        gap: 0.7em;
+        flex-wrap: wrap;
+        gap: 0 0.7em;
 
         p {
             padding: 0.4em 1.3em;
