@@ -20,7 +20,4 @@ export async function load({ params }) {
   };
 }
 
-/** @type {import('./$types').EntryGenerator} */
-export function entries() {
-  return [{ slug: "" }];
-}
+export const prerender = true;
