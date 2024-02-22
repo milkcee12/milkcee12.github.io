@@ -15,9 +15,10 @@
 </p>
 
 <div class="title">
-  <p><i>{data.type}, {data.date}</i></p>
   <h2>{data.title}</h2>
   <Tags tags={data.tags} />
+  <p><i>{data.type}</i></p>
+  <p><i>{data.date}</i></p>
 </div>
 
 <svelte:component this={data.content} />
@@ -26,14 +27,14 @@
 
 <style lang="scss">
   .title {
-    margin: 4em 0 1em;
+    margin: 4em 0 2em;
     h2 {
       margin-top: 0em;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.2em;
     }
 
     p {
-      margin-bottom: 0.5em;
+      margin: 0.3em;
     }
   }
 
