@@ -19,3 +19,8 @@ export async function load({ params }) {
     content: content,
   };
 }
+
+/** @type {import('./$types').EntryGenerator} */
+export function entries() {
+  return [{ slug: "" }];
+}
