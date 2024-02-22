@@ -1,6 +1,7 @@
 ---
 title: Last Broadcast
 date: 2023
+type: Video Game
 link: https://store.steampowered.com/app/2508870/Last_Broadcast/
 tags:
   - UI/UX Design

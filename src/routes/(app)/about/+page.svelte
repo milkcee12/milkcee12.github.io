@@ -1,6 +1,5 @@
 <script lang="ts">
   import Heading from "$lib/components/common/Heading.svelte";
-  import ImageLoader from "$lib/components/common/ImageLoader.svelte";
   import aboutImage from "$lib/images/about/glasses-cow.jpg";
   import { loadImagesFromModule } from "$lib/util";
 
@@ -53,9 +52,7 @@
   <Heading headingText="Profile Picture Graveyard" emoji="🪦" hasLink={false} />
   <p>🕴️ Hover over the pictures (or tap if you're on mobile)!</p>
   <div class="profile-gallery">
-    {#await loadProfilePictures()}
-      <ImageLoader />
-    {:then profilePictures}
+    {#await loadProfilePictures() then profilePictures}
       {#each profilePictures as { url, filename }}
         <div class="profile-item">
           <figure>

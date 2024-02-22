@@ -15,7 +15,7 @@
 </p>
 
 <div class="title">
-  <p><i>{data.date}</i></p>
+  <p><i>{data.type}, {data.date}</p>
   <h2>{data.title}</h2>
   <Tags tags={data.tags} />
 </div>

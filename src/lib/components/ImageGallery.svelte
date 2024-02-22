@@ -2,7 +2,6 @@
   import LazyImage from "./common/LazyImage.svelte";
   import { openModal } from "svelte-modals";
   import GalleryModal from "$lib/components/common/GalleryModal.svelte";
-  import ImageLoader from "$lib/components/common/ImageLoader.svelte";
   import { loadImagesFromModule } from "$lib/util";
   import { playgroundModules, PlaygroundModule } from "$lib/imageModules";
   import data from "$lib/data/yml/playground.yml";
@@ -27,9 +26,7 @@
 </script>
 
 <div class="gallery">
-  {#await getImageMapFromModule(module)}
-    <ImageLoader />
-  {:then images}
+  {#await getImageMapFromModule(module) then images}
     {#each images as image, i}
       {#if !image.filename.includes("-video")}
         {@const id = parseInt(image.filename) - 1}

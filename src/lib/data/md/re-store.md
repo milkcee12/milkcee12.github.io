@@ -1,6 +1,7 @@
 ---
 title: Re:STORE
 date: 2021
+type: Video Game
 link: https://jteaaa.itch.io/re-store
 tags:
   - Illustration
