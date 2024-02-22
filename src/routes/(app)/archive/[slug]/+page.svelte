@@ -15,7 +15,7 @@
 </p>
 
 <div class="title">
-  <p><i>{data.type}, {data.date}</p>
+  <p><i>{data.type}, {data.date}</i></p>
   <h2>{data.title}</h2>
   <Tags tags={data.tags} />
 </div>
@@ -49,7 +49,8 @@
     }
   }
 
-  .breadcrumbs a, .footer a {
+  .breadcrumbs a,
+  .footer a {
     text-decoration: none;
   }
 
