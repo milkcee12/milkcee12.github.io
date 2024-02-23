@@ -1,5 +1,3 @@
-import { error } from "@sveltejs/kit";
-
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   const modules = import.meta.glob("../../../../lib/data/md/*.md");
@@ -7,7 +5,7 @@ export async function load({ params }) {
     `../../../../lib/data/md/${params.slug}.md`
   ]();
 
-  const { title, date, type, tags } = project.metadata;
+  const { title, date, type, tags, link, link_text } = project.metadata;
   const content = project.default;
 
   return {
@@ -15,6 +13,8 @@ export async function load({ params }) {
     title: title,
     date: date,
     type: type,
+    link: link,
+    link_text: link_text,
     tags: tags,
     content: content,
   };

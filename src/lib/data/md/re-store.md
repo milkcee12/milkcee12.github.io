@@ -3,6 +3,7 @@ title: Re:STORE
 date: 2021
 type: Video Game
 link: https://jteaaa.itch.io/re-store
+link_text: Play on Itch.io
 tags:
   - Illustration
   - Prop Art

@@ -1,8 +1,16 @@
 <script lang="ts">
+  import Metadata from "$lib/components/common/Metadata.svelte";
   import Tags from "$lib/components/common/Tags.svelte";
+  import { onMount } from "svelte";
 
   /** @type {import('./$types').PageData} */
   export let data: any;
+
+  onMount(() => {
+    setTimeout(() => {
+      scrollTo({ top: 230, behavior: "instant" });
+    }, 300);
+  });
 </script>
 
 <svelte:head>
@@ -15,10 +23,14 @@
 </p>
 
 <div class="title">
-  <h2>{data.title}</h2>
+  <h2 id="project-title">{data.title}</h2>
   <Tags tags={data.tags} />
-  <p><i>{data.type}</i></p>
-  <p><i>{data.date}</i></p>
+
+  <Metadata
+    type={data.type}
+    date={data.date}
+    link={data.link}
+    linkText={data.link_text} />
 </div>
 
 <svelte:component this={data.content} />

@@ -1,8 +1,9 @@
 ---
 title: Last Broadcast
-date: 2023
+date: 2022-2023
 type: Video Game
 link: https://store.steampowered.com/app/2508870/Last_Broadcast/
+link_text: View on Steam
 tags:
   - UI/UX Design
   - Graphic Design
@@ -41,11 +42,12 @@ tags:
 </div>
 
 ### UI Assets
+
 A collection of assets I made for Last Broadcast.
 <img alt="UI assets" src={assets}>
 
-
 ### UI Mockups
+
 Not all of these made it to the final game.
 
 <img alt="Dialogue mockup" src={subtitleMock}>
