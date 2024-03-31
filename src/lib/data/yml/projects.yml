@@ -1,5 +1,17 @@
 # next_id: 5
 projects:
+  - id: 2
+    title: AthenaHacks 2024
+    start_date: Aug 2023
+    end_date: Mar 2024
+    desc: The 2024 website of SoCal's premier women-centric hackathon. Created from scratch with SvelteKit, TypeScript, and Sass. Prototype designed in Figma.
+    tags:
+      tech:
+        - Front-End
+      art:
+        - UI/UX
+    link: https://athenahacks.github.io/AthenaHacks2024/
+    link_text: View the website.
   - id: 1
     title: Google STEP Internship
     start_date: May 2023
@@ -14,22 +26,23 @@ projects:
         - Back-End
       art:
         - UI/UX
-  - id: 2
-    title: Milkcee Studios
-    start_date: Dec 2022
-    end_date:
-    desc:
-      What you're looking at right now! Started as a winter break project and built
-      up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.
-    tags:
-      tech:
-        - Front-End
-        - Back-End
-      art:
-        - UI/UX
-        - Illustration
-    link: https://github.com/milkcee12/milkcee12.github.io/tree/main
-    link_text: View the Github repo
+
+  # - id: 2
+  #   title: Milkcee Studios
+  #   start_date: Dec 2022
+  #   end_date:
+  #   desc:
+  #     What you're looking at right now! Started as a winter break project and built
+  #     up little by little. Created from scratch with SvelteKit, TypeScript, and Sass.
+  #   tags:
+  #     tech:
+  #       - Front-End
+  #       - Back-End
+  #     art:
+  #       - UI/UX
+  #       - Illustration
+  #   link: https://github.com/milkcee12/milkcee12.github.io/tree/main
+  #   link_text: View the Github repo
   - id: 3
     title: Trojan Dining
     start_date: 2021

@@ -36,8 +36,8 @@
     </Heading>
   </div>
   <div class="timeline-graph" bind:this={timelineGraph}>
-    {#each data.projects as project}
-      <TimeNode {project} {numProjects}>
+    {#each data.projects as project, i}
+      <TimeNode {project} {numProjects} {i}>
         <!-- TimelineFill only created for first node -->
         <TimelineFill {timelineHeight} />
       </TimeNode>

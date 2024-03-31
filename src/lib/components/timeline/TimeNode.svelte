@@ -3,12 +3,13 @@
 
   export let project: any;
   export let numProjects: number;
+  export let i: number;
 
   let isCurrentProject: boolean = project.end_date;
   let hasLink: boolean = project.hasOwnProperty("link");
-  let isReverse: boolean = project.id % 2 == 0;
-  let isFirstChild: boolean = project.id == 1;
-  let isLastChild: boolean = project.id == numProjects;
+  let isReverse: boolean = i % 2 != 0;
+  let isFirstChild: boolean = i == 0;
+  let isLastChild: boolean = i == numProjects-1;
 
   let node: HTMLElement;
   let isNodeVisited: boolean = false;

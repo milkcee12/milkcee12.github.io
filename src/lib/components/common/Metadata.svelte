@@ -38,6 +38,13 @@
       p {
         margin: 0;
       }
+
+      a {
+        transition: opacity 0.5s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
     }
   }
 </style>
