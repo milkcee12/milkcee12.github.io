@@ -2,6 +2,7 @@
   import Metadata from "$lib/components/common/Metadata.svelte";
   import Tags from "$lib/components/common/Tags.svelte";
   import { onMount } from "svelte";
+  import { base } from "$app/paths";
 
   /** @type {import('./$types').PageData} */
   export let data: any;
@@ -18,8 +19,8 @@
 </svelte:head>
 
 <p class="breadcrumbs">
-  <a href="/archive">Archive</a> &gt;
-  <a href="/archive/{data.slug}">{data.title}</a>
+  <a href="{base}/archive">Archive</a> &gt;
+  <a href="{base}/archive/{data.slug}">{data.title}</a>
 </p>
 
 <div class="title">
@@ -35,7 +36,7 @@
 
 <svelte:component this={data.content} />
 
-<p class="footer">&lt; <a href="/archive">Back to archive</a></p>
+<p class="footer">&lt; <a href="{base}/archive">Back to archive</a></p>
 
 <style lang="scss">
   .title {
