@@ -6,6 +6,7 @@
   import { onMount } from "svelte";
   import ColorLink from "$lib/components/common/ColorLink.svelte";
   import Heading from "$lib/components/common/Heading.svelte";
+  import { base } from "$app/paths";
 
   let timelineGraph: HTMLElement;
   let timelineHeight: number;
@@ -32,7 +33,7 @@
 <section id="timeline">
   <div class="heading-spacer">
     <Heading headingText="Featured Work" emoji="🦺" hasLink={true}>
-      <ColorLink href="/work" colorArt={true}>See all work</ColorLink>
+      <ColorLink href="{base}/work" colorArt={true}>See all work</ColorLink>
     </Heading>
   </div>
   <div class="timeline-graph" bind:this={timelineGraph}>
