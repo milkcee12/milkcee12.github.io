@@ -5,6 +5,7 @@
   import ColorLink from "$lib/components/common/ColorLink.svelte";
   import homeAboutProfile from "$lib/images/home_about-profile.webp";
   import Heading from "$lib/components/common/Heading.svelte";
+  import { base } from "$app/paths";
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
     <div class="content">
       <div class="blurb">
         <Heading headingText="Hello World!" emoji="👋" hasLink={true}>
-          <ColorLink href="/about" colorArt={true}>More about me</ColorLink
+          <ColorLink href="{base}/about" colorArt={true}>More about me</ColorLink
           ></Heading>
         <p>
           I'm Michaela or Milkcee, depending on where you found me from. I'm a
