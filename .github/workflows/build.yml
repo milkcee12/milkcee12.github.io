@@ -1,4 +1,4 @@
-name: build-deploy-sveltekit-to-pages
+name: Build and Deploy to Github Pages
 
 on:
   push:
@@ -19,11 +19,6 @@ jobs:
           npm run build
         env:
           PUBLIC_GITHUB_URL: ${{ secrets.PUBLIC_GITHUB_URL }}
-
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: docs
           
   deploy:
     runs-on: ubuntu-latest
