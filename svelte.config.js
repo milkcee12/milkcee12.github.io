@@ -25,7 +25,9 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapterStatic({}),
 		// Allows a non-root base path. From https://github.com/metonym/sveltekit-gh-pages
-		base: process.env.NODE_ENV === "production" ? "/v1-skim" : "",
+		paths: {
+			base: process.env.NODE_ENV === "production" ? "/v1-skim" : "",
+		},
 	}
 };
 
