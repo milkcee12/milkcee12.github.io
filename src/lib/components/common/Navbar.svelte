@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { slide, fade } from "svelte/transition";
+  import { base } from "$app/paths";
 
   let path: string;
   let open: boolean;
@@ -10,14 +11,13 @@
 </script>
 
 <nav class="navbar">
-  <a href="/" class="brand"><b>MC</b></a>
+  <a href="{base}/" class="brand"><b>MC</b></a>
   <div class="default-nav">
     <div class="links">
-      <a class:active={path === "/work"} href="/work">Work</a>
-      <a class:active={path === "/playground"} href="/playground">Playground</a>
-      <a class:active={path === "/about"} href="/about">About</a>
-      <a class:active={path === "/archive"} href="/archive">Archive</a>
-      <!-- <a href="#" target="_blank" rel="noreferrer">Resume</a> -->
+      <a class:active={path === "{base}/work"} href="{base}/work">Work</a>
+      <a class:active={path === "{base}/playground"} href="{base}/playground">Playground</a>
+      <a class:active={path === "{base}/about"} href="{base}/about">About</a>
+      <a class:active={path === "{base}/archive"} href="{base}/archive">Archive</a>
     </div>
   </div>
 
