@@ -3,6 +3,7 @@
   import data from "$lib/data/yml/archive.yml";
   import LazyImage from "$lib/components/common/LazyImage.svelte";
   import { loadImagesFromModule } from "$lib/util";
+  import { base } from "$app/paths";
 
   let projects: any = data.projects;
 
@@ -42,7 +43,7 @@
       <div class="item">
         <a href={project.slug}>
           <div class="thumbnail">
-            <LazyImage src={project.url} alt={project.filename} />
+            <LazyImage src="{base}{project.url}" alt={project.filename} />
           </div>
           <div class="project-info">
             <h3>{project.title}</h3>
