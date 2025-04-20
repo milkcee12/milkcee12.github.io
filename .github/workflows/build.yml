@@ -6,38 +6,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: npm install and build
+      - name: Install and Build
         run: |
           npm install
           npm run build
         env:
           PUBLIC_GITHUB_URL: ${{ secrets.PUBLIC_GITHUB_URL }}
-          
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    
-    permissions:
-      pages: write
-      id-token: write
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-      
-    steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-          branch: gh-pages
-          folder: build
-          clean: true
-          target-folder: v1-skim
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+            branch: gh-pages
+            folder: build
+            clean: true
+            target-folder: v1-skim
