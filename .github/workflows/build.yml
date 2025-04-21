@@ -25,5 +25,5 @@ jobs:
         with:
             branch: gh-pages
             folder: build
-            clean: true
-            target-folder: docs
+            clean-exclude: |
+              v1-skim
