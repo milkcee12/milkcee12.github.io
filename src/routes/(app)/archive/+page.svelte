@@ -41,9 +41,9 @@
   {#await loadArchiveThumbnails() then thumbnails}
     {#each mergeThumbnailData(thumbnails) as project}
       <div class="item">
-        <a href={project.slug}>
+        <a href="{base}{project.slug}">
           <div class="thumbnail">
-            <LazyImage src="{base}{project.url}" alt={project.filename} />
+            <LazyImage src="{project.url}" alt={project.filename} />
           </div>
           <div class="project-info">
             <h3>{project.title}</h3>
