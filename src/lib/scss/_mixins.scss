@@ -1,0 +1,26 @@
+// Adapted from https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+
+$breakpoints: (
+    'small': (max-width: 767px),
+    'medium': (max-width: 992px),
+    'large': (max-width: 1200px)) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Breakpoint mixin not found";
+    }
+}
