@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 
-body {
+body, button {
     font-family: "Kirang Haerang", system-ui;
+    color: $off-black;
+}
+
+.risograph::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $pink;
+    rotate: 0.4deg;
+    transform: translate(-0.15em, 0.15em);
+    z-index: -1;
 }
