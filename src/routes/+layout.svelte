@@ -3,3 +3,10 @@
 </script>
 
 <slot />
+
+<style lang="scss">
+  :global(body){
+    background-color: $off-white;
+    overflow: hidden;
+  }
+</style>
