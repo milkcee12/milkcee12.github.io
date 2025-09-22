@@ -28,4 +28,4 @@ jobs:
             branch: gh-pages
             folder: build
             clean: true
-            target-folder: v1-skim
+            # target-folder: v1-skim
