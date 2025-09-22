@@ -6,4 +6,4 @@ Check the branches to see the code of each version, and click the links below to
 
 | Version | Codename | Retired on | Link |
 | -| - | - | - |
-| 1 | Skim | Soon... | https://milkcee12.github.io/v1-skim |
+| 1 | Skim | Soon... | https://milkcee12.github.io/|
